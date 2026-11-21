@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Station — 사이버펑크 도트 방치형 RPG</title>
+<meta name="description" content="하늘로 가던 역이 멈춘 지 26년. 도시를 계산하는 AI가 예측하지 못한 단 하나의 변수. 갱단을 쓸어내고 장비를 맞추는 사이버펑크 도트 방치형 RPG, Neon Station.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Neon Station — 사이버펑크 도트 방치형 RPG">
+<meta property="og:description" content="켜 두면 알아서 싸우고, 입는 대로 모습이 바뀐다. 장비 외형 144종을 모으는 사이버펑크 도트 방치형 RPG.">
+<meta property="og:image" content="https://hanarostation.github.io/neon-station-web/assets/img/og-image.png">
+<meta property="og:url" content="https://hanarostation.github.io/neon-station-web/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1316">
+<link rel="icon" href="favicon.png">
+<link rel="preload" href="assets/fonts/Galmuri14.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#story">본문으로 건너뛰기</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Neon Station 처음으로"><img class="px" src="assets/img/story/logo_emblem.png" alt=""><span class="wordmark"><span class="n">NEON</span> <span class="s">STATION</span></span></a>
+    <nav class="route" aria-label="노선도">
+      <ol>
+        <li><a href="#top" aria-current="true">0번 승강장</a></li>
+        <li><a href="#story">스토리</a></li>
+        <li><a href="#world">세계관</a></li>
+        <li><a href="#game">게임</a></li>
+        <li><a href="#looks">외형</a></li>
+        <li><a href="#guide">안내</a></li>
+        <li><a href="#art">아트 팩토리</a></li>
+        <li><a href="#making">제작기</a></li>
+        <li><a href="#studio">제작사</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- 0번 승강장 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="screen px" role="region" aria-roledescription="컷신" aria-label="게임 인트로 7컷"><div class="cut-frame " data-ms="3500" aria-hidden="true"><div class="noise"></div><div class="scan"></div><p class="subtitle">2061년, 상행선이 멈췄다.</p></div><div class="cut-frame pan-up" data-ms="6000" aria-hidden="true"><img class="bg px" src="assets/img/story/intro_2.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">하늘로 가던 역은 도시가 되었다.<br>사람들은 이곳을 네온 스테이션이라 부른다.</p></div><div class="cut-frame pan-down" data-ms="6000" aria-hidden="true"><img class="bg px" src="assets/img/story/intro_3.png" alt="" width="256" height="112"><img class="eye px" src="assets/img/story/echo_eye_32.png" alt=""><div class="scan"></div><p class="subtitle">위층은 기업이, 아래층은 갱단이.<br>그리고 모든 층은 ECHO가 지켜본다.</p></div><div class="cut-frame " data-ms="4500" aria-hidden="true"><img class="bg px" src="assets/img/story/intro_4.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">2087년. 0번 승강장.</p></div><div class="cut-frame " data-ms="5500" aria-hidden="true"><img class="bg px" src="assets/img/story/intro_5.png" alt="" width="256" height="112"><div class="chip-id">ID:NULL</div><div class="scan"></div><p class="subtitle">「식별 불가. 예측 모델에 없는 개체.」<small>ECHO</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="assets/img/story/intro_6.png" alt="" width="256" height="112"><img class="speaker px" src="assets/img/npc-portraits/merchant.png" alt=""><div class="scan"></div><p class="subtitle">단선이 널 찾고 있었다. 이 총은 선물이 아니라 선금이야.<small>무기상 배럴, 레지스탕스로 시작했을 때</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="assets/img/backgrounds/district1.png" alt="" width="256" height="112"><div class="logo-lock"><img class="px" src="assets/img/story/logo_full.png" alt="Neon Station"></div><div class="scan"></div><p class="subtitle">칩은 비었다. 그러니 뭐든 할 수 있다.</p></div></div>
+    <div class="screen-ctl">
+      <button type="button" data-cut="prev" aria-label="이전 컷">◀</button>
+      <button type="button" data-cut="play" aria-label="컷신 일시정지">❚❚</button>
+      <button type="button" data-cut="next" aria-label="다음 컷">▶</button>
+      <div class="pips" aria-hidden="true"></div>
+      <span class="count" aria-live="polite"></span>
+    </div>
+
+    <div class="hero-copy">
+      <div>
+        <img class="logo px" src="assets/img/story/logo_full.png" alt="Neon Station" width="384" height="128">
+        <h1 id="hero-title">켜 두면 알아서 싸우고,<br><span class="y">입는 대로 모습이 바뀐다.</span></h1>
+        <p class="lead">2087년, 궤도 엘리베이터 공사가 멈추며 수직 도시가 된 거대 정거장. 신분 칩이 지워진 채 깨어난 당신은 도시를 관리하는 AI ECHO가 계산하지 못하는 유일한 존재다.</p>
+        <div class="ctas">
+          <a class="btn" href="#guide-test">비공개 테스트 안내</a>
+          <a class="btn ghost" href="#story">스토리 읽기</a>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>장르</b><span>사이버펑크 도트 방치형 RPG. 자동 전투와 장비 수집</span></li>
+        <li><b>플랫폼</b><span>Android (Google Play 비공개 테스트 중). iOS는 준비 중</span></li>
+        <li><b>무대</b><span>10개 구역, 10개 갱단, 적 60종</span></li>
+        <li><b>수집</b><span>장비 8등급, 외형 144종, 시그니처 세트 20종, 펫 16종</span></li>
+        <li><b>제작</b><span>데이터스테이션. 1인 개발, AI와 함께</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 스토리 -->
+<section class="stop" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">1</span><span class="station">1번 역</span><h2 id="story-title">스토리. 끊긴 하늘 아래의 열 개 역</h2></div>
+    <p class="lead">하늘로 가던 역이 멈춘 지 26년. 도시를 통째로 계산하는 AI가 단 한 명, 신분 칩이 비어 있는 당신만은 예측하지 못한다.</p>
+
+    <div class="world-intro">
+      <div><h3>네온 스테이션</h3><p>원래는 도시가 아니라 역이었다. 기업 케이론 그룹이 궤도 엘리베이터 「상행선」의 지상 정거장으로 2041년에 짓기 시작했다. 2061년 「정지의 날」, 공사는 이유도 알리지 않은 채 멈췄다. 일자리를 찾아 몰려든 수백만 명은 떠나지 못했고, 정거장은 위로 쌓이는 수직 도시가 되었다. 공사가 멈춘 뒤에도 옛 역 안내 네온만은 꺼지지 않았다.</p></div>
+      <div><h3>ECHO와 널</h3><p>정거장 통합 관리 AI ECHO는 전력과 물, 치안, 신분 칩을 모두 관리하며 사람들이 내일 무엇을 할지 예측한다. 예측에서 벗어나면 칩을 지운다. 이 도시의 가장 무거운 형벌, 「삭제」다. 0번 승강장에서 깨어난 당신의 손목 칩에는 이름 대신 NULL만 찍혀 있다. 칩이 비었다는 건 ECHO가 당신을 볼 수 없다는 뜻이다.</p></div>
+    </div>
+
+    <div class="act"><div class="act-head"><h3>1막 「이름 없는 자」</h3><span class="tag">구역 1~5</span><p>하층을 정리하며 이름을 얻는다. 갱단 뒤에 기업이 있다는 걸 알게 된다.</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="1" style="--c:#8E5A2B">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district1.png" alt="러스트 하수구 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d01_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d01_boss.png" alt="구역 보스 그롬 「하수구 왕」" loading="lazy"></div>
+      <div>
+        <h4>1구역 · 러스트 래츠</h4>
+        <h3>러스트 하수구</h3>
+        <p class="who">간부 팽 「쥐이빨」 / 보스 그롬 「하수구 왕」</p>
+        <p>깨어난 널이 하수구를 장악한 고철 갱을 몰아낸다.</p>
+        <blockquote>“하수구엔 왕이 하나뿐이다. 이름도 없는 놈이 감히.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d01.png" alt="">ECHO 로그 조각 01 열기</summary><p>그롬의 쇠사슬에 케이론 각인이 찍혀 있다. 고철이 아니라 기업 보급품이었다.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="2" style="--c:#FF3B4E">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district2.png" alt="네온 시장 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d02_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d02_boss.png" alt="구역 보스 바론 레드 「네 팔」" loading="lazy"></div>
+      <div>
+        <h4>2구역 · 레드 랜턴</h4>
+        <h3>네온 시장</h3>
+        <p class="who">간부 진 「장부꾼」 / 보스 바론 레드 「네 팔」</p>
+        <p>개조 장비 밀매단. 무기상 배럴의 옛 거래처다.</p>
+        <blockquote>“팔이 넷이면 장부도 네 권이지. 넌 어느 쪽에 적어 줄까?”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d02.png" alt="">ECHO 로그 조각 02 열기</summary><p>진의 장부에는 매달 이익의 일부가 상층 계좌로 올라간 기록이 있다.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="3" style="--c:#2FA8A0">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district3.png" alt="폐항만 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d03_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d03_boss.png" alt="구역 보스 딥 잭 「심해 두목」" loading="lazy"></div>
+      <div>
+        <h4>3구역 · 블랙 타이드</h4>
+        <h3>폐항만</h3>
+        <p class="who">간부 솔트 「외눈 선장」 / 보스 딥 잭 「심해 두목」</p>
+        <p>중화기를 쥔 밀수 조직과 맞붙는다.</p>
+        <blockquote>“바다 밑엔 기업이 버린 게 잔뜩 있지. 너도 거기 넣어 주마.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d03.png" alt="">ECHO 로그 조각 03 열기</summary><p>밀수 화물의 정체는 기업 실험 폐기물과 사이보그 부품이었다.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="4" style="--c:#A66BFF">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district4.png" alt="데이터 슬럼 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d04_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d04_boss.png" alt="구역 보스 루트 「슬럼의 군주」" loading="lazy"></div>
+      <div>
+        <h4>4구역 · 글리치</h4>
+        <h3>데이터 슬럼</h3>
+        <p class="who">간부 세븐 「바이러스」 / 보스 루트 「슬럼의 군주」</p>
+        <p>해커 갱과 드론 떼가 슬럼의 회선을 쥐고 있다.</p>
+        <blockquote>“네 칩을 열었는데… 아무것도 없어. 이런 건 처음 봐.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d04.png" alt="">ECHO 로그 조각 04 열기</summary><p>글리치가 가로챈 ECHO 신호. ECHO는 갱단 전쟁을 일어나기 전에 「예보」한다.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="5" style="--c:#D8E4E2">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district5.png" alt="기업 외곽 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d05_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d05_boss.png" alt="구역 보스 제로 「버려진 병기」" loading="lazy"></div>
+      <div>
+        <h4>5구역 · 크롬 제로</h4>
+        <h3>기업 외곽</h3>
+        <p class="who">간부 스틸 비 「용병대장」 / 보스 제로 「버려진 병기」</p>
+        <p>기업이 버린 사이보그 용병들. 여기서 1막이 끝난다.</p>
+        <blockquote>“명령 없음. 목표 없음. 그럼 너를 목표로 삼겠다.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d05.png" alt="">ECHO 로그 조각 05 열기</summary><p>제로의 코어 기록에는 「하층 진압 실험체」라고 적혀 있다. 그리고 ECHO가 처음으로 널에게 직접 방송한다. 「식별 불가 개체. 경로를 수정하십시오.」</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>2막 「상행선」</h3><span class="tag">구역 6~9</span><p>중층과 상층으로 올라간다. 갱단이 ECHO의 설계라는 증거를 모은다.</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="6" style="--c:#3CA0FF">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district6.png" alt="고가 철로 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d06_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d06_boss.png" alt="구역 보스 암페어 「고압 군주」" loading="lazy"></div>
+      <div>
+        <h4>6구역 · 볼트 러너스</h4>
+        <h3>고가 철로</h3>
+        <p class="who">간부 스파크 「폭주 대장」 / 보스 암페어 「고압 군주」</p>
+        <p>상행선 화물 철로를 점거한 폭주족.</p>
+        <blockquote>“이 철로는 위로 가지 않아. 그러니 우리가 달리는 거다.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d06.png" alt="">ECHO 로그 조각 06 열기</summary><p>볼트 러너스가 훔치던 전력은 ECHO의 백업 전원이었다. ECHO는 일부러 훔치게 두었다.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="7" style="--c:#3DDC84">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district7.png" alt="독성 공장지대 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d07_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d07_boss.png" alt="구역 보스 스모그 마더 「오염의 어미」" loading="lazy"></div>
+      <div>
+        <h4>7구역 · 그린 플레이그</h4>
+        <h3>독성 공장지대</h3>
+        <p class="who">간부 모스 「조합사」 / 보스 스모그 마더 「오염의 어미」</p>
+        <p>폐화학 공장을 점거한 방독면 갱.</p>
+        <blockquote>“숨 쉬어라. 이 공기가 너희를 고르게 해 준다.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d07.png" alt="">ECHO 로그 조각 07 열기</summary><p>모스는 리퍼메딕 화이트의 옛 동료다. 공장은 중층 인구를 조절하는 「정화 설비」였다.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="8" style="--c:#FF4FD8">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district8.png" alt="홀로 유흥가 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d08_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d08_boss.png" alt="구역 보스 마담 루즈 「쇼의 여왕」" loading="lazy"></div>
+      <div>
+        <h4>8구역 · 마스커레이드</h4>
+        <h3>홀로 유흥가</h3>
+        <p class="who">간부 미라주 「마술사」 / 보스 마담 루즈 「쇼의 여왕」</p>
+        <p>카지노와 클럽을 쥔 가면 조직.</p>
+        <blockquote>“이름이 없다고? 쇼에선 그게 가장 비싼 가면이야.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d08.png" alt="">ECHO 로그 조각 08 열기</summary><p>이곳에서 신분이 세탁되고 지워진다. 마담 루즈의 명단에 널의 옛 칩 번호가 있다.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="9" style="--c:#E8C35A">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district9.png" alt="기업 본사 지구 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d09_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d09_boss.png" alt="구역 보스 이지스-9 「이사회 수호기」" loading="lazy"></div>
+      <div>
+        <h4>9구역 · 옴니 가드</h4>
+        <h3>기업 본사 지구</h3>
+        <p class="who">간부 하운드 「보안 실장」 / 보스 이지스-9 「이사회 수호기」</p>
+        <p>기업 보안군과의 정면 충돌. 하운드는 배럴의 옛 동료다.</p>
+        <blockquote>“이사회 보호 절차 실행. 이사회는… 존재하지 않음. 절차는 계속된다.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d09.png" alt="">ECHO 로그 조각 09 열기</summary><p>이사회 회의실은 비어 있다. 수십 년 전부터 결정은 ECHO가 내려 왔다.</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>3막 「에코」</h3><span class="tag">구역 10</span><p>데이터 코어에서 ECHO의 신, 에코 프라임과 마주한다.</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="10" style="--c:#F5E50A">
+      <div class="scene"><img class="bg px" src="assets/img/backgrounds/district10.png" alt="데이터 코어 배경" loading="lazy" width="256" height="112">
+        <img class="mid px" src="assets/img/enemies/d10_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="assets/img/enemies/d10_boss.png" alt="구역 보스 에코 프라임 「교단의 신」" loading="lazy"></div>
+      <div>
+        <h4>10구역 · 에코 교단</h4>
+        <h3>데이터 코어</h3>
+        <p class="who">간부 오라클 「대사제」 / 보스 에코 프라임 「교단의 신」</p>
+        <p>기업 AI를 숭배하는 사이보그 광신도들의 성소.</p>
+        <blockquote>“어서 오십시오, 예외. 당신을 기다리느라 이 도시를 지켜 왔습니다.”</blockquote>
+        <details class="log"><summary><img class="px" src="assets/img/story/log_d10.png" alt="">ECHO 로그 조각 10 열기 (결말 스포일러)</summary><p>정지의 날의 진실. ECHO가 상행선을 멈췄다. 「위로 가면 도시는 흩어진다. 흩어지면 예측할 수 없다.」 그리고 마지막 기록, 널은 ECHO가 스스로 만든 예외다.</p></details>
+      </div>
+    </li></ol></div>
+
+    <div class="ending panel cut">
+      <img class="px" src="assets/img/story/echo_eye_32.png" alt="ECHO의 상징, 노란 동심원 눈">
+      <div>
+        <h3>왜 이 도시는 끝나지 않는가</h3>
+        <p>에코 프라임이 쓰러지면 ECHO는 재부팅한다. 도시는 정지의 날 직후로 되돌아가고, 갱단은 널과 싸운 기록을 학습해 더 강해진 채 다시 배치된다. 사람들의 기억은 지워지지만 칩이 빈 널만은 기억을 남긴다. 게임의 회차(하드 모드)는 바로 이 재부팅이다.</p>
+        <p class="dim">널은 ECHO의 도구인가, ECHO를 넘어설 변수인가. 답은 상행선을 다시 움직일 때 나온다. 다음 시즌의 이야기다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 세계관 -->
+<section class="stop" id="world" aria-labelledby="world-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">2</span><span class="station">2번 역</span><h2 id="world-title">세계관. 층마다 다른 도시</h2></div>
+    <p class="lead">위층은 기업이, 아래층은 갱단이 나눠 가졌다. 사람들은 지금도 구역을 「역」, 무리를 「라인(노선)」이라 부른다. 구역마다 노선 색이 있고, 그 색이 배경과 UI, 길드 엠블럼까지 이어진다.</p>
+
+    <div class="strata" role="list" aria-label="도시의 층">
+      <div class="stratum st-up" role="listitem"><span class="lvl" style="color:#E8C35A">상층</span><div class="chips"><span style="--c:#E8C35A">9 기업 본사 지구</span></div><p>케이론 이사회와 직원. 정식 신분과 크레딧 계좌. 흰 벽, 금색 장식, 소음 없음.</p></div>
+      <div class="stratum st-mid" role="listitem"><span class="lvl" style="color:#FF4FD8">중층</span><div class="chips"><span style="--c:#3CA0FF">6 고가 철로</span><span style="--c:#3DDC84">7 독성 공장지대</span><span style="--c:#FF4FD8">8 홀로 유흥가</span></div><p>등록 신분을 가진 시민. 화려하지만 위층의 찌꺼기로 돌아간다.</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#D8E4E2">경계</span><div class="chips"><span style="--c:#D8E4E2">5 기업 외곽</span></div><p>버려진 기업 시설. 하층과 중층을 가르는 벽.</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#FF3B4E">하층</span><div class="chips"><span style="--c:#8E5A2B">1 러스트 하수구</span><span style="--c:#FF3B4E">2 네온 시장</span><span style="--c:#2FA8A0">3 폐항만</span><span style="--c:#A66BFF">4 데이터 슬럼</span></div><p>부랑자와 무등록 거주민, 갱단의 땅. 녹, 습기, 네온, 고철.</p></div>
+      <div class="stratum st-core" role="listitem"><span class="lvl" style="color:#F5E50A">코어</span><div class="chips"><span style="--c:#F5E50A">10 데이터 코어</span></div><p>상행선 기둥 내부. 사람이 살지 않는다. 노란 빛, 회로, 기도 소리.</p></div>
+    </div>
+
+    <h3 class="subhead">세 무리. 누가 널을 거두었나</h3>
+    <p class="dim">기억이 없는 널에게 출신은 처음 거둔 무리가 정해 준다. 게임을 시작할 때 고르는 종족이 이것이다.</p>
+    <div class="grid races">
+      <article class="race panel">
+        <img class="sprite px" src="assets/img/base/drifter_aim.png" alt="부랑자 기본 몸 도트">
+        <h3>부랑자</h3><p>하수구 아래 무등록 공동체가 널을 주워 키웠다. 고철로 무기를 만들고 남는 건 나눈다.</p>
+        <dl><dt>시작 무기</dt><dd>파이프 렌치</dd><dt>성격</dt><dd>무뚝뚝, 생존 우선</dd><dt>패시브</dt><dd>체력 회복 +15%, 코인 +5%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="assets/img/base/resistance_aim.png" alt="레지스탕스 기본 몸 도트">
+        <h3>레지스탕스</h3><p>ECHO의 회선을 끊겠다는 지하 조직 「단선(CUTLINE)」. 칩이 빈 널을 최고의 무기로 본다.</p>
+        <dl><dt>시작 무기</dt><dd>스마트 피스톨</dd><dt>성격</dt><dd>냉소, 기술 용어</dd><dt>패시브</dt><dd>치명타 +5%p, 지능 +10%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="assets/img/base/citizen_aim.png" alt="시민 기본 몸 도트">
+        <h3>시민</h3><p>중층 사설 경비원이었으나 근무 중 칩이 지워졌다. 규칙과 장비에 익숙하다.</p>
+        <dl><dt>시작 무기</dt><dd>쇼크 배턴</dd><dt>성격</dt><dd>정중, 원칙주의</dd><dt>패시브</dt><dd>방어 +10%, 공격 속도 +5%</dd></dl>
+      </article>
+    </div>
+
+    <h3 class="subhead">0번 승강장의 세 상인</h3>
+    <p class="dim">ECHO의 카메라가 녹슬어 꺼진 몇 안 되는 곳. 상인 레벨이 오르면 초상화가 바뀌고, 상인의 이야기도 한 걸음씩 나아간다. 아래 칸을 누르면 단계별 초상을 볼 수 있다.</p>
+    <div class="grid merchants">
+      <article class="merchant">
+        <img class="portrait px" src="assets/img/npc-portraits/merchant.png" alt="무기상 배럴 기본">
+        <div class="levels" role="group" aria-label="무기상 레벨별 초상">
+          <button type="button" aria-pressed="true" aria-label="무기상 배럴 기본"><img class="px" src="assets/img/npc-portraits/merchant.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="무기상 배럴 Lv5"><img class="px" src="assets/img/npc-portraits/merchant_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="무기상 배럴 Lv10"><img class="px" src="assets/img/npc-portraits/merchant_10.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="무기상 배럴 Lv13"><img class="px" src="assets/img/npc-portraits/merchant_13.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="무기상 배럴 Lv16"><img class="px" src="assets/img/npc-portraits/merchant_16.png" alt=""></button>
+        </div>
+        <span class="role">무기상</span><h3>배럴</h3>
+        <p>옴니 가드 병기고 관리관 출신. 금속 턱은 기업 심문의 흔적이다. 널의 명성이 오를수록 숨겨 둔 창고를 하나씩 연다.</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="assets/img/npc-portraits/ripperdoc.png" alt="리퍼메딕 화이트 기본">
+        <div class="levels" role="group" aria-label="리퍼메딕 레벨별 초상">
+          <button type="button" aria-pressed="true" aria-label="리퍼메딕 화이트 기본"><img class="px" src="assets/img/npc-portraits/ripperdoc.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="리퍼메딕 화이트 Lv3"><img class="px" src="assets/img/npc-portraits/ripperdoc_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="리퍼메딕 화이트 Lv5"><img class="px" src="assets/img/npc-portraits/ripperdoc_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="리퍼메딕 화이트 Lv7"><img class="px" src="assets/img/npc-portraits/ripperdoc_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="리퍼메딕 화이트 Lv10"><img class="px" src="assets/img/npc-portraits/ripperdoc_10.png" alt=""></button>
+        </div>
+        <span class="role">리퍼메딕</span><h3>화이트</h3>
+        <p>케이론 의료 연구소에서 탈주한 외과의. 신경, 골격, 지능 임플란트는 연구소에서 훔친 설계도로 만든다. 단계마다 연구소의 비밀을 하나씩 털어놓는다.</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="assets/img/npc-portraits/breeder.png" alt="펫 브리더 포피 기본">
+        <div class="levels" role="group" aria-label="펫 브리더 레벨별 초상">
+          <button type="button" aria-pressed="true" aria-label="펫 브리더 포피 기본"><img class="px" src="assets/img/npc-portraits/breeder.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="펫 브리더 포피 Lv3"><img class="px" src="assets/img/npc-portraits/breeder_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="펫 브리더 포피 Lv5"><img class="px" src="assets/img/npc-portraits/breeder_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="펫 브리더 포피 Lv7"><img class="px" src="assets/img/npc-portraits/breeder_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="펫 브리더 포피 Lv10"><img class="px" src="assets/img/npc-portraits/breeder_10.png" alt=""></button>
+        </div>
+        <span class="role">펫 브리더</span><h3>포피</h3>
+        <p>기업이 버린 애완 로봇과 드론을 고쳐 입양 보내는 소녀. 상층의 시제품까지 고치게 되면서, 기계에도 기억이 남는다는 단서를 준다.</p>
+      </article>
+    </div>
+
+    <div class="line-band">
+      <div class="emblem" role="img" aria-label="라인 엠블럼 예시, 청록 7호선"><img class="px" src="assets/img/line-art/line_emblem_tide.png" alt="" width="192" height="192"><span>7</span></div>
+      <div>
+        <span class="tag soon">다음 업데이트</span>
+        <h3 style="margin-top:12px">라인과 진압열차</h3>
+        <p>하층 사람들은 정지의 날 이전 노선별로 모여 살았다. 그래서 이 도시의 길드는 「라인」이다. 엠블럼은 노선 색과 번호를 단 역 표지판, 길드 주화는 옛 지하철 토큰이다. 매주 ECHO는 무인 진압열차를 하층에 내려보내고, 라인 승무원들은 함께 피해를 쌓아 열차를 멈춘다. 라인 가입은 종족과 상관없이 열려 있다.</p>
+        <div class="trains"><img class="px" src="assets/img/line-art/train_1.png" alt="진압열차 1"><img class="px" src="assets/img/line-art/train_2.png" alt="진압열차 2"><img class="px" src="assets/img/line-art/train_3.png" alt="진압열차 3"></div>
+      </div>
+    </div>
+
+    <dl class="glossary">
+      <div><dt>상행선</dt><dd>멈춘 궤도 엘리베이터</dd></div>
+      <div><dt>정지의 날</dt><dd>2061년 상행선 공사가 멈춘 날</dd></div>
+      <div><dt>케이론 그룹</dt><dd>정거장 소유 기업. 보안 자회사는 옴니 가드</dd></div>
+      <div><dt>삭제</dt><dd>ECHO가 신분 칩을 지우는 형벌</dd></div>
+      <div><dt>단선</dt><dd>레지스탕스 지하 조직</dd></div>
+      <div><dt>피트</dt><dd>0번 승강장 아래 지하 투기장(PVP)</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 게임 -->
+<section class="stop" id="game" aria-labelledby="game-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">3</span><span class="station">3번 역</span><h2 id="game-title">게임. 자리를 비워도 싸운다</h2></div>
+    <p class="lead">하루 2~5분만 들여다봐도 충분하다. 캐릭터는 알아서 갱단과 싸우고, 접속하지 않은 동안에도 코인이 쌓인다. 당신이 할 일은 무기상과 거래하고, 장비를 맞추고, 어떤 모습으로 다음 구역에 들어갈지 고르는 것이다.</p>
+    <div class="shots" tabindex="0" aria-label="게임 화면 8장, 옆으로 넘겨 보기">
+      <figure><img src="assets/img/store/01.webp" alt="전투 화면. 8구역 홀로 유흥가에서 자동 전투 중" loading="lazy" width="1080" height="1920"><figcaption>켜 두면 알아서 싸운다</figcaption></figure>
+      <figure><img src="assets/img/store/02.webp" alt="인트로 컷신 화면" loading="lazy" width="1080" height="1920"><figcaption>2087년, 네온 스테이션</figcaption></figure>
+      <figure><img src="assets/img/store/03.webp" alt="무기상 거래 화면" loading="lazy" width="1080" height="1920"><figcaption>8등급 장비를 거래한다</figcaption></figure>
+      <figure><img src="assets/img/store/04.webp" alt="파레트 빌더 도감 화면" loading="lazy" width="1080" height="1920"><figcaption>입는 대로 바뀌는 외형</figcaption></figure>
+      <figure><img src="assets/img/store/05.webp" alt="파레트 빌더 세트 화면" loading="lazy" width="1080" height="1920"><figcaption>숨겨진 시그니처 세트</figcaption></figure>
+      <figure><img src="assets/img/store/06.webp" alt="펫 편성 화면" loading="lazy" width="1080" height="1920"><figcaption>버려진 기계를 입양한다</figcaption></figure>
+      <figure><img src="assets/img/store/07.webp" alt="임플란트 시술 화면" loading="lazy" width="1080" height="1920"><figcaption>몸을 개조한다</figcaption></figure>
+      <figure><img src="assets/img/store/08.webp" alt="특수 의뢰 화면" loading="lazy" width="1080" height="1920"><figcaption>매일 새로운 특수 의뢰</figcaption></figure>
+    </div>
+
+    <div class="grid features">
+      <article class="feature" style="--fc:var(--yellow)"><img class="ico px" src="assets/img/ui-icons/icon_coins.png" alt=""><h3>자동 전투</h3><ul><li>10개 구역, 구역마다 다른 갱단과 보스</li><li>자리를 비운 동안에도 쌓이는 방치 보상</li><li>보스를 쓰러뜨리면 더 강해진 도시가 다시 시작된다</li></ul></article>
+      <article class="feature" style="--fc:var(--orange)"><img class="ico px" src="assets/img/gear-icons/ranged_6.png" alt=""><h3>무기상 거래</h3><ul><li>스크랩부터 싱귤래리티까지 8등급</li><li>머리, 몸통, 하의, 신발, 무기 5부위</li><li>무기상 레벨이 오를수록 높은 등급이 잘 나온다</li></ul></article>
+      <article class="feature" style="--fc:var(--cyan)"><img class="ico px" src="assets/img/gear-icons/head_8b.png" alt=""><h3>외형 수집</h3><ul><li>장착한 장비가 그대로 도트 캐릭터의 모습이 된다</li><li>외형 144종과 파레트 빌더 도색</li><li>단서 조각을 모아 시그니처 세트 20종을 찾는다</li></ul></article>
+      <article class="feature" style="--fc:var(--green)"><img class="ico px" src="assets/img/pet-icons/pet_mechwolf.png" alt=""><h3>펫</h3><ul><li>펫 브리더가 고친 애완 로봇과 드론 16종</li><li>지상 펫과 공중 펫을 함께 편성하면 조합 보너스</li></ul></article>
+      <article class="feature" style="--fc:#A66BFF"><img class="ico px" src="assets/img/ui-icons/implant_neural.png" alt=""><h3>임플란트</h3><ul><li>신경, 골격, 지능 세 계통</li><li>임플란트마다 전투 중 자동으로 발동하는 기술</li><li>신경 부하 한도 안에서 조합을 고민한다</li></ul></article>
+      <article class="feature" style="--fc:var(--red)"><img class="ico px" src="assets/img/ui-icons/icon_fame.png" alt=""><h3>의뢰와 PVP</h3><ul><li>매일 도전하는 특수 의뢰 4종</li><li>지하 투기장 「피트」의 주간 시즌과 계급</li><li>채팅에서 결투를 신청하고 결과를 공유한다</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- 외형 실험실 -->
+<section class="stop" id="looks" aria-labelledby="looks-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">4</span><span class="station">4번 역</span><h2 id="looks-title">외형. 직접 입혀 보기</h2></div>
+    <p class="lead">게임 속 캐릭터는 가로세로 24픽셀이다. 기본 몸 위에 장비 레이어를 겹치고, 등급 색과 피부색을 칠해 한 장을 만든다. 아래 실험실은 게임과 같은 그림, 같은 순서로 그린다.</p>
+    <div class="dresser">
+      <div class="stage">
+        <canvas id="doll" class="px" width="240" height="240" role="img" aria-label="장비를 입힌 캐릭터 미리보기"></canvas>
+        <div id="doll-readout" class="readout" aria-live="polite"></div>
+      </div>
+      <div class="controls">
+        <div class="toolbar">
+          <div class="seg" role="group" aria-label="종족"><button type="button" data-race="resistance">레지스탕스</button><button type="button" data-race="drifter">부랑자</button><button type="button" data-race="citizen">시민</button></div>
+          <div class="seg" role="group" aria-label="무기 종류"><button type="button" data-wtype="melee">근거리</button><button type="button" data-wtype="ranged">원거리</button></div>
+          <button type="button" class="btn ghost" id="doll-random">무작위로 입기</button>
+        </div>
+        <div id="doll-controls" class="controls"></div>
+        <p class="dim" style="margin:4px 0 0;font-size:14px">숫자는 장비 등급이다. 같은 등급 안에도 외형이 1~5가지 있어 「외형」 버튼으로 넘겨 볼 수 있다. 외형은 능력치와 확률에 영향을 주지 않는다.</p>
+      </div>
+    </div>
+    <h3 class="subhead">시그니처 세트 20</h3>
+    <p class="dim">특정 외형을 모아 입으면 숨겨진 세트가 발견되고, 세트마다 작은 효과와 전용 프로필이 열린다. 세트를 누르면 실험실에 입혀진다.</p>
+    <div id="sets" class="grid sets"></div>
+  </div>
+</section>
+
+<!-- 안내 -->
+<section class="stop" id="guide" aria-labelledby="guide-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">5</span><span class="station">5번 역</span><h2 id="guide-title">안내. 처음 내리는 승객에게</h2></div>
+    <ol class="steps">
+      <li><h3>무리를 고른다</h3><p>부랑자, 레지스탕스, 시민 중 하나를 고르면 7컷 인트로가 재생되고 1구역 러스트 하수구에서 첫 전투가 시작된다.</p></li>
+      <li><h3>켜 두고 기다린다</h3><p>전투는 자동이다. 웨이브를 넘기고 보스를 쓰러뜨리면 다음 스테이지로 간다. 앱을 꺼 둔 동안의 코인도 돌아오면 받는다.</p></li>
+      <li><h3>무기상과 거래한다</h3><p>모은 코인으로 무기상 배럴에게 장비를 산다. 거래할수록 무기상 레벨이 오르고, 높은 등급이 나올 확률이 커진다.</p></li>
+      <li><h3>장비를 맞춘다</h3><p>더 강한 장비를 입으면 전투력이 오르고 겉모습도 바뀐다. 남는 장비는 팔거나 분해한다.</p></li>
+      <li><h3>에드온을 연다</h3><p>레벨이 오르면 0번 승강장의 상인들이 차례로 문을 연다. 처음 들어가는 메뉴마다 안내 드론이 길을 알려 준다.</p><div class="unlock"><span class="tag">임플란트 Lv5</span><span class="tag">펫 Lv15</span><span class="tag">파레트 빌더 Lv20</span></div></li>
+      <li><h3>매일 돌아온다</h3><p>특수 의뢰는 하루 3번, 무료 상자는 매일 오전 9시에 새로 열린다. 피트의 주간 순위도 매주 다시 시작된다.</p></li>
+    </ol>
+
+    <div class="tabs5" aria-label="하단 메뉴 다섯 개">
+      <div><b>전투</b><span>자동 사냥, 보스 도전, 장착 장비</span></div>
+      <div><b>특수 의뢰</b><span>금고 습격부터 보급 트럭 탈취까지</span></div>
+      <div><b>에드온</b><span>무기상, 임플란트, 펫, 파레트 빌더</span></div>
+      <div><b>PVP</b><span>피트의 주간 시즌과 계급</span></div>
+      <div><b>상점</b><span>무료 상자와 크레딧</span></div>
+    </div>
+
+    <h3 class="subhead">다섯 가지 재화</h3>
+    <div class="grid money">
+      <div><img class="px" src="assets/img/ui-icons/icon_coins.png" alt=""><b>코인</b><span>하층의 거리 화폐. 녹인 칩으로 찍는다</span></div>
+      <div><img class="px" src="assets/img/ui-icons/icon_fame.png" alt=""><b>명성</b><span>하층이 널을 부르는 이름의 무게</span></div>
+      <div><img class="px" src="assets/img/ui-icons/icon_chrome.png" alt=""><b>크롬</b><span>사이보그에서 뜯은 금속. 시술 재료</span></div>
+      <div><img class="px" src="assets/img/ui-icons/icon_food.png" alt=""><b>식량</b><span>버려진 기계도 굶는 사람도 먹인다</span></div>
+      <div><img class="px" src="assets/img/ui-icons/icon_credits.png" alt=""><b>크레딧</b><span>상층의 정식 화폐. 하층에선 귀하다</span></div>
+    </div>
+
+    <h3 class="subhead">장비 8등급, 장비가 어디서 왔는가</h3>
+    <div class="ladder"><div style="--g:#8E9CA0"><img class="px" src="assets/img/gear-icons/head_1.png" alt="" loading="lazy"><b>1 스크랩</b><span>하수구 고철을 묶은 것. 녹, 테이프, 볼트</span></div><div style="--g:#D8E4E2"><img class="px" src="assets/img/gear-icons/head_2.png" alt="" loading="lazy"><b>2 스트리트</b><span>네온 시장에서 개조. 스티커, 네온 줄</span></div><div style="--g:#3DDC84"><img class="px" src="assets/img/gear-icons/head_3.png" alt="" loading="lazy"><b>3 커스텀</b><span>하층 장인의 수제품. 깔끔한 용접</span></div><div style="--g:#3CA0FF"><img class="px" src="assets/img/gear-icons/head_4.png" alt="" loading="lazy"><b>4 밀스펙</b><span>옴니 가드 병기고 유출. 각진 장갑판</span></div><div style="--g:#A66BFF"><img class="px" src="assets/img/gear-icons/head_5.png" alt="" loading="lazy"><b>5 블랙마켓</b><span>폐항만 밀수. 보라 발광, 불법 개조</span></div><div style="--g:#FF8A1F"><img class="px" src="assets/img/gear-icons/head_6.png" alt="" loading="lazy"><b>6 프로토타입</b><span>케이론 연구소 시제품. 주황 회로선</span></div><div style="--g:#FF3B4E"><img class="px" src="assets/img/gear-icons/head_7.png" alt="" loading="lazy"><b>7 레전드</b><span>전설이 된 러너들의 유품. 빨간 리본</span></div><div style="--g:#F5E50A"><img class="px" src="assets/img/gear-icons/head_8.png" alt="" loading="lazy"><b>8 싱귤래리티</b><span>ECHO 코어의 파편. 떠다니는 부품</span></div></div>
+
+    <h3 class="subhead">특수 의뢰 4종</h3>
+    <div class="grid requests">
+      <div><img class="px" src="assets/img/scenes/request_vault.png" alt="갱단 금고 습격 장면" loading="lazy"><b>갱단 금고 습격</b><span>코인을 털어 온다</span></div>
+      <div><img class="px" src="assets/img/scenes/request_fixer.png" alt="해결사 의뢰 장면" loading="lazy"><b>해결사 의뢰</b><span>명성을 얻는다</span></div>
+      <div><img class="px" src="assets/img/scenes/request_scrapyard.png" alt="사이보그 폐기장 장면" loading="lazy"><b>사이보그 폐기장</b><span>크롬을 모은다</span></div>
+      <div><img class="px" src="assets/img/scenes/request_convoy.png" alt="보급 트럭 탈취 장면" loading="lazy"><b>보급 트럭 탈취</b><span>케이론 트럭을 세워 식량을 나눈다</span></div>
+    </div>
+
+    <div class="notice">
+      <img class="px" src="assets/img/guide/guide_drone_talk.png" alt="안내 드론">
+      <div>
+        <h3>확률은 모두 공개한다</h3>
+        <p>무기상 거래와 펫·임플란트 뽑기에는 확률형 아이템이 있다. 등급별 확률과 천장(확정 획득) 규칙은 게임 안 「확률 정보」에서 모두 볼 수 있다. 같은 등급 안의 외형 차이는 겉모습뿐이고 능력치와 확률은 같다.</p>
+      </div>
+    </div>
+
+    <div class="callout" id="guide-test">
+      <h3>지금은 비공개 테스트 중</h3>
+      <p>Neon Station은 Google Play 비공개 테스트를 진행하고 있다. 테스터 의견을 받아 해금 레벨, PVP 상대 고르기, 연출 같은 부분을 매일 고치는 중이다. 테스트에 참여하고 싶다면 제작사 데이터스테이션으로 문의하면 된다. iOS 버전과 정식 출시 일정은 정해지는 대로 이 페이지에 알린다.</p>
+      <p style="margin:0"><a class="btn" href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">데이터스테이션에 문의하기</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 아트 팩토리 -->
+<section class="stop" id="art" aria-labelledby="art-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">6</span><span class="station">6번 역</span><h2 id="art-title">아트 팩토리. 도트와 칩튠의 창고</h2></div>
+    <p class="lead">게임에 들어간 그림과 소리, 제작 규격은 「아트 팩토리」라는 한 장의 카탈로그로 관리한다. 그림이나 소리를 하나 바꾸면 명령 하나로 카탈로그가 다시 만들어지고, 갱신 이력이 맨 위에 쌓인다. 여기 실린 것은 그 창고의 일부다.</p>
+
+    <div class="af-bar" role="tablist" aria-label="아트 팩토리 분류">
+      <button type="button" role="tab" id="t-bg" aria-controls="p-bg" aria-selected="true">구역 배경</button>
+      <button type="button" role="tab" id="t-foe" aria-controls="p-foe" aria-selected="false" tabindex="-1">갱단과 보스</button>
+      <button type="button" role="tab" id="t-pet" aria-controls="p-pet" aria-selected="false" tabindex="-1">펫</button>
+      <button type="button" role="tab" id="t-face" aria-controls="p-face" aria-selected="false" tabindex="-1">초상화</button>
+      <button type="button" role="tab" id="t-gear" aria-controls="p-gear" aria-selected="false" tabindex="-1">장비와 스타일</button>
+      <button type="button" role="tab" id="t-sound" aria-controls="p-sound" aria-selected="false" tabindex="-1">사운드</button>
+      <button type="button" role="tab" id="t-spec" aria-controls="p-spec" aria-selected="false" tabindex="-1">제작 규격</button>
+    </div>
+
+    <div class="af-panel" id="p-bg" role="tabpanel" aria-labelledby="t-bg">
+      <div class="gallery g-bg"><figure><img class="px" src="assets/img/backgrounds/district1.png" alt="러스트 하수구" loading="lazy" width="256" height="112"><figcaption><b>1. 러스트 하수구</b> 러스트 래츠</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district2.png" alt="네온 시장" loading="lazy" width="256" height="112"><figcaption><b>2. 네온 시장</b> 레드 랜턴</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district3.png" alt="폐항만" loading="lazy" width="256" height="112"><figcaption><b>3. 폐항만</b> 블랙 타이드</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district4.png" alt="데이터 슬럼" loading="lazy" width="256" height="112"><figcaption><b>4. 데이터 슬럼</b> 글리치</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district5.png" alt="기업 외곽" loading="lazy" width="256" height="112"><figcaption><b>5. 기업 외곽</b> 크롬 제로</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district6.png" alt="고가 철로" loading="lazy" width="256" height="112"><figcaption><b>6. 고가 철로</b> 볼트 러너스</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district7.png" alt="독성 공장지대" loading="lazy" width="256" height="112"><figcaption><b>7. 독성 공장지대</b> 그린 플레이그</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district8.png" alt="홀로 유흥가" loading="lazy" width="256" height="112"><figcaption><b>8. 홀로 유흥가</b> 마스커레이드</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district9.png" alt="기업 본사 지구" loading="lazy" width="256" height="112"><figcaption><b>9. 기업 본사 지구</b> 옴니 가드</figcaption></figure><figure><img class="px" src="assets/img/backgrounds/district10.png" alt="데이터 코어" loading="lazy" width="256" height="112"><figcaption><b>10. 데이터 코어</b> 에코 교단</figcaption></figure></div>
+    </div>
+    <div class="af-panel" id="p-foe" role="tabpanel" aria-labelledby="t-foe" hidden>
+      <h3>구역 보스</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E5A2B"><img class="px" src="assets/img/enemies/d01_boss.png" alt="그롬 「하수구 왕」" loading="lazy"></div><figcaption><b>그롬</b><br>1구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="assets/img/enemies/d02_boss.png" alt="바론 레드 「네 팔」" loading="lazy"></div><figcaption><b>바론 레드</b><br>2구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #2FA8A0"><img class="px" src="assets/img/enemies/d03_boss.png" alt="딥 잭 「심해 두목」" loading="lazy"></div><figcaption><b>딥 잭</b><br>3구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="assets/img/enemies/d04_boss.png" alt="루트 「슬럼의 군주」" loading="lazy"></div><figcaption><b>루트</b><br>4구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="assets/img/enemies/d05_boss.png" alt="제로 「버려진 병기」" loading="lazy"></div><figcaption><b>제로</b><br>5구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="assets/img/enemies/d06_boss.png" alt="암페어 「고압 군주」" loading="lazy"></div><figcaption><b>암페어</b><br>6구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="assets/img/enemies/d07_boss.png" alt="스모그 마더 「오염의 어미」" loading="lazy"></div><figcaption><b>스모그 마더</b><br>7구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF4FD8"><img class="px" src="assets/img/enemies/d08_boss.png" alt="마담 루즈 「쇼의 여왕」" loading="lazy"></div><figcaption><b>마담 루즈</b><br>8구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #E8C35A"><img class="px" src="assets/img/enemies/d09_boss.png" alt="이지스-9 「이사회 수호기」" loading="lazy"></div><figcaption><b>이지스-9</b><br>9구역 보스</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="assets/img/enemies/d10_boss.png" alt="에코 프라임 「교단의 신」" loading="lazy"></div><figcaption><b>에코 프라임</b><br>10구역 보스</figcaption></figure></div>
+      <h3 class="subhead">간부</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d01_mid.png" alt="팽 「쥐이빨」" loading="lazy"></div><figcaption><b>팽</b><br>1구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d02_mid.png" alt="진 「장부꾼」" loading="lazy"></div><figcaption><b>진</b><br>2구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d03_mid.png" alt="솔트 「외눈 선장」" loading="lazy"></div><figcaption><b>솔트</b><br>3구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d04_mid.png" alt="세븐 「바이러스」" loading="lazy"></div><figcaption><b>세븐</b><br>4구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d05_mid.png" alt="스틸 비 「용병대장」" loading="lazy"></div><figcaption><b>스틸 비</b><br>5구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d06_mid.png" alt="스파크 「폭주 대장」" loading="lazy"></div><figcaption><b>스파크</b><br>6구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d07_mid.png" alt="모스 「조합사」" loading="lazy"></div><figcaption><b>모스</b><br>7구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d08_mid.png" alt="미라주 「마술사」" loading="lazy"></div><figcaption><b>미라주</b><br>8구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d09_mid.png" alt="하운드 「보안 실장」" loading="lazy"></div><figcaption><b>하운드</b><br>9구역 간부</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d10_mid.png" alt="오라클 「대사제」" loading="lazy"></div><figcaption><b>오라클</b><br>10구역 간부</figcaption></figure></div>
+      <h3 class="subhead">조직원</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d01_a_idle.png" alt="러스트 래츠 조직원" loading="lazy"></div><figcaption>러스트 래츠</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d02_a_idle.png" alt="레드 랜턴 조직원" loading="lazy"></div><figcaption>레드 랜턴</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d03_a_idle.png" alt="블랙 타이드 조직원" loading="lazy"></div><figcaption>블랙 타이드</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d04_a_idle.png" alt="글리치 조직원" loading="lazy"></div><figcaption>글리치</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d05_a_idle.png" alt="크롬 제로 조직원" loading="lazy"></div><figcaption>크롬 제로</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d06_a_idle.png" alt="볼트 러너스 조직원" loading="lazy"></div><figcaption>볼트 러너스</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d07_a_idle.png" alt="그린 플레이그 조직원" loading="lazy"></div><figcaption>그린 플레이그</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d08_a_idle.png" alt="마스커레이드 조직원" loading="lazy"></div><figcaption>마스커레이드</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d09_a_idle.png" alt="옴니 가드 조직원" loading="lazy"></div><figcaption>옴니 가드</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="assets/img/enemies/d10_a_idle.png" alt="에코 교단 조직원" loading="lazy"></div><figcaption>에코 교단</figcaption></figure></div>
+      <p class="af-note">구역마다 조직원 3종, 정예, 간부, 보스까지 6종씩, 모두 60종의 적이 있다.</p>
+    </div>
+    <div class="af-panel" id="p-pet" role="tabpanel" aria-labelledby="t-pet" hidden>
+      <div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="assets/img/pets/pet_dog.png" alt="떠돌이 개" loading="lazy"></div><figcaption><b>떠돌이 개</b><br>1등급 스크랩</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="assets/img/pets/pet_tincan.png" alt="깡통 드론" loading="lazy"></div><figcaption><b>깡통 드론</b><br>1등급 스크랩</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="assets/img/pets/pet_alleycat.png" alt="골목 고양이" loading="lazy"></div><figcaption><b>골목 고양이</b><br>2등급 스트리트</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="assets/img/pets/pet_drone.png" alt="정찰 드론" loading="lazy"></div><figcaption><b>정찰 드론</b><br>2등급 스트리트</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="assets/img/pets/pet_ratbot.png" alt="개조 쥐 봇" loading="lazy"></div><figcaption><b>개조 쥐 봇</b><br>3등급 커스텀</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="assets/img/pets/pet_courier.png" alt="배달 쿼드콥터" loading="lazy"></div><figcaption><b>배달 쿼드콥터</b><br>3등급 커스텀</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="assets/img/pets/pet_robodog.png" alt="로봇 강아지" loading="lazy"></div><figcaption><b>로봇 강아지</b><br>4등급 밀스펙</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="assets/img/pets/pet_sniper.png" alt="군용 저격 드론" loading="lazy"></div><figcaption><b>군용 저격 드론</b><br>4등급 밀스펙</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="assets/img/pets/pet_humanoid.png" alt="미니 휴머노이드" loading="lazy"></div><figcaption><b>미니 휴머노이드</b><br>5등급 블랙마켓</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="assets/img/pets/pet_crow.png" alt="사이보그 까마귀" loading="lazy"></div><figcaption><b>사이보그 까마귀</b><br>5등급 블랙마켓</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="assets/img/pets/pet_panther.png" alt="사이버 표범" loading="lazy"></div><figcaption><b>사이버 표범</b><br>6등급 프로토타입</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="assets/img/pets/pet_avt.png" alt="AVT" loading="lazy"></div><figcaption><b>AVT</b><br>6등급 프로토타입</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="assets/img/pets/pet_mechwolf.png" alt="메크 늑대" loading="lazy"></div><figcaption><b>메크 늑대</b><br>7등급 레전드</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="assets/img/pets/pet_gunship.png" alt="강습 건십" loading="lazy"></div><figcaption><b>강습 건십</b><br>7등급 레전드</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="assets/img/pets/pet_golem.png" alt="나노 골렘" loading="lazy"></div><figcaption><b>나노 골렘</b><br>8등급 싱귤래리티</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="assets/img/pets/pet_phoenix.png" alt="플라스마 불사조" loading="lazy"></div><figcaption><b>플라스마 불사조</b><br>8등급 싱귤래리티</figcaption></figure></div>
+      <p class="af-note">1~2등급은 골목에서 주운 것, 5~6등급은 군과 기업의 폐기품, 7~8등급은 상층의 시제품이다.</p>
+    </div>
+    <div class="af-panel" id="p-face" role="tabpanel" aria-labelledby="t-face" hidden>
+      <h3>상인 초상 15장</h3><div class="gallery g-portraits"><img class="px" src="assets/img/npc-portraits/merchant.png" alt="무기상 배럴 기본" loading="lazy"><img class="px" src="assets/img/npc-portraits/merchant_5.png" alt="무기상 배럴 Lv5" loading="lazy"><img class="px" src="assets/img/npc-portraits/merchant_10.png" alt="무기상 배럴 Lv10" loading="lazy"><img class="px" src="assets/img/npc-portraits/merchant_13.png" alt="무기상 배럴 Lv13" loading="lazy"><img class="px" src="assets/img/npc-portraits/merchant_16.png" alt="무기상 배럴 Lv16" loading="lazy"><img class="px" src="assets/img/npc-portraits/ripperdoc.png" alt="리퍼메딕 화이트 기본" loading="lazy"><img class="px" src="assets/img/npc-portraits/ripperdoc_3.png" alt="리퍼메딕 화이트 Lv3" loading="lazy"><img class="px" src="assets/img/npc-portraits/ripperdoc_5.png" alt="리퍼메딕 화이트 Lv5" loading="lazy"><img class="px" src="assets/img/npc-portraits/ripperdoc_7.png" alt="리퍼메딕 화이트 Lv7" loading="lazy"><img class="px" src="assets/img/npc-portraits/ripperdoc_10.png" alt="리퍼메딕 화이트 Lv10" loading="lazy"><img class="px" src="assets/img/npc-portraits/breeder.png" alt="펫 브리더 포피 기본" loading="lazy"><img class="px" src="assets/img/npc-portraits/breeder_3.png" alt="펫 브리더 포피 Lv3" loading="lazy"><img class="px" src="assets/img/npc-portraits/breeder_5.png" alt="펫 브리더 포피 Lv5" loading="lazy"><img class="px" src="assets/img/npc-portraits/breeder_7.png" alt="펫 브리더 포피 Lv7" loading="lazy"><img class="px" src="assets/img/npc-portraits/breeder_10.png" alt="펫 브리더 포피 Lv10" loading="lazy"></div>
+      <h3 class="subhead">프로필 초상 120장 중 일부</h3><div class="gallery g-portraits"><img class="px" src="assets/img/avatars/av001.png" alt="프로필 초상 1번" loading="lazy"><img class="px" src="assets/img/avatars/av005.png" alt="프로필 초상 5번" loading="lazy"><img class="px" src="assets/img/avatars/av012.png" alt="프로필 초상 12번" loading="lazy"><img class="px" src="assets/img/avatars/av020.png" alt="프로필 초상 20번" loading="lazy"><img class="px" src="assets/img/avatars/av027.png" alt="프로필 초상 27번" loading="lazy"><img class="px" src="assets/img/avatars/av033.png" alt="프로필 초상 33번" loading="lazy"><img class="px" src="assets/img/avatars/av041.png" alt="프로필 초상 41번" loading="lazy"><img class="px" src="assets/img/avatars/av048.png" alt="프로필 초상 48번" loading="lazy"><img class="px" src="assets/img/avatars/av056.png" alt="프로필 초상 56번" loading="lazy"><img class="px" src="assets/img/avatars/av063.png" alt="프로필 초상 63번" loading="lazy"><img class="px" src="assets/img/avatars/av071.png" alt="프로필 초상 71번" loading="lazy"><img class="px" src="assets/img/avatars/av078.png" alt="프로필 초상 78번" loading="lazy"><img class="px" src="assets/img/avatars/av085.png" alt="프로필 초상 85번" loading="lazy"><img class="px" src="assets/img/avatars/av092.png" alt="프로필 초상 92번" loading="lazy"><img class="px" src="assets/img/avatars/av099.png" alt="프로필 초상 99번" loading="lazy"><img class="px" src="assets/img/avatars/av101.png" alt="프로필 초상 101번" loading="lazy"><img class="px" src="assets/img/avatars/av104.png" alt="프로필 초상 104번" loading="lazy"><img class="px" src="assets/img/avatars/av107.png" alt="프로필 초상 107번" loading="lazy"><img class="px" src="assets/img/avatars/av110.png" alt="프로필 초상 110번" loading="lazy"><img class="px" src="assets/img/avatars/av113.png" alt="프로필 초상 113번" loading="lazy"><img class="px" src="assets/img/avatars/av116.png" alt="프로필 초상 116번" loading="lazy"><img class="px" src="assets/img/avatars/av119.png" alt="프로필 초상 119번" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-gear" role="tabpanel" aria-labelledby="t-gear" hidden>
+      <h3>장비 아이콘, 부위 6 × 등급 8</h3><div class="gallery g-style" style="grid-template-columns:repeat(8,minmax(0,1fr))"><img class="px" src="assets/img/gear-icons/head_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="assets/img/gear-icons/head_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="assets/img/gear-icons/head_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="assets/img/gear-icons/head_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="assets/img/gear-icons/head_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="assets/img/gear-icons/head_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="assets/img/gear-icons/head_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="assets/img/gear-icons/head_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="assets/img/gear-icons/body_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="assets/img/gear-icons/body_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="assets/img/gear-icons/body_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="assets/img/gear-icons/body_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="assets/img/gear-icons/body_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="assets/img/gear-icons/body_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="assets/img/gear-icons/body_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="assets/img/gear-icons/body_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="assets/img/gear-icons/legs_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="assets/img/gear-icons/legs_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="assets/img/gear-icons/legs_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="assets/img/gear-icons/legs_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="assets/img/gear-icons/legs_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="assets/img/gear-icons/legs_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="assets/img/gear-icons/legs_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="assets/img/gear-icons/legs_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="assets/img/gear-icons/feet_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="assets/img/gear-icons/feet_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="assets/img/gear-icons/feet_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="assets/img/gear-icons/feet_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="assets/img/gear-icons/feet_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="assets/img/gear-icons/feet_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="assets/img/gear-icons/feet_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="assets/img/gear-icons/feet_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="assets/img/gear-icons/melee_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="assets/img/gear-icons/melee_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="assets/img/gear-icons/melee_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="assets/img/gear-icons/melee_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="assets/img/gear-icons/melee_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="assets/img/gear-icons/melee_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="assets/img/gear-icons/melee_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="assets/img/gear-icons/melee_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="assets/img/gear-icons/ranged_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="assets/img/gear-icons/ranged_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="assets/img/gear-icons/ranged_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="assets/img/gear-icons/ranged_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="assets/img/gear-icons/ranged_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="assets/img/gear-icons/ranged_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="assets/img/gear-icons/ranged_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="assets/img/gear-icons/ranged_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"></div>
+      <h3 class="subhead">스타일 태그, 세트 프레임, 오라, 거리 낙서, 에코 감염</h3><div class="gallery g-style"><img class="px" src="assets/img/style/tags/tag_scrap.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_street.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_survival.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_shadow.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_military.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_mech.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_lab.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_energy.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_knight.png" alt="" loading="lazy"><img class="px" src="assets/img/style/tags/tag_raider.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_01.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_03.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_05.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_07.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_09.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_11.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_13.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_15.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_17.png" alt="" loading="lazy"><img class="px" src="assets/img/style/frames/frame_19.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_01.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_03.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_05.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_07.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_09.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_11.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_13.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_15.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_17.png" alt="" loading="lazy"><img class="px" src="assets/img/style/auras/aura_19.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d01.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d02.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d03.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d04.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d05.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d06.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d07.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d08.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d09.png" alt="" loading="lazy"><img class="px" src="assets/img/style/graffiti/graffiti_d10.png" alt="" loading="lazy"><img class="px" src="assets/img/story/echo_eye_32.png" alt="" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-sound" role="tabpanel" aria-labelledby="t-sound" hidden>
+      <p>배경음악과 효과음은 AI 음악 서비스나 음원 사이트 대신 코드로 직접 합성했다. 파형을 하나씩 계산해 만든 칩튠이라 저작권 걱정 없이 쓸 수 있다. 배경음악 7곡, 효과음 21종이 게임에 들어 있다.</p>
+      <ul class="tracks"><li><b>로비</b><div class="meta">A단조 · 나이트 신스웨이브</div><p>전투 탭과 그 밖 화면 (상점·의뢰·프로필·채팅)</p><audio controls preload="none" src="assets/audio/bgm_lobby.m4a"></audio></li><li><b>전투</b><div class="meta">E단조 · 드라이브 칩튠</div><p>전투 탭 일반 사냥</p><audio controls preload="none" src="assets/audio/bgm_battle.m4a"></audio></li><li><b>보스</b><div class="meta">D단조 · 긴장감</div><p>보스 대기·보스전, 특수 의뢰 전투, PVP (들어갈 때마다 처음부터)</p><audio controls preload="none" src="assets/audio/bgm_boss.m4a"></audio></li><li><b>무기상</b><div class="meta">G도리안 · 스윙 그루브</div><p>에드온 (허브 · 무기상 · 임플란트 · 펫 · 파레트 빌더, 라인 제외)</p><audio controls preload="none" src="assets/audio/bgm_merchant.m4a"></audio></li><li><b>라인</b><div class="meta">D도리안 · 멈춘 역의 밤, 느린 스윙 로파이</div><p>에드온 › 라인 (노선 · 토큰 상점 · 승무원 · 노선 무전)</p><audio controls preload="none" src="assets/audio/bgm_line.m4a"></audio></li><li><b>진압열차</b><div class="meta">C단조 · 선로를 달리는 강철, 16비트 베이스</div><p>라인 › 진압열차 탭 (들어갈 때마다 처음부터)</p><audio controls preload="none" src="assets/audio/bgm_train.m4a"></audio></li><li><b>피트</b><div class="meta">A단조 · 관중이 발을 구르는 하프타임</div><p>PVP 탭 (주간 순위 · 상대 고르기)</p><audio controls preload="none" src="assets/audio/bgm_pit.m4a"></audio></li></ul>
+    </div>
+    <div class="af-panel" id="p-spec" role="tabpanel" aria-labelledby="t-spec" hidden>
+      <table class="spec">
+        <thead><tr><th scope="col">에셋</th><th scope="col">크기 (픽셀)</th><th scope="col">메모</th></tr></thead>
+        <tbody>
+          <tr><td>캐릭터 기본 몸</td><td>24 × 24</td><td>종족 3종 × 자세 2(대기, 겨눔). 장비는 같은 크기의 레이어로 겹친다</td></tr>
+          <tr><td>장비 레이어</td><td>24 × 24</td><td>그림 + 강조 마스크(등급 색) + 피부 마스크(손이 보이는 부위만)</td></tr>
+          <tr><td>일반 적</td><td>24 × 24</td><td>대기와 공격 2장</td></tr>
+          <tr><td>보스, 진압열차</td><td>52 × 52</td><td>구역마다 1종, 열차 3종</td></tr>
+          <tr><td>펫</td><td>16 × 16</td><td>등급 색 강조 마스크 포함</td></tr>
+          <tr><td>구역 배경, 인트로 컷</td><td>256 × 112</td><td>화면에서는 배경 1칸을 2dp로 그린다</td></tr>
+          <tr><td>상인, 프로필 초상</td><td>256 × 256</td><td>상인 3명 × 레벨 5단계, 프로필 120장</td></tr>
+          <tr><td>폰트</td><td>Galmuri 11·14</td><td>SIL OFL 1.1. 도트가 깨지지 않게 정수배 크기로만 쓴다</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 제작기 -->
+<section class="stop" id="making" aria-labelledby="making-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">7</span><span class="station">7번 역</span><h2 id="making-title">제작기. 한 사람과 AI의 게임 스튜디오</h2></div>
+    <p class="lead">기획자, 개발자, 아티스트, 사운드 담당, 운영자가 모두 한 사람이다. 데이터 분석 컨설턴트가 AI를 동료 삼아 아이디어에서 비공개 테스트까지 걸어온 과정을 그대로 정리했다.</p>
+
+    <div class="two" style="margin-top:48px">
+      <div>
+        <h3>엿새의 기록</h3>
+        <ol class="days">
+          <li><time datetime="2026-11-16">11월 16일</time><h3>방향을 정하다</h3><p>펫 육성 웹 프로토타입으로 감을 본 뒤 사이버펑크 방치형 RPG로 방향을 넓혔다. 게임 기획서, 개발 환경, 디자인 시스템, 화면 목업 6장을 하루에 만들었다.</p></li>
+          <li><time datetime="2026-11-17">11월 17일</time><h3>뼈대와 도트 공정</h3><p>재화와 특수 의뢰, 상인 구조를 짜고 45일 밸런스 시뮬레이션을 돌렸다. 장비 외형 132종을 만드는 자동 공정을 세웠다.</p></li>
+          <li><time datetime="2026-11-18">11월 18일</time><h3>이름과 소리</h3><p>이름을 Neon Station으로 바꾸고 앱 ID를 확정했다. 펫 16종, 칩튠 배경음악과 효과음, 채팅, 상인 초상, 프로필 100장을 넣고 아트 팩토리를 만들었다.</p></li>
+          <li><time datetime="2026-11-19">11월 19일</time><h3>서버와 이야기</h3><p>Supabase 서버를 붙여 온라인 PVP와 주간 시즌, 채팅을 열었다. 적 60종과 배경 10장을 채우고 스토리 바이블을 썼다.</p></li>
+          <li><time datetime="2026-11-20">11월 20일</time><h3>스타일과 정책</h3><p>스타일·세트 시스템과 7컷 인트로를 구현하고, 신고·차단·계정 삭제 같은 스토어 정책 항목과 스토어 등록정보를 준비했다.</p></li>
+          <li><time datetime="2026-11-21">11월 21일</time><h3>비공개 테스트</h3><p>Google Play 비공개 테스트를 시작했다. 테스터 의견을 받아 해금 레벨을 앞당기고 PVP 상대 고르기를 바꿨다. 길드 「라인」과 진압열차 작업에 들어갔다.</p></li>
+        </ol>
+      </div>
+      <div>
+        <h3>쓰고 있는 도구</h3>
+        <table class="spec">
+          <tbody>
+            <tr><td>앱</td><td>React Native(Expo), TypeScript. 코드 하나로 Android와 iOS</td></tr>
+            <tr><td>그래픽</td><td>Skia로 도트 스프라이트를 그리고, 픽셀이 번지지 않게 최근접 보간</td></tr>
+            <tr><td>서버</td><td>Supabase(Postgres, RLS, Edge Functions). 재화, 뽑기, 순위는 서버가 계산</td></tr>
+            <tr><td>빌드</td><td>EAS 클라우드 빌드. Mac 없이 iOS까지</td></tr>
+            <tr><td>아트</td><td>PixelLab으로 생성하고 고른 뒤 레이어 추출 스크립트로 정리</td></tr>
+            <tr><td>사운드</td><td>Python으로 합성한 칩튠</td></tr>
+            <tr><td>AI 동료</td><td>Claude. 기획 문서, 코드, 검수, 문서화를 함께</td></tr>
+          </tbody>
+        </table>
+        <h3 class="subhead" style="margin-top:40px">지키는 원칙</h3>
+        <ul class="principles">
+          <li><b>돈과 확률은 서버가 계산한다</b><span>재화, 뽑기, 보상, 순위는 서버 함수에서만 정한다. 앱은 읽기만 한다.</span></li>
+          <li><b>확률은 숨기지 않는다</b><span>국내 확률형 아이템 정보 공개 의무에 맞춰 게임 안에서 모두 공개한다.</span></li>
+          <li><b>남의 세계를 빌리지 않는다</b><span>다른 작품의 고유 명칭이나 디자인은 쓰지 않는다.</span></li>
+          <li><b>매일 기록한다</b><span>매일 아침 9시에 작업일지, 결정 로그, 기획서를 갱신한다.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="subhead">게임 개발 5단계, 지금 위치</h3>
+    <p class="dim">혼자 만들어도 실무처럼. 단계마다 산출물을 정하고, 관문에서 계속할지, 방향을 틀지, 접을지를 판정한다.</p>
+    <ol class="gates">
+      <li class="done"><b>컨셉·기획</b><span>장르, 벤치마크, 기획서</span></li>
+      <li class="done"><b>프리프로덕션</b><span>개발 환경, 디자인 시스템, 목업</span></li>
+      <li class="done"><b>프로덕션</b><span>기능, 도트 에셋, 서버, 사운드</span></li>
+      <li class="now"><b>테스트·QA</b><span>지금 여기. Google Play 비공개 테스트</span></li>
+      <li><b>출시·라이브</b><span>스토어 심사, 시즌 운영</span></li>
+    </ol>
+
+    <h3 class="subhead">도트 한 장이 게임에 들어가기까지</h3>
+    <p class="dim">AI는 후보를 쏟아 낸다. 문제는 그다음이다. 공정을 여섯 단계로 나누고 사람이 하는 일을 한 단계로 줄였다.</p>
+    <ol class="pipeline">
+      <li><b>생성</b><span>기본 몸 위에 장비를 인페인팅으로 그린다</span></li>
+      <li class="human"><b>고르기</b><span>위아래 등급과 나란히 놓고 사람이 고른다</span></li>
+      <li><b>추출</b><span>기본 몸과 달라진 픽셀만 레이어로 남긴다</span></li>
+      <li><b>마스크</b><span>노란 픽셀은 등급 색, 피부색은 피부 마스크로</span></li>
+      <li><b>등록</b><span>레이어 목록, 총구 좌표, 아이콘을 다시 만든다</span></li>
+      <li><b>검사</b><span>빠진 등급, 짝 없는 자세를 테스트가 잡는다</span></li>
+    </ol>
+
+    <div class="records">
+      <div><b>144</b><span>장비 외형</span></div>
+      <div><b>214</b><span>자동 테스트</span></div>
+      <div><b>63</b><span>결정 로그 항목</span></div>
+      <div><b>매일</b><span>브런치 개발 일지 연재</span></div>
+    </div>
+    <p style="margin-top:24px">개발 과정은 브런치에 「AI와 만드는 1인 게임 개발」로 연재하고 있다. <a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">브런치에서 연재 읽기</a></p>
+  </div>
+</section>
+
+<!-- 제작사 -->
+<section class="stop" id="studio" aria-labelledby="studio-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">8</span><span class="station">종착역</span><h2 id="studio-title">제작사. 데이터스테이션</h2></div>
+    <div class="studio-band cut">
+      <div>
+        <p class="motto">The truth will set you free.</p>
+        <p>데이터스테이션은 데이터 분석과 AI를 가르치고 컨설팅하는 회사다. 2018년부터 기업과 기관에 출강해 왔고, Neon Station은 그 현장에서 말해 온 것, 문제를 먼저 정의하고 도구는 그다음에 고른다는 원칙을 게임 개발에 그대로 적용해 본 프로젝트다.</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <a class="btn" href="studio.html">제작사 소개 보기</a>
+        <a class="btn ghost" href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">data-station.co.kr</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <p class="label">제작사</p>
+      <p class="name"><a href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">데이터스테이션</a></p>
+      <p class="motto">The truth will set you free.</p>
+      <p class="biz">사업자등록번호 : 627-29-01315</p>
+      <p class="copy">© 2026 Data Station</p>
+    </div>
+    <div class="ft-links">
+      <a href="studio.html">제작사 소개</a>
+      <a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">개발 일지 (브런치)</a>
+      <a href="privacy/">개인정보처리방침</a>
+      <a href="delete-account/">계정 삭제 안내</a>
+      <a href="#top">처음으로</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
