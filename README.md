@@ -33,7 +33,7 @@
 ## 올린 뒤 손볼 것
 
 - **공유 미리보기 이미지:** 카카오톡·SNS 미리보기는 절대 주소가 필요합니다. 주소가 정해지면 `index.html`, `studio.html`의 `og:image`를 `https://hanarostation.github.io/neon-station-web/assets/img/og-image.png`처럼 바꿔 주세요.
-- **비공개 테스트 신청 링크:** 지금은 데이터스테이션 홈페이지로 연결됩니다. 테스트 신청 폼이나 Google Play 링크가 생기면 `index.html`의 `#guide-test` 버튼 주소를 바꿔 주세요.
+- **비공개 테스트 신청 링크:** 인스타그램 @_neon_station DM(`https://ig.me/m/_neon_station`)으로 연결됩니다. 바꾸려면 `index.html`의 `#guide-test` 버튼 주소를 고치세요.
 - **새 에셋 반영:** 게임의 `assets/sprites/`에서 해당 PNG를 `assets/img/` 같은 경로로 복사하면 됩니다. 장비 외형을 추가했다면 `assets/js/data.js`의 `NS_GEAR`에도 추가합니다.
 - **글자 추가:** 폰트는 지금 쓰인 글자만 남겨 둔 파일이라, 새 문장에 처음 쓰는 한글이 들어가면 그 글자만 기본 글꼴로 보입니다. 원본 TTF(게임 `assets/fonts/`)로 다시 서브셋하거나 원본 woff2로 바꾸면 됩니다.
 
