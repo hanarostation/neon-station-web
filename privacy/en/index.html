@@ -13,9 +13,9 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 </head>
 <body>
 <h1>Neon Station Privacy Policy</h1>
-<p class="muted">Effective date: November 23, 2026 · Operator: Datastation (the “Operator”) · <a href="../">한국어</a></p>
+<p class="muted">Effective date: December 1, 2026 (announced November 24, 2026) · Operator: Datastation (the “Operator”) · <a href="../">한국어</a></p>
 
-<p>The Operator provides the mobile game “Neon Station” (the “Game”) in compliance with the Personal Information Protection Act of the Republic of Korea and other applicable laws, and processes users’ personal information as described below. The Game is played with an anonymous account, without sign-up or login, and does not collect contact information such as your name, phone number or email address.</p>
+<p>The Operator provides the mobile game “Neon Station” (the “Game”) in compliance with the Personal Information Protection Act of the Republic of Korea and other applicable laws, and processes users’ personal information as described below. The Game starts with an anonymous account without sign-up, and you may choose to link a Google or Apple account. If you do not link an account, we do not collect contact information such as your name, phone number or email address.</p>
 
 <h2>1. Information we process and why</h2>
 <table>
@@ -28,12 +28,26 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 <tr><td>Access logs (server logs including IP address)</td><td>Service security and incident response</td><td>Generated automatically when using the server</td></tr>
 <tr><td>App usage events (app open and close, intro completed, level, faction, menu unlocks, set discoveries), a random per-install ID, device information (device model, OS and app version, language), and country and city estimated from the IP address</td><td>Usage statistics, improving game balance and features</td><td>Collected automatically by the analytics tool while using the app</td></tr>
 <tr><td>Error and crash reports and app logs</td><td>Finding and fixing errors</td><td>Collected automatically by the analytics tool when an error occurs</td></tr>
+<tr><td>(Optional) User identifier and email address of the linked Google or Apple account (if you choose “Hide My Email” on Apple, the relay address created by Apple)</td><td>Account linking, restoring progress on another device, identity verification</td><td>When you sign in under Profile › Account link</td></tr>
+<tr><td>(Optional) Game progress backup — the full progress data stored on your device (level, currencies, gear and inventory, settings, etc.)</td><td>Restoring progress when a linked user changes devices or reinstalls, handling support requests</td><td>Only for linked accounts; sent automatically every 10 minutes and when the app goes to the background</td></tr>
+<tr><td>Purchase records — product purchased, store transaction ID and order number, purchase time, environment (real or test), refund status</td><td>Verifying purchases and delivering items, handling refunds and recovering delivered items, preventing fraudulent purchases, keeping legally required records</td><td>Our server checks directly with Google Play and App Store servers when you buy</td></tr>
+<tr><td>Advertising information — advertising identifier (Android advertising ID), device and app information, approximate location estimated from the IP address, ad impression, click and view records</td><td>Serving and measuring rewarded ads, preventing ad fraud</td><td>Collected automatically by the ad SDK (Google AdMob) after the app starts</td></tr>
 </table>
-<p class="muted">Most game progress (currencies, inventory, etc.) is stored only on your device and is not sent to the Operator. We use the analytics tool PostHog for usage statistics and error analysis, and these records are linked to the anonymous account identifier above. This version does not use advertising SDKs, location permission (GPS), contacts, photos or the microphone, and does not track you for targeted advertising or combine your data with data from other companies.</p>
+<p class="muted">If you do not link an account, most game progress (currencies, inventory, etc.) is stored only on your device and is not sent to the Operator. We use the analytics tool PostHog for usage statistics and error analysis, and these records are linked to the account identifier above. Payment method information such as card numbers is handled by Google and Apple and is never received by the Operator. The Game does not use location permission (GPS), contacts, photos or the microphone.</p>
+
+<h2>1-1. Ads and personalized ads</h2>
+<ul>
+<li>The Game shows only <b>rewarded ads</b> from Google AdMob, and an ad plays only when you tap a button such as “Watch ad for 3x”. There are no banner or interstitial ads. If you buy the permanent ad removal, you receive the rewards without ads.</li>
+<li><b>Android</b>: personalized ads may be shown. You can delete or reset your advertising ID in your device’s <b>Settings › Google › Ads</b> (or Settings › Privacy › Ads) to stop personalized ads.</li>
+<li><b>iOS</b>: we do not ask for tracking permission (ATT) and request <b>non-personalized ads only</b>, without the advertising identifier (IDFA).</li>
+<li>Users in the EEA, the UK and Switzerland see an ad consent form on first launch.</li>
+<li>How Google uses information from partner apps: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
+</ul>
 
 <h2>2. Retention and deletion</h2>
 <ul>
-<li>Account and server records: kept until you delete your account, and deleted without delay when you request deletion.</li>
+<li>Account and server records (including linked Google/Apple account information and progress backups): kept until you delete your account, and deleted without delay when you request deletion.</li>
+<li>Purchase records: kept for <b>5 years</b> as required by the Korean Act on the Consumer Protection in Electronic Commerce (records of payment and supply of goods). When you delete your account, we unlink the purchase records from it and keep only those records until the period ends.</li>
 <li>Chat messages: only the latest 500 messages are kept; older messages are deleted automatically.</li>
 <li>Reports: deleted within 6 months after the report is handled (also deleted when the account is deleted).</li>
 <li>App usage and error records (analytics tool): kept for 1 year from collection, then deleted. When you request account deletion, records linked to that account identifier are deleted as well.</li>
@@ -45,8 +59,8 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 <tr><th>Processor</th><th>Task</th><th>Storage location</th></tr>
 <tr><td>Supabase, Inc.</td><td>Database, anonymous authentication and server functions</td><td>Republic of Korea (Seoul region)</td></tr>
 <tr><td>PostHog, Inc.</td><td>Usage statistics and error analysis</td><td>United States</td></tr>
-<tr><td>Google LLC (Google Play)</td><td>App distribution</td><td>Per Google’s policies</td></tr>
-<tr><td>Apple Inc. (App Store)</td><td>App distribution</td><td>Per Apple’s policies</td></tr>
+<tr><td>Google LLC</td><td>App distribution (Google Play), in-app payment processing (Google Play Billing), Google sign-in, ads (AdMob)</td><td>United States and others, per Google’s policies</td></tr>
+<tr><td>Apple Inc.</td><td>App distribution (App Store), in-app purchase processing, Sign in with Apple</td><td>United States and others, per Apple’s policies</td></tr>
 </table>
 <p>The Operator does not sell or provide users’ personal information to third parties.</p>
 
@@ -60,10 +74,21 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 <tr><th>Retention</th><td>1 year from collection (deleted together when you request account deletion)</td></tr>
 <tr><th>How to refuse, and its effect</th><td>If you do not want your information transferred abroad, you can stop using the Game and delete your account, or contact us at the address below. On request, we will delete the analytics records for your account. Analytics records are not used for game features, so refusing does not limit your use of the Game.</td></tr>
 </table>
+<p></p>
+<table>
+<tr><th>Recipient</th><td>Google LLC (AdMob · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form">Google privacy form</a>)</td></tr>
+<tr><th>Country</th><td>United States and other countries where Google operates servers</td></tr>
+<tr><th>Information transferred</th><td>Advertising identifier (Android advertising ID), device and app information, approximate location estimated from the IP address, ad impression, click and view records</td></tr>
+<tr><th>When and how</th><td>When ads are loaded or played after the app starts, over an encrypted connection (HTTPS)</td></tr>
+<tr><th>Purpose</th><td>Serving and measuring rewarded ads, preventing ad fraud</td></tr>
+<tr><th>Retention</th><td>Per Google’s privacy policy</td></tr>
+<tr><th>How to refuse, and its effect</th><td>On Android you can delete or reset the advertising ID in device settings (stops personalized ads). If you do not want any ad information sent, you can stop using the Game; in that case you cannot use the Game.</td></tr>
+</table>
+<p class="muted">Google/Apple sign-in and in-app payments are carried out by you directly on Google’s or Apple’s screens, and the processing of information in those steps follows each company’s privacy policy.</p>
 
 <h2>5. Your rights and how to exercise them</h2>
 <ul>
-<li>In the Game, go to <b>Profile › Info › Delete account &amp; data</b> to immediately delete your server account and records and the progress on your device.</li>
+<li>In the Game, go to <b>Profile › Info › Delete account &amp; data</b> to immediately delete your server account and records (including linked account information and progress backups) and the progress on your device. Purchase records are kept separately from the account for the legal period described in section 2.</li>
 <li>If you have already removed the app, email <a href="mailto:0001jmp@gmail.com">0001jmp@gmail.com</a> with the subject “Neon Station account deletion request” and the <b>nickname</b> you used in the Game. We will delete your data within 10 days and let you know.</li>
 <li>Send requests to access, correct or suspend processing of your information to the contact below. We will reply within 10 days.</li>
 </ul>
@@ -79,8 +104,8 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 <p class="muted">Korean privacy complaint and consultation services: Personal Information Infringement Report Center (privacy.kisa.or.kr, 118 in Korea), Personal Information Dispute Mediation Committee (www.kopico.go.kr, 1833-6972)</p>
 
 <h2>9. Changes</h2>
-<p>If this policy changes, we will announce it on this page and in the Game 7 days before the change takes effect. When we add advertising or payment features, we will update the information processed and the processors on this page first.</p>
+<p>If this policy changes, we will announce it on this page and in the Game 7 days before the change takes effect, and 30 days before for changes that are unfavorable or important to users.</p>
 <p class="muted">This English version is a translation. If it differs from the <a href="../">Korean version</a>, the Korean version prevails.<br>
-History: Nov 21, 2026 first published · Nov 23, 2026 added the analytics tool (PostHog) to the information processed, processors and international transfer, and added the App Store as a distributor.</p>
+History: Nov 21, 2026 first published · Nov 23, 2026 added the analytics tool (PostHog) to the information processed, processors and international transfer, and added the App Store as a distributor · Nov 24, 2026 announced (effective Dec 1, 2026): rewarded ads (Google AdMob), in-app purchases and purchase record retention, Google/Apple account linking and progress backup.</p>
 </body>
 </html>
