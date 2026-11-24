@@ -77,6 +77,7 @@
   const GRADES = [
     ['스크랩', '#8E9CA0'], ['스트리트', '#D8E4E2'], ['커스텀', '#3DDC84'], ['밀스펙', '#3CA0FF'],
     ['블랙마켓', '#A66BFF'], ['프로토타입', '#FF8A1F'], ['레전드', '#FF3B4E'], ['싱귤래리티', '#F5E50A'],
+    ['퀀텀', '#4DFFE5'], ['보이드', '#7B2DFF'], ['오리진', '#FFFFFF'],
   ];
   const RACES = { resistance: { name: '레지스탕스' }, drifter: { name: '부랑자', skin: '#D1A370' }, citizen: { name: '시민' } };
   const SLOTS = [['head', '머리'], ['body', '몸통'], ['legs', '하의'], ['feet', '신발'], ['weapon', '무기']];
@@ -85,7 +86,7 @@
   const cache = {};
   const load = (src) => cache[src] || (cache[src] = new Promise((res) => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = src; }));
   const tint = (im, color) => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); x.globalCompositeOperation = 'source-in'; x.fillStyle = color; x.fillRect(0, 0, c.width, c.height); return c; };
-  const parse = (id) => { const m = /^(head|body|legs|feet|melee|ranged)_(\d)([a-e]?)$/.exec(id || ''); return m && { kind: m[1], grade: +m[2], v: m[3] }; };
+  const parse = (id) => { const m = /^(head|body|legs|feet|melee|ranged)_(\d{1,2})([a-e]?)$/.exec(id || ''); return m && { kind: m[1], grade: +m[2], v: m[3] }; };
   const hasSkin = (p) => ((GEAR[p.kind] || {})[p.grade] || []).some(([v, s]) => v === p.v && s);
 
   async function compose(look, race, canvas) {
@@ -117,7 +118,7 @@
     return `${GRADES[p.grade - 1][0]}${list.length > 1 ? ` 외형 ${idx + 1}` : ''}${named ? ` · ${named}` : ''}`;
   };
 
-  const state = { race: 'resistance', wtype: 'ranged', look: { head: 'head_8', body: 'body_8', legs: 'legs_8', feet: 'feet_8', weapon: 'ranged_8' } };
+  const state = { race: 'resistance', wtype: 'ranged', look: { head: 'head_11', body: 'body_11', legs: 'legs_11', feet: 'feet_11', weapon: 'ranged_11' } };
   const stageCanvas = $('#doll');
   const readout = $('#doll-readout');
   const kindOf = (slot) => (slot === 'weapon' ? state.wtype : slot);
@@ -164,7 +165,7 @@
   }));
   $('#doll-random').addEventListener('click', () => {
     state.wtype = Math.random() < 0.5 ? 'melee' : 'ranged';
-    SLOTS.forEach(([s]) => { const kind = kindOf(s); const gr = 1 + Math.floor(Math.random() * 8); const list = GEAR[kind][gr]; state.look[s] = `${kind}_${gr}${list[Math.floor(Math.random() * list.length)][0]}`; });
+    SLOTS.forEach(([s]) => { const kind = kindOf(s); const gr = 1 + Math.floor(Math.random() * GRADES.length); const list = GEAR[kind][gr]; state.look[s] = `${kind}_${gr}${list[Math.floor(Math.random() * list.length)][0]}`; });
     render();
   });
 

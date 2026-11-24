@@ -8,9 +8,9 @@
 | `studio.html` | 제작사 데이터스테이션 소개 |
 | `assets/css/style.css` | 스타일 (색은 게임 `src/constants/theme.ts`·`grades.ts`와 같은 값) |
 | `assets/js/main.js` | 컷신, 노선도 표시, 상인 초상, 아트 팩토리 탭, 외형 실험실 |
-| `assets/js/data.js` | 장비 외형 목록·시그니처 세트 (게임 `assets/sprites/gear`, `docs/art-factory.json`에서 추출) |
+| `assets/js/data.js` | 장비 외형 목록(11등급)·시그니처 세트 (게임 `assets/sprites/gear`, `docs/art-factory.json`에서 추출) |
 | `assets/img/` | 게임 도트 에셋 사본, 스토어 스크린샷(webp), 공유용 이미지 `og-image.png` |
-| `assets/audio/` | 배경음악 7곡 (코드 합성 칩튠) |
+| `assets/audio/` | 배경음악 10곡 (코드 합성 칩튠) |
 | `assets/fonts/` | 갈무리(Galmuri) 폰트 — 사이트에 쓰인 글자만 남긴 woff2, SIL OFL 1.1 (`OFL.txt`) |
 
 ## GitHub Pages로 올리기
@@ -38,3 +38,7 @@
 - **글자 추가:** 폰트는 지금 쓰인 글자만 남겨 둔 파일이라, 새 문장에 처음 쓰는 한글이 들어가면 그 글자만 기본 글꼴로 보입니다. 원본 TTF(게임 `assets/fonts/`)로 다시 서브셋하거나 원본 woff2로 바꾸면 됩니다.
 
 로컬에서 미리 보려면 이 폴더에서 `python -m http.server 8000` 실행 후 http://localhost:8000 을 엽니다.
+
+## 갱신 기록
+
+- 2026-11-24: 1.1.0 기준으로 갱신 — 장비 11등급(퀀텀·보이드·오리진)·외형 264종, 스킬트리·칩, 특수 의뢰 5종(중계 서버 해킹), 온라인 탭(PVP·라인), 3개 언어, 무기상 Lv50, 배경음악 10곡, 프로필 204장, 스토어 스크린샷 v1.1.0, 새 앱 아이콘(파비콘), 테스트 안내(비공개 테스트 테스터 모집·App Store 출시 준비), 바닥글에 인스타그램·고객 지원 링크, 제작사 페이지에 데이터스테이션 로고.

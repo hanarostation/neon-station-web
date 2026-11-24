@@ -255,7 +255,7 @@ details.log p { margin: 0; color: var(--text); }
 .shots figcaption { font-size: 14px; color: var(--dim); padding-top: 8px; }
 .features { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; }
 .feature { border-top: 3px solid var(--fc, var(--cyan)); padding: 18px 0 0; }
-.feature h3 { font-size: 24px; }
+.feature h3 { font-size: 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .feature ul { margin: 0; padding-left: 18px; color: var(--dim); font-size: 15px; }
 .feature li { margin-bottom: 4px; }
 .feature .ico { width: 48px; height: 48px; float: right; margin-left: 8px; }
@@ -275,11 +275,12 @@ details.log p { margin: 0; color: var(--text); }
 .ctl-row > span { font: 700 12px/1 var(--pixel); }
 .grades { display: flex; flex-wrap: wrap; gap: 4px; }
 .grades button {
-  width: 34px; height: 34px; border: 2px solid var(--g); background: transparent; color: var(--g);
+  width: 32px; height: 34px; border: 2px solid var(--g); background: transparent; color: var(--g);
   font: 700 12px/1 var(--pixel); cursor: pointer;
 }
 .grades button[aria-pressed="true"] { background: var(--g); color: var(--bg); }
 .grades button.off { --g: var(--dim); width: auto; padding: 0 8px; }
+.grades button[data-g="11"][aria-pressed="false"] { color: var(--text); }
 .var-btn { min-width: 64px; height: 34px; background: var(--raised); border: 1px solid var(--line); color: var(--text); font: 12px/1 var(--pixel); cursor: pointer; }
 .var-btn:disabled { opacity: .35; cursor: default; }
 .seg { display: inline-flex; border: 1px solid var(--line); }
@@ -306,17 +307,19 @@ details.log p { margin: 0; color: var(--text); }
 .tabs5 div:last-child { border-right: 0; }
 .tabs5 b { font: 700 15px/1.4 var(--pixel); color: var(--yellow); display: block; margin-bottom: 6px; }
 .tabs5 span { font-size: 14px; color: var(--dim); }
-.money { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 20px; }
+.money { grid-template-columns: repeat(6, minmax(0, 1fr)); margin-top: 20px; }
 .money div { text-align: center; padding: 16px 10px; background: var(--surface); }
 .money img { width: 56px; height: 52px; }
 .money b { display: block; font: 700 12px/1.6 var(--pixel); }
 .money span { font-size: 13px; color: var(--dim); line-height: 1.5; display: block; }
-.ladder { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; margin-top: 20px; }
+.ladder { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; margin-top: 20px; }
 .ladder div { border-top: 6px solid var(--g); background: var(--surface); padding: 12px 10px; }
-.ladder img { width: 100%; aspect-ratio: 128 / 112; display: block; }
+.ladder img { width: 72%; aspect-ratio: 128 / 112; display: block; margin: 0 auto 6px; }
 .ladder b { font: 700 12px/1.5 var(--pixel); color: var(--g); display: block; }
 .ladder span { font-size: 12.5px; color: var(--dim); line-height: 1.45; display: block; }
-.requests { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; }
+.requests { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 20px; }
+.gallery.gear-grid { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+.gear-grid img { padding: 4px; }
 .requests img { width: 144px; height: 144px; display: block; background: var(--raised); }
 .requests b { display: block; font: 700 12px/1.6 var(--pixel); margin-top: 10px; }
 .requests span { font-size: 14px; color: var(--dim); }
@@ -414,7 +417,9 @@ footer.site .ft-links { display: flex; flex-direction: column; gap: 8px; text-al
   .tabs5 div { border-bottom: 1px solid var(--line); }
   .money { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ladder { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .requests { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .money { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .requests { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gallery.gear-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .gates, .pipeline { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 4px; }
   .records { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stratum { grid-template-columns: 90px 1fr; }
