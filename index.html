@@ -35,6 +35,7 @@
         <li><a href="#studio">제작사</a></li>
       </ol>
     </nav>
+    <div class="pagelinks"><a href="guide.html">가이드</a><a href="news.html">공지</a></div>
   </div>
 </header>
 
@@ -57,18 +58,23 @@
         <h1 id="hero-title">켜 두면 알아서 싸우고,<br><span class="y">입는 대로 모습이 바뀐다.</span></h1>
         <p class="lead">2087년, 궤도 엘리베이터 공사가 멈추며 수직 도시가 된 거대 정거장. 신분 칩이 지워진 채 깨어난 당신은 도시를 관리하는 AI ECHO의 기록에 없는 단 한 사람이다.</p>
         <div class="ctas">
-          <a class="btn" href="#guide-test">테스터 신청 안내</a>
-          <a class="btn ghost" href="#story">스토리 읽기</a>
+          <a class="btn" data-appstore data-fallback="App Store에서 「Neon Station」 검색">App Store에서 받기</a>
+          <a class="btn ghost" href="guide.html">시작 가이드</a>
+          <a class="btn ghost" href="#guide-test">안드로이드 테스터 신청</a>
         </div>
       </div>
       <ul class="facts">
         <li><b>장르</b><span>사이버펑크 도트 방치형 RPG. 자동 전투와 장비 수집</span></li>
-        <li><b>플랫폼</b><span>Android, iOS. Google Play 비공개 테스트 테스터 모집 중, App Store 출시 준비 중</span></li>
+        <li><b>플랫폼</b><span>iOS App Store 출시. Android는 Google Play 비공개 테스트 테스터 모집 중</span></li>
         <li><b>무대</b><span>10개 구역, 10개 갱단, 적 60종</span></li>
-        <li><b>수집</b><span>장비 11등급, 외형 264종, 시그니처 세트 20종, 펫 16종</span></li>
+        <li><b>수집</b><span>장비 11등급, 외형 264종, 시그니처 세트 30종, 펫 16종</span></li>
         <li><b>언어</b><span>한국어, English, 中文(简体)</span></li>
         <li><b>제작</b><span>데이터스테이션. 1인 개발, AI와 함께</span></li>
       </ul>
+    </div>
+    <div class="latest" aria-labelledby="latest-title">
+      <div class="latest-head"><h2 id="latest-title">최신 소식</h2><a href="news.html">공지 전체 보기</a></div>
+      <ul data-latest="3"></ul>
     </div>
   </div>
 </section>
@@ -345,7 +351,7 @@
     <div class="grid features">
       <article class="feature" style="--fc:var(--yellow)"><img class="ico px" src="assets/img/ui-icons/icon_coins.png" alt=""><h3>자동 전투</h3><ul><li>10개 구역, 구역마다 다른 갱단과 보스</li><li>자리를 비운 동안에도 쌓이는 방치 보상</li><li>켜 두고 사냥하면 접속 보상이 따로 쌓인다</li></ul></article>
       <article class="feature" style="--fc:var(--orange)"><img class="ico px" src="assets/img/gear-icons/ranged_9.png" alt=""><h3>무기상 거래</h3><ul><li>스크랩부터 오리진까지 11등급</li><li>머리, 몸통, 하의, 신발, 무기 5부위</li><li>무기상은 최대 Lv50. 레벨이 오를수록 높은 등급이 열린다</li></ul></article>
-      <article class="feature" style="--fc:var(--cyan)"><img class="ico px" src="assets/img/gear-icons/head_11.png" alt=""><h3>외형 수집</h3><ul><li>장착한 장비가 그대로 캐릭터의 모습이 된다</li><li>외형 264종과 파레트 빌더 도색</li><li>단서를 모아 시그니처 세트 20종을 활성화한다</li></ul></article>
+      <article class="feature" style="--fc:var(--cyan)"><img class="ico px" src="assets/img/gear-icons/head_11.png" alt=""><h3>외형 수집</h3><ul><li>장착한 장비가 그대로 캐릭터의 모습이 된다</li><li>외형 264종과 파레트 빌더 도색</li><li>단서를 모아 시그니처 세트 30종을 활성화한다</li></ul></article>
       <article class="feature" style="--fc:#4DFFE5"><img class="ico px" src="assets/img/ui-icons/icon_chips.png" alt=""><h3>스킬트리 <span class="tag soon">새 기능</span></h3><ul><li>신경 칩을 모아 16층 그물 나무를 키운다</li><li>스펙, 의뢰, PVP, 에드온 네 계열</li><li>계정 Lv10에 에드온에서 열린다</li></ul></article>
       <article class="feature" style="--fc:var(--green)"><img class="ico px" src="assets/img/pet-icons/pet_mechwolf.png" alt=""><h3>펫</h3><ul><li>펫 브리더가 고친 애완 로봇과 드론 16종</li><li>지상 펫과 공중 펫을 함께 편성하면 조합 보너스</li></ul></article>
       <article class="feature" style="--fc:#A66BFF"><img class="ico px" src="assets/img/ui-icons/implant_neural.png" alt=""><h3>임플란트</h3><ul><li>신경, 골격, 지능 세 계통</li><li>전투 중 자동으로 발동하는 기술</li><li>신경 부하 한도 안에서 조합을 고민한다</li></ul></article>
@@ -376,7 +382,7 @@
         <p class="dim" style="margin:4px 0 0;font-size:14px">숫자는 장비 등급이다. 같은 등급 안에도 외형이 1~5가지 있어 「외형」 버튼으로 넘겨 볼 수 있다. 외형은 능력치와 확률에 영향을 주지 않는다.</p>
       </div>
     </div>
-    <h3 class="subhead">시그니처 세트 20</h3>
+    <h3 class="subhead">시그니처 세트 30</h3>
     <p class="dim">특정 외형을 모아 입으면 숨겨진 세트가 발견되고, 세트마다 작은 효과와 전용 프로필이 열린다. 세트를 누르면 실험실에 입혀진다.</p>
     <div id="sets" class="grid sets"></div>
   </div>
@@ -434,9 +440,9 @@
     </div>
 
     <div class="callout" id="guide-test">
-      <h3>비공개 테스트 테스터 모집</h3>
-      <p>Neon Station은 Google Play 정식 출시 전 비공개 테스트에 함께할 테스터를 모으고 있다. 안드로이드 폰이 있다면 인스타그램 <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>으로 DM을 보내 주면 참여 방법을 알려 준다. 테스트 중 받은 의견은 매일 게임에 반영한다. 아이폰 버전은 App Store 출시를 준비하고 있다.</p>
-      <p style="margin:0;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="https://ig.me/m/_neon_station" target="_blank" rel="noopener">인스타그램 DM으로 신청하기</a><a class="btn ghost" href="support/">고객 지원</a></p>
+      <h3>아이폰은 지금, 안드로이드는 테스터로</h3>
+      <p>Neon Station은 App Store에 출시되어 아이폰 · 아이패드에서 바로 받을 수 있다. 안드로이드는 Google Play 정식 출시 전 비공개 테스트에 함께할 테스터를 모으고 있다. 인스타그램 <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>으로 DM을 보내 주면 참여 방법을 알려 준다. 처음이라면 <a href="guide.html">시작 가이드</a>부터 읽어 보자.</p>
+      <p style="margin:0;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="https://ig.me/m/_neon_station" target="_blank" rel="noopener">안드로이드 테스터 신청 (DM)</a><a class="btn ghost" data-appstore data-fallback="App Store에서 「Neon Station」 검색">App Store에서 받기</a><a class="btn ghost" href="news.html">공지</a></p>
     </div>
   </div>
 </section>
@@ -494,7 +500,7 @@
           <tr><td>펫</td><td>16 × 16</td><td>등급 색 강조 마스크 포함</td></tr>
           <tr><td>구역 배경, 인트로 컷</td><td>256 × 112</td><td>화면에서는 배경 1칸을 2dp로 그린다</td></tr>
           <tr><td>상인, 프로필 초상</td><td>256 × 256</td><td>상인 3명 × 레벨 5단계, 프로필 204장</td></tr>
-          <tr><td>세트 오라</td><td>36 × 36</td><td>세트 20종마다 3프레임, 몸을 감싸는 빛과 발밑 고리</td></tr>
+          <tr><td>세트 오라</td><td>36 × 36</td><td>세트 30종마다 3프레임, 몸을 감싸는 빛과 발밑 고리</td></tr>
           <tr><td>폰트</td><td>Galmuri 11·14, Fusion Pixel 12</td><td>SIL OFL 1.1. 중국어판은 Fusion Pixel. 도트가 깨지지 않게 정수배 크기로만 쓴다</td></tr>
         </tbody>
       </table>
@@ -510,7 +516,7 @@
 
     <div class="two" style="margin-top:48px">
       <div>
-        <h3>아흐레의 기록</h3>
+        <h3>열흘의 기록</h3>
         <ol class="days">
           <li><time datetime="2026-11-16">11월 16일</time><h3>방향을 정하다</h3><p>펫 육성 웹 프로토타입으로 감을 본 뒤 사이버펑크 방치형 RPG로 방향을 넓혔다. 게임 기획서, 개발 환경, 디자인 시스템, 화면 목업 6장을 하루에 만들었다.</p></li>
           <li><time datetime="2026-11-17">11월 17일</time><h3>뼈대와 도트 공정</h3><p>재화와 특수 의뢰, 상인 구조를 짜고 45일 밸런스 시뮬레이션을 돌렸다. 장비 외형을 대량으로 만드는 자동 공정을 세웠다.</p></li>
@@ -520,7 +526,8 @@
           <li><time datetime="2026-11-21">11월 21일</time><h3>라인과 첫 테스터</h3><p>Google Play 테스트 트랙에 첫 빌드를 올리고 테스터 의견을 받기 시작했다. 길드 「라인」과 진압열차, 시그니처 세트 20종, 칭호 112종을 넣었다.</p></li>
           <li><time datetime="2026-11-22">11월 22일</time><h3>싱귤래리티 너머</h3><p>퀀텀, 보이드, 오리진 세 등급을 더해 장비를 11등급으로 늘리고, 접속 시간 보상과 업데이트 선물을 만들었다. 소개 사이트를 neon-station.com에 열었다.</p></li>
           <li><time datetime="2026-11-23">11월 23일</time><h3>스킬트리와 세 언어</h3><p>칩으로 키우는 16층 스킬트리와 중계 서버 해킹 의뢰, 온라인 탭, 영어·중국어판을 넣었다. iOS 첫 빌드를 TestFlight에 올렸다.</p></li>
-          <li><time datetime="2026-11-24">11월 24일</time><h3>1.1.0, 두 스토어로</h3><p>무기상 Lv50, 쿠폰, 새 외형 66종, 전투 배경음악 3곡, 채팅 금칙어와 이용 규칙을 넣은 1.1.0을 만들었다. App Store에 첫 심사를 내고, Google Play 비공개 테스트 테스터를 모으기 시작했다.</p></li>
+          <li><time datetime="2026-11-24">11월 24일</time><h3>App Store 출시</h3><p>무기상 Lv50, 쿠폰, 새 외형 66종, 세트 30종, 전투 배경음악 3곡, 채팅 금칙어를 넣은 1.1.0으로 App Store 심사를 통과해 iOS에 출시했다. 같은 날 앱 안 결제와 계정 연동을 담은 1.1.1을 만들었다.</p></li>
+          <li><time datetime="2026-11-25">11월 25일</time><h3>1.1.2와 안내서</h3><p>아이템 레벨, 상위 외형 330종, 진압열차 기여도 보상을 담은 1.1.2를 준비하고, 처음 온 러너를 위한 시작 가이드와 공지 게시판을 열었다.</p></li>
         </ol>
       </div>
       <div>
@@ -554,8 +561,8 @@
       <li class="done"><b>컨셉·기획</b><span>장르, 벤치마크, 기획서</span></li>
       <li class="done"><b>프리프로덕션</b><span>개발 환경, 디자인 시스템, 목업</span></li>
       <li class="done"><b>프로덕션</b><span>기능, 도트 에셋, 서버, 사운드</span></li>
-      <li class="now"><b>테스트·QA</b><span>지금 여기. Google Play 비공개 테스트, App Store 심사</span></li>
-      <li><b>출시·라이브</b><span>스토어 심사, 시즌 운영</span></li>
+      <li class="done"><b>테스트·QA</b><span>Google Play 비공개 테스트는 계속</span></li>
+      <li class="now"><b>출시·라이브</b><span>지금 여기. iOS 출시, 업데이트와 공지 운영</span></li>
     </ol>
 
     <h3 class="subhead">도트 한 장이 게임에 들어가기까지</h3>
@@ -571,7 +578,7 @@
 
     <div class="records">
       <div><b>264</b><span>장비 외형</span></div>
-      <div><b>95</b><span>결정 로그 항목</span></div>
+      <div><b>107</b><span>결정 로그 항목</span></div>
       <div><b>3</b><span>언어 (한국어, English, 中文)</span></div>
       <div><b>26</b><span>브런치 개발 일지 원고</span></div>
     </div>
@@ -609,10 +616,12 @@
     <div class="ft-links">
       <a href="studio.html">제작사 소개</a>
       <a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">개발 일지 (브런치)</a>
+      <a href="guide.html">시작 가이드</a>
+      <a href="news.html">공지</a>
       <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">인스타그램</a>
       <a href="support/">고객 지원</a>
       <a href="privacy/">개인정보처리방침</a>
-      <a href="terms/">이용약관 · 환불</a>
+      <a href="terms/">이용약관</a>
       <a href="delete-account/">계정 삭제 안내</a>
       <a href="#top">처음으로</a>
     </div>
@@ -620,6 +629,8 @@
 </footer>
 
 <script src="assets/js/data.js"></script>
+<script src="assets/js/news-data.js"></script>
+<script src="assets/js/news.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
