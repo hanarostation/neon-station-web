@@ -241,8 +241,8 @@ details.log p { margin: 0; color: var(--text); }
 .emblem { position: relative; width: 192px; height: 192px; }
 .emblem img { display: block; }
 .emblem span { position: absolute; inset: 0; display: grid; place-items: center; font: 45px/1 var(--display); color: var(--text); }
-.line-band .trains { display: flex; gap: 12px; margin-top: 16px; }
-.line-band .trains img { width: 104px; background: var(--raised); }
+.line-band .trains { display: grid; grid-template-columns: repeat(5, minmax(0, 88px)); gap: 8px; margin-top: 16px; }
+.line-band .trains img { width: 100%; background: var(--raised); }
 .glossary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; margin: 40px 0 0; }
 .glossary div { padding: 12px 0; border-bottom: 1px solid var(--line); }
 .glossary dt { font: 700 12px/1.6 var(--pixel); color: var(--yellow); }

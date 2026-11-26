@@ -38,7 +38,7 @@
   <section class="sub-hero">
     <div class="wrap">
       <div class="signal" aria-hidden="true"><i></i><i></i><i></i></div>
-      <p class="basis" style="margin-top:18px">처음 내린 승객을 위한 안내서 · 앱 1.1.2 기준 · 2026년 11월 25일 갱신</p>
+      <p class="basis" style="margin-top:18px">처음 내린 승객을 위한 안내서 · 앱 1.1.3 기준 · 2026년 11월 26일 갱신</p>
       <h1>시작 가이드</h1>
       <p class="lead">Neon Station은 켜 두면 캐릭터가 알아서 싸우는 방치형 RPG입니다. 하루 몇 분만 들여다봐도 충분합니다. 이 페이지만 읽으면 첫날 무엇을 하면 되는지, 언제 무엇이 열리는지 알 수 있습니다.</p>
       <div class="drone">
@@ -153,8 +153,8 @@
         <ol class="unlock-line">
           <li style="--c:var(--yellow)"><span class="lv">Lv1</span><b>무기상 · 특수 의뢰 · PVP · 상점</b><span>특수 의뢰 「갱단 금고 습격」(코인), 「해결사 의뢰」(명성)부터 시작합니다.</span></li>
           <li style="--c:#A66BFF"><span class="lv">Lv5</span><b>임플란트</b><span>크롬으로 신경 · 골격 · 지능 임플란트를 시술합니다. 「사이보그 폐기장」(크롬) 의뢰가 함께 열립니다.</span></li>
-          <li style="--c:#4DFFE5"><span class="lv">Lv10</span><b>스킬트리 · 라인</b><span>칩으로 스킬을 올립니다. 「중계 서버 해킹」(칩) 의뢰가 열리고, 온라인 탭에서 길드 라인에 탈 수 있습니다.</span></li>
-          <li style="--c:var(--green)"><span class="lv">Lv15</span><b>펫</b><span>식량으로 로봇 펫과 드론을 입양합니다. 「보급 트럭 탈취」(식량) 의뢰가 열립니다.</span></li>
+          <li style="--c:#4DFFE5"><span class="lv">Lv10</span><b>스킬트리 · 라인</b><span>칩으로 스펙 · 의뢰 · PVP · 임플란트 · 펫 · 에드온 여섯 계열의 스킬을 올립니다. 「중계 서버 해킹」(칩) 의뢰가 열리고, 온라인 탭에서 길드 라인에 탈 수 있습니다.</span></li>
+          <li style="--c:var(--green)"><span class="lv">Lv15</span><b>펫</b><span>식량으로 로봇 펫과 드론 55종(등급마다 5종)을 입양합니다. 「보급 트럭 탈취」(식량) 의뢰가 열립니다.</span></li>
           <li style="--c:var(--cyan)"><span class="lv">Lv20</span><b>파레트 빌더</b><span>외형 도감, 도색, 스타일 태그, 시그니처 세트.</span></li>
           <li style="--c:var(--line)"><span class="lv">Lv50</span><b>임플란트 2번째 칸</b><span>계열마다 두 번째 칸이 열립니다.</span></li>
         </ol>
@@ -187,13 +187,13 @@
           <li><label><input type="checkbox" data-k="req"><img class="px" src="assets/img/scenes/request_vault.png" alt=""><div><b>특수 의뢰</b><span>의뢰마다 하루 3번. 한 번 클리어한 레벨은 [소탕]으로 바로 보상을 받습니다.</span></div></label></li>
           <li><label><input type="checkbox" data-k="pvp"><img class="px" src="assets/img/guide/spot_pvp.png" alt="" style="object-fit:cover"><div><b>PVP 무료 도전권 5장</b><span>쓰지 않은 무료 도전권은 다음 날로 넘어가지 않습니다.</span></div></label></li>
           <li><label><input type="checkbox" data-k="line"><img class="px" src="assets/img/line-art/line_emblem_tide.png" alt=""><div><b>라인 출석 · 승차권 납부</b><span>토큰과 노선 경험치. 라인에 탄 뒤부터(계정 Lv10).</span></div></label></li>
-          <li><label><input type="checkbox" data-k="train"><img class="px" src="assets/img/line-art/train_1.png" alt=""><div><b>진압열차 공격 3번</b><span>라인 승무원이 함께 피해를 쌓아 주간 보스를 멈춥니다.</span></div></label></li>
+          <li><label><input type="checkbox" data-k="train"><img class="px" src="assets/img/line-art/train_1.png" alt=""><div><b>진압열차 공격 3번</b><span>라인 승무원이 함께 피해를 쌓아 멈춥니다. 한 대를 멈추면 바로 다음 호가 내려옵니다(최대 10호).</span></div></label></li>
         </ul>
         <div class="daily-ctl"><span id="daily-left"></span><button type="button" id="daily-reset">모두 지우기</button></div>
         <h3 style="margin-top:32px">매주 월요일 오전 9시</h3>
         <ul>
           <li>PVP 주간 순위가 확정됩니다. PVP 화면 위 「지난 주 순위 보상」에서 [보상 받기]를 누르세요. 한 번이라도 대전한 러너만 순위에 듭니다.</li>
-          <li>새 진압열차가 내려옵니다(1호 블랙아웃 → 2호 레드라인 → 3호 제로아워).</li>
+          <li>진압열차가 1호부터 다시 시작합니다. 1호 블랙아웃에서 10호 종착역까지, 단계가 오를수록 체력이 크게 늘고 보상도 커집니다. 보상은 그 열차에 넣은 피해(기여도)에 따라 나뉩니다.</li>
         </ul>
       </section>
 
@@ -218,9 +218,9 @@
       <section class="gch tips" id="g-tips" aria-labelledby="h-tips">
         <h2 id="h-tips"><span class="gno">8</span>꼭 알아 둘 팁</h2>
         <details><summary>장비가 너무 많이 쌓여요</summary><p>무기상 인벤토리는 장착했을 때 전투력이 많이 오르는 순으로 정렬됩니다. [일괄 판매]는 장착해도 전투력이 오르지 않는 장비만 팝니다. 아끼는 장비는 장비 상세에서 [잠금]을 눌러 두면 판매에서 보호됩니다.</p></details>
-        <details><summary>높은 등급이 안 나와요 (천장)</summary><p>같은 무기상 레벨에서 200번 거래하는 동안 그 레벨의 해금 등급 이상이 한 번도 안 나오면, 다음 거래에서 해금 등급이 확정으로 나옵니다. 리퍼메딕 · 펫 브리더는 100번입니다. 등급별 확률은 각 화면의 「확률 정보」에서 모두 볼 수 있습니다.</p></details>
-        <details><summary>근거리와 원거리, 무엇이 좋나요?</summary><p>원거리는 제자리에서 쏘고, 근거리는 적 앞까지 걸어가 싸웁니다. 다가가는 동안 맞는 것을 보전하려고 근거리 무기는 받는 피해가 8% 줄고, PVP에서는 추가 보정이 붙습니다. 세기는 등급과 레벨이 정하니 마음에 드는 모습을 고르세요.</p></details>
-        <details><summary>시그니처 세트는 어떻게 맞추나요?</summary><p>① 힌트 조각 3개로 필요한 부위와 외형을 알아냅니다(플레이하며 얻거나 명성으로 삽니다). ② 그 외형을 도감에 엽니다(장비를 얻거나 도면 조각으로 해금). ③ 필요한 칸을 모두 그 외형으로 장착하거나 도색합니다. 모두 맞는 순간 자동으로 발견되고, 세트 오라 · 세트 프로필 · 칭호를 받습니다. 세트는 30종입니다.</p></details>
+        <details><summary>높은 등급이 안 나와요 (천장)</summary><p>같은 무기상 레벨에서 200번 거래하는 동안 그 레벨의 해금 등급 이상이 한 번도 안 나오면, 다음 거래에서 해금 등급이 확정으로 나옵니다. 리퍼메딕 · 펫 브리더는 100번이고, 이 둘은 Lv15까지 올라 퀀텀(Lv12) · 보이드(Lv14) · 오리진(Lv15) 등급이 열립니다. 무기상 초상을 누르면 레벨별 확률표를 넘겨 볼 수 있고, 다른 등급별 확률도 각 화면의 「확률 정보」에서 모두 볼 수 있습니다.</p></details>
+        <details><summary>근거리와 원거리, 무엇이 좋나요?</summary><p>원거리는 제자리에서 쏘고, 근거리는 적 앞까지 걸어가 싸웁니다. 다가가는 동안 맞는 것을 보전하려고 근거리 무기는 받는 피해가 8% 줄고, PVP에서는 추가 보정이 붙습니다. 장비 부 옵션의 「근거리 공격력」 · 「원거리 공격력」은 장착한 무기 종류가 맞을 때만 적용되니, 무기를 바꿀 때 옵션도 함께 보세요.</p></details>
+        <details><summary>시그니처 세트는 어떻게 맞추나요?</summary><p>① 힌트 조각 3개로 필요한 부위와 외형을 알아냅니다(플레이하며 얻거나 명성으로 삽니다). ② 그 외형을 도감에 엽니다(장비를 얻거나 도면 조각으로 해금). ③ 필요한 칸을 모두 그 외형으로 장착하거나 도색합니다. 모두 맞는 순간 자동으로 발견되고, 세트 오라 · 세트 프로필 · 칭호를 받습니다. 세트는 40종이고, 31~40번은 상위 외형(아이템 Lv26 이상)으로 맞춥니다.</p></details>
         <details><summary>도색이 뭔가요?</summary><p>파레트 빌더 › 스타일 탭에서 장비 칸에 다른 외형을 입히는 것입니다. 능력치는 그대로 두고 모습과 스타일 태그만 바뀝니다. 비용은 도면 조각이고, 지우기는 무료입니다.</p></details>
         <details><summary>휴대폰을 바꾸면 진행이 사라지나요?</summary><p>계정 연동을 하지 않았다면 진행은 기기 안에만 있습니다. 프로필 › 계정 연동에서 Google 또는 Apple 계정을 연결하면 서버에 자동으로 백업되고, 새 기기에서 같은 계정으로 불러올 수 있습니다(1.1.1부터).</p></details>
         <details><summary>쿠폰은 어디서 받나요?</summary><p>쿠폰 코드는 인스타그램 @_neon_station과 이 사이트의 공지에 올라옵니다. 프로필 › [쿠폰 입력]에 넣으면 보상을 받습니다. 계정당 한 번이고 인터넷 연결이 필요합니다.</p></details>
@@ -237,12 +237,14 @@
           <div><dt>에드온</dt><dd>0번 승강장의 상인과 성장 메뉴를 모은 탭.</dd></div>
           <div><dt>피트</dt><dd>지하 투기장. PVP를 하는 곳.</dd></div>
           <div><dt>라인</dt><dd>길드. 라인장은 기관사, 부라인장은 차장.</dd></div>
-          <div><dt>진압열차</dt><dd>매주 내려오는 라인 보스.</dd></div>
+          <div><dt>진압열차</dt><dd>매주 1호부터 10호까지 차례로 내려오는 라인 보스.</dd></div>
           <div><dt>천장</dt><dd>정해진 횟수 안에 좋은 등급이 안 나오면 확정으로 주는 장치.</dd></div>
           <div><dt>도면 조각</dt><dd>장비를 팔면 쌓이는 재료. 외형 해금과 도색에 씁니다.</dd></div>
           <div><dt>공명</dt><dd>장착 5칸이 모두 같은 등급 이상일 때 붙는 보너스.</dd></div>
           <div><dt>에코 감염</dt><dd>높은 등급 임플란트와 에너지 외형이 쌓이면 생기는 강하지만 위험한 상태.</dd></div>
           <div><dt>소탕</dt><dd>이미 클리어한 의뢰의 보상을 전투 없이 바로 받는 것.</dd></div>
+          <div><dt>아이템 레벨</dt><dd>같은 등급 안에서의 레벨(1~50). Lv26부터 상위 외형을 입습니다.</dd></div>
+          <div><dt>신경 부하</dt><dd>임플란트 등급 합의 한도. 스킬트리 임플란트 계열로 늘어납니다.</dd></div>
         </dl>
       </section>
 

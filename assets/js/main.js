@@ -86,7 +86,7 @@
   const cache = {};
   const load = (src) => cache[src] || (cache[src] = new Promise((res) => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = src; }));
   const tint = (im, color) => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); x.globalCompositeOperation = 'source-in'; x.fillStyle = color; x.fillRect(0, 0, c.width, c.height); return c; };
-  const parse = (id) => { const m = /^(head|body|legs|feet|melee|ranged)_(\d{1,2})([a-e]?)$/.exec(id || ''); return m && { kind: m[1], grade: +m[2], v: m[3] }; };
+  const parse = (id) => { const m = /^(head|body|legs|feet|melee|ranged)_(\d{1,2})([a-z]?)$/.exec(id || ''); return m && { kind: m[1], grade: +m[2], v: m[3] }; };
   const hasSkin = (p) => ((GEAR[p.kind] || {})[p.grade] || []).some(([v, s]) => v === p.v && s);
 
   async function compose(look, race, canvas) {
