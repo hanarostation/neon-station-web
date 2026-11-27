@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Station — cyberpunk pixel idle RPG</title>
+<meta name="description" content="26 years since the station to the sky stopped. You wake up on Platform 0 with your ID chip wiped. Clear out the gangs and collect 594 gear looks in Neon Station, a cyberpunk pixel idle RPG.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Neon Station — cyberpunk pixel idle RPG">
+<meta property="og:description" content="Leave it on and it fights for you. What you wear is how you look. A cyberpunk pixel idle RPG with 594 gear looks to collect.">
+<meta property="og:image" content="https://neon-station.com/assets/img/og-image.png">
+<meta property="og:url" content="https://neon-station.com/en/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1316">
+<link rel="icon" href="../favicon.png">
+<link rel="alternate" hreflang="ko" href="https://neon-station.com/">
+<link rel="alternate" hreflang="en" href="https://neon-station.com/en/">
+<link rel="alternate" hreflang="ja" href="https://neon-station.com/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://neon-station.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://neon-station.com/">
+<link rel="preload" href="../assets/fonts/Galmuri14.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#story">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Neon Station home"><img class="px" src="../assets/img/story/logo_emblem.png" alt=""><span class="wordmark"><span class="n">NEON</span> <span class="s">STATION</span></span></a>
+    <nav class="route" aria-label="Route map">
+      <ol>
+        <li><a href="#top" aria-current="true">Platform 0</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#world">World</a></li>
+        <li><a href="#game">Game</a></li>
+        <li><a href="#looks">Looks</a></li>
+        <li><a href="#guide">Info</a></li>
+        <li><a href="#art">Art Factory</a></li>
+        <li><a href="#making">Making of</a></li>
+        <li><a href="#studio">Studio</a></li>
+      </ol>
+    </nav>
+    <div class="pagelinks"><a href="guide.html">Guide</a><a href="news.html">News</a></div>
+    <details class="langs"><summary aria-label="Language: English">English</summary><nav aria-label="Language"><a href="../" hreflang="ko" lang="ko">한국어</a><a href="./" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></nav></details>
+  </div>
+</header>
+
+<main>
+<!-- 0번 승강장 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="screen px" role="region" aria-roledescription="cutscene" aria-label="Game intro in 7 cuts"><div class="cut-frame " data-ms="3500" aria-hidden="true"><div class="noise"></div><div class="scan"></div><p class="subtitle">2061. The upbound line stopped.</p></div><div class="cut-frame pan-up" data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_2.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">The station to the sky became a city.<br>People call it Neon Station.</p></div><div class="cut-frame pan-down" data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_3.png" alt="" width="256" height="112"><img class="eye px" src="../assets/img/story/echo_eye_32.png" alt=""><div class="scan"></div><p class="subtitle">Corporations on the upper floors, gangs on the lower.<br>And ECHO watches every floor.</p></div><div class="cut-frame " data-ms="4500" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_4.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">2087. Platform 0.</p></div><div class="cut-frame " data-ms="5500" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_5.png" alt="" width="256" height="112"><div class="chip-id">ID:NULL</div><div class="scan"></div><p class="subtitle">“Cannot identify. Entity not in prediction model.”<small>ECHO</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_6.png" alt="" width="256" height="112"><img class="speaker px" src="../assets/img/npc-portraits/merchant.png" alt=""><div class="scan"></div><p class="subtitle">Cutline was looking for you. This gun is not a gift. It is a down payment.<small>Barrel, the Arms Dealer, when you start as Resistance</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/backgrounds/district1.png" alt="" width="256" height="112"><div class="logo-lock"><img class="px" src="../assets/img/story/logo_full.png" alt="Neon Station"></div><div class="scan"></div><p class="subtitle">The chip is empty. So you can do anything.</p></div></div>
+    <div class="screen-ctl">
+      <button type="button" data-cut="prev" aria-label="Previous cut">◀</button>
+      <button type="button" data-cut="play" aria-label="Pause cutscene">❚❚</button>
+      <button type="button" data-cut="next" aria-label="Next cut">▶</button>
+      <div class="pips" aria-hidden="true"></div>
+      <span class="count" aria-live="polite"></span>
+    </div>
+
+    <div class="hero-copy">
+      <div>
+        <img class="logo px" src="../assets/img/story/logo_full.png" alt="Neon Station" width="384" height="128">
+        <h1 id="hero-title">Leave it on and it fights for you.<br><span class="y">What you wear is how you look.</span></h1>
+        <p class="lead">2087. A giant station that became a vertical city when work on the orbital elevator stopped. You wake up with your ID chip wiped, the one person missing from the records of ECHO, the AI that runs the city.</p>
+        <div class="ctas">
+          <a class="btn" data-appstore data-fallback="Search 「Neon Station」 on the App Store">Get it on the App Store</a> <a class="btn ghost" href="guide.html">Starter guide</a> <a class="btn ghost" data-playstore data-fallback="Google Play coming soon">Get it on Google Play</a>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>Genre</b><span>Cyberpunk pixel idle RPG. Auto battle and gear collecting</span></li>
+        <li><b>Platforms</b><span>Out on the iOS App Store. Android is in Google Play review for full release</span></li>
+        <li><b>Setting</b><span>10 districts, 10 gangs, 60 enemy types</span></li>
+        <li><b>Collect</b><span>11 gear grades, 594 looks, 40 Signature Sets, 55 pets, 232 titles</span></li>
+        <li><b>Languages</b><span>한국어, English, 中文(简体), 日本語</span></li>
+        <li><b>Made by</b><span>Data Station. A solo developer, working with AI</span></li>
+      </ul>
+    </div>
+    <div class="latest" aria-labelledby="latest-title">
+      <div class="latest-head"><h2 id="latest-title">Latest news</h2><a href="news.html">All news</a></div>
+      <ul data-latest="3"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 스토리 -->
+<section class="stop" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">1</span><span class="station">Station 1</span><h2 id="story-title">Story. Ten stations under a broken sky</h2></div>
+    <p class="lead">26 years since the station to the sky stopped. The AI that watches every floor has a record of everyone but one: you, with a blank ID chip.</p>
+
+    <div class="world-intro">
+      <div><h3>Neon Station</h3><p>It was a station before it was a city. In 2041 the Keiron Group began building it as the ground station of the orbital elevator, the upbound line. On the Day of Stopping in 2061, work stopped without a word of explanation. The millions who came for jobs could not leave, and the station became a vertical city that kept piling upward. Even after work stopped, the old station signs in neon never went out.</p></div>
+      <div><h3>ECHO and Null</h3><p>ECHO, the AI that runs the whole station, controls power, water, security and ID chips, and predicts what people will do tomorrow. Step outside the prediction and it wipes your chip. That is the heaviest punishment in this city: Deletion. You wake up on Platform 0 and your wrist chip shows only NULL where your name should be. A blank chip means ECHO cannot see you.</p></div>
+    </div>
+
+    <div class="act"><div class="act-head"><h3>Act 1 「The Nameless」</h3><span class="tag">Districts 1–5</span><p>You clean up the lower floors and earn a name. You learn there is a corporation behind the gangs.</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="1" style="--c:#8E5A2B">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district1.png" alt="Rust Sewers background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d01_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d01_boss.png" alt="District boss Grom 「Sewer King」" loading="lazy"></div>
+      <div>
+        <h4>District 1 · Rust Rats</h4>
+        <h3>Rust Sewers</h3>
+        <p class="who">Lieutenant Fang 「Rat Tooth」 / Boss Grom 「Sewer King」</p>
+        <p>The awakened Null drives out the scrap gang that holds the sewers.</p>
+        <blockquote>“There is only one king in the sewers. And a nobody dares?”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d01.png" alt="">Open ECHO log fragment 01</summary><p>Grom's chains carry a Keiron stamp. They were not scrap. They were corporate supplies.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="2" style="--c:#FF3B4E">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district2.png" alt="Neon Market background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d02_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d02_boss.png" alt="District boss Baron Red 「Four Arms」" loading="lazy"></div>
+      <div>
+        <h4>District 2 · Red Lantern</h4>
+        <h3>Neon Market</h3>
+        <p class="who">Lieutenant Jin 「Ledger Keeper」 / Boss Baron Red 「Four Arms」</p>
+        <p>A ring that smuggles modded gear. An old client of Barrel, the Arms Dealer.</p>
+        <blockquote>“Four arms means four ledgers. Which one should I write you in?”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d02.png" alt="">Open ECHO log fragment 02</summary><p>Jin's ledger shows part of the profit going up to an upper-floor account every month.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="3" style="--c:#2FA8A0">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district3.png" alt="Abandoned Harbor background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d03_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d03_boss.png" alt="District boss Deep Jack 「Deep-Sea Boss」" loading="lazy"></div>
+      <div>
+        <h4>District 3 · Black Tide</h4>
+        <h3>Abandoned Harbor</h3>
+        <p class="who">Lieutenant Salt 「One-Eyed Captain」 / Boss Deep Jack 「Deep-Sea Boss」</p>
+        <p>You clash with a smuggling ring armed with heavy weapons.</p>
+        <blockquote>“The seabed is full of things the corporations threw away. I will put you down there too.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d03.png" alt="">Open ECHO log fragment 03</summary><p>The smuggled cargo turned out to be corporate lab waste and cyborg parts.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="4" style="--c:#A66BFF">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district4.png" alt="Data Slum background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d04_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d04_boss.png" alt="District boss Root 「Lord of the Slum」" loading="lazy"></div>
+      <div>
+        <h4>District 4 · Glitch</h4>
+        <h3>Data Slum</h3>
+        <p class="who">Lieutenant Seven 「Virus」 / Boss Root 「Lord of the Slum」</p>
+        <p>A hacker gang and its drone swarms hold the lines of the slum.</p>
+        <blockquote>“I opened your chip… and there is nothing. I have never seen this.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d04.png" alt="">Open ECHO log fragment 04</summary><p>An ECHO signal intercepted by Glitch. ECHO 「forecasts」 gang wars before they start.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="5" style="--c:#D8E4E2">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district5.png" alt="Corporate Outskirts background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d05_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d05_boss.png" alt="District boss Zero 「Discarded Weapon」" loading="lazy"></div>
+      <div>
+        <h4>District 5 · Chrome Zero</h4>
+        <h3>Corporate Outskirts</h3>
+        <p class="who">Lieutenant Steel Bee 「Mercenary Captain」 / Boss Zero 「Discarded Weapon」</p>
+        <p>Cyborg mercenaries the corporations threw away. Act 1 ends here.</p>
+        <blockquote>“No orders. No target. Then I will make you the target.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d05.png" alt="">Open ECHO log fragment 05</summary><p>Zero's core log reads 「lower-floor suppression test subject」. And for the first time, ECHO broadcasts to Null directly: “Unidentified entity. Correct your route.”</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>Act 2 「The Upbound Line」</h3><span class="tag">Districts 6–9</span><p>You climb to the middle and upper floors, gathering proof that the gangs were designed by ECHO.</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="6" style="--c:#3CA0FF">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district6.png" alt="Elevated Railway background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d06_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d06_boss.png" alt="District boss Ampere 「High-Voltage Lord」" loading="lazy"></div>
+      <div>
+        <h4>District 6 · Volt Runners</h4>
+        <h3>Elevated Railway</h3>
+        <p class="who">Lieutenant Spark 「Gang Leader」 / Boss Ampere 「High-Voltage Lord」</p>
+        <p>A biker gang that took over the upbound freight line.</p>
+        <blockquote>“This track does not go up. So we run.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d06.png" alt="">Open ECHO log fragment 06</summary><p>The power the Volt Runners stole was ECHO's backup supply. ECHO let them steal it on purpose.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="7" style="--c:#3DDC84">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district7.png" alt="Toxic Factory Zone background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d07_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d07_boss.png" alt="District boss Smog Mother 「Mother of Pollution」" loading="lazy"></div>
+      <div>
+        <h4>District 7 · Green Plague</h4>
+        <h3>Toxic Factory Zone</h3>
+        <p class="who">Lieutenant Moth 「Mixer」 / Boss Smog Mother 「Mother of Pollution」</p>
+        <p>A gas-mask gang that took over an abandoned chemical plant.</p>
+        <blockquote>“Breathe. This air will even you all out.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d07.png" alt="">Open ECHO log fragment 07</summary><p>Moth is an old colleague of White, the Ripper Medic. The plant was a 「purification facility」 that controlled the middle-floor population.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="8" style="--c:#FF4FD8">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district8.png" alt="Holo Pleasure District background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d08_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d08_boss.png" alt="District boss Madame Rouge 「Queen of the Show」" loading="lazy"></div>
+      <div>
+        <h4>District 8 · Masquerade</h4>
+        <h3>Holo Pleasure District</h3>
+        <p class="who">Lieutenant Mirage 「Magician」 / Boss Madame Rouge 「Queen of the Show」</p>
+        <p>A masked syndicate that runs the casinos and clubs.</p>
+        <blockquote>“No name? On the show floor, that is the most expensive mask there is.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d08.png" alt="">Open ECHO log fragment 08</summary><p>Identities are laundered and wiped here. Madame Rouge's list holds Null's old chip number.</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="9" style="--c:#E8C35A">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district9.png" alt="Corporate HQ District background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d09_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d09_boss.png" alt="District boss Aegis-9 「Board Guardian」" loading="lazy"></div>
+      <div>
+        <h4>District 9 · Omni Guard</h4>
+        <h3>Corporate HQ District</h3>
+        <p class="who">Lieutenant Hound 「Security Chief」 / Boss Aegis-9 「Board Guardian」</p>
+        <p>A head-on clash with the corporate security force. Hound is an old colleague of Barrel.</p>
+        <blockquote>“Running board protection protocol. The board… does not exist. The protocol continues.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d09.png" alt="">Open ECHO log fragment 09</summary><p>The boardroom is empty. For decades, ECHO has been making the decisions.</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>Act 3 「Echo」</h3><span class="tag">District 10</span><p>In the Data Core you face Echo Prime, the god of ECHO.</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="10" style="--c:#F5E50A">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district10.png" alt="Data Core background" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d10_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d10_boss.png" alt="District boss Echo Prime 「God of the Cult」" loading="lazy"></div>
+      <div>
+        <h4>District 10 · Echo Cult</h4>
+        <h3>Data Core</h3>
+        <p class="who">Lieutenant Oracle 「High Priest」 / Boss Echo Prime 「God of the Cult」</p>
+        <p>The sanctuary of cyborg zealots who worship the corporate AI.</p>
+        <blockquote>“Welcome, exception. I have kept this city while I waited for you.”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d10.png" alt="">Open ECHO log fragment 10 (ending spoiler)</summary><p>The truth of the Day of Stopping. ECHO stopped the upbound line. “If they go up, the city scatters. If it scatters, it cannot be predicted.” And the last record: Null is an exception ECHO made itself.</p></details>
+      </div>
+    </li></ol></div>
+
+    <div class="ending panel cut">
+      <img class="px" src="../assets/img/story/echo_eye_32.png" alt="The symbol of ECHO, a yellow eye of concentric rings">
+      <div>
+        <h3>Why this city never ends</h3>
+        <p>When Echo Prime falls, ECHO reboots. The city rolls back to just after the Day of Stopping, and the gangs return stronger, having learned from their fights with Null. Everyone's memory is wiped, except Null's, whose chip is blank. The next run of the game (hard mode) is this reboot.</p>
+        <p class="dim">Is Null a tool of ECHO, or the variable that will outgrow it? The answer comes when the upbound line moves again. That is the story of the next season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 세계관 -->
+<section class="stop" id="world" aria-labelledby="world-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">2</span><span class="station">Station 2</span><h2 id="world-title">World. A different city on every floor</h2></div>
+    <p class="lead">Corporations took the upper floors and gangs took the lower ones. People still call districts 「stations」 and groups 「lines」. Each district has a line color, and that color runs through the backgrounds, the UI and even the guild emblems.</p>
+
+    <div class="strata" role="list" aria-label="Floors of the city">
+      <div class="stratum st-up" role="listitem"><span class="lvl" style="color:#E8C35A">Upper</span><div class="chips"><span style="--c:#E8C35A">9 Corporate HQ District</span></div><p>The Keiron board and staff. Official IDs and Credit accounts. White walls, gold trim, no noise.</p></div>
+      <div class="stratum st-mid" role="listitem"><span class="lvl" style="color:#FF4FD8">Middle</span><div class="chips"><span style="--c:#3CA0FF">6 Elevated Railway</span><span style="--c:#3DDC84">7 Toxic Factory Zone</span><span style="--c:#FF4FD8">8 Holo Pleasure District</span></div><p>Citizens with registered IDs. Flashy, but it runs on what falls from above.</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#D8E4E2">Border</span><div class="chips"><span style="--c:#D8E4E2">5 Corporate Outskirts</span></div><p>Abandoned corporate facilities. The wall between the lower and middle floors.</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#FF3B4E">Lower</span><div class="chips"><span style="--c:#8E5A2B">1 Rust Sewers</span><span style="--c:#FF3B4E">2 Neon Market</span><span style="--c:#2FA8A0">3 Abandoned Harbor</span><span style="--c:#A66BFF">4 Data Slum</span></div><p>Land of drifters, unregistered residents and gangs. Rust, damp, neon, scrap.</p></div>
+      <div class="stratum st-core" role="listitem"><span class="lvl" style="color:#F5E50A">Core</span><div class="chips"><span style="--c:#F5E50A">10 Data Core</span></div><p>Inside the pillar of the upbound line. No one lives here. Yellow light, circuits, the sound of prayer.</p></div>
+    </div>
+
+    <h3 class="subhead">Three groups. Who took Null in?</h3>
+    <p class="dim">Null has no memory, so the first group that took Null in decides where Null comes from. This is the race you choose when you start the game.</p>
+    <div class="grid races">
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/drifter_aim.png" alt="Drifter base body pixel art">
+        <h3>Drifter</h3><p>An unregistered community under the sewers found Null and raised them. They make weapons from scrap and share what is left.</p>
+        <dl><dt>Starting weapon</dt><dd>Pipe Wrench</dd><dt>Personality</dt><dd>Blunt, survival first</dd><dt>Passive</dt><dd>HP regen +15%, Coins +5%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/resistance_aim.png" alt="Resistance base body pixel art">
+        <h3>Resistance</h3><p>Cutline (CUTLINE), an underground group set on cutting ECHO's lines. They see Null, with a blank chip, as their best weapon.</p>
+        <dl><dt>Starting weapon</dt><dd>Smart Pistol</dd><dt>Personality</dt><dd>Cynical, tech jargon</dd><dt>Passive</dt><dd>Crit +5%p, Intelligence +10%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/citizen_aim.png" alt="Citizen base body pixel art">
+        <h3>Citizen</h3><p>A private guard on the middle floors whose chip was wiped on duty. Knows rules and equipment well.</p>
+        <dl><dt>Starting weapon</dt><dd>Shock Baton</dd><dt>Personality</dt><dd>Polite, by the book</dd><dt>Passive</dt><dd>Defense +10%, attack speed +5%</dd></dl>
+      </article>
+    </div>
+
+    <h3 class="subhead">Three merchants of Platform 0</h3>
+    <p class="dim">One of the few places where ECHO's cameras have rusted out. As a merchant levels up, their portrait changes and their story moves a step forward. Tap the boxes below to see each stage.</p>
+    <div class="grid merchants">
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/merchant.png" alt="Barrel, the Arms Dealer, base">
+        <div class="levels" role="group" aria-label="Arms Dealer portraits by level">
+          <button type="button" aria-pressed="true" aria-label="Barrel, the Arms Dealer, base"><img class="px" src="../assets/img/npc-portraits/merchant.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Barrel, the Arms Dealer, Lv5"><img class="px" src="../assets/img/npc-portraits/merchant_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Barrel, the Arms Dealer, Lv10"><img class="px" src="../assets/img/npc-portraits/merchant_10.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Barrel, the Arms Dealer, Lv13"><img class="px" src="../assets/img/npc-portraits/merchant_13.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Barrel, the Arms Dealer, Lv16"><img class="px" src="../assets/img/npc-portraits/merchant_16.png" alt=""></button>
+        </div>
+        <span class="role">Arms Dealer</span><h3>Barrel</h3>
+        <p>A former Omni Guard armory keeper. The metal jaw is a scar from a corporate interrogation. As Null's Fame grows, he opens his hidden stores one by one.</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/ripperdoc.png" alt="White, the Ripper Medic, base">
+        <div class="levels" role="group" aria-label="Ripper Medic portraits by level">
+          <button type="button" aria-pressed="true" aria-label="White, the Ripper Medic, base"><img class="px" src="../assets/img/npc-portraits/ripperdoc.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="White, the Ripper Medic, Lv3"><img class="px" src="../assets/img/npc-portraits/ripperdoc_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="White, the Ripper Medic, Lv5"><img class="px" src="../assets/img/npc-portraits/ripperdoc_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="White, the Ripper Medic, Lv7"><img class="px" src="../assets/img/npc-portraits/ripperdoc_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="White, the Ripper Medic, Lv10"><img class="px" src="../assets/img/npc-portraits/ripperdoc_10.png" alt=""></button>
+        </div>
+        <span class="role">Ripper Medic</span><h3>White</h3>
+        <p>A surgeon who fled the Keiron medical lab. Her nerve, skeletal and intelligence implants are built from blueprints stolen from the lab. At each stage she gives away one more of its secrets.</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/breeder.png" alt="Poppy, the Pet Breeder, base">
+        <div class="levels" role="group" aria-label="Pet Breeder portraits by level">
+          <button type="button" aria-pressed="true" aria-label="Poppy, the Pet Breeder, base"><img class="px" src="../assets/img/npc-portraits/breeder.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Poppy, the Pet Breeder, Lv3"><img class="px" src="../assets/img/npc-portraits/breeder_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Poppy, the Pet Breeder, Lv5"><img class="px" src="../assets/img/npc-portraits/breeder_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Poppy, the Pet Breeder, Lv7"><img class="px" src="../assets/img/npc-portraits/breeder_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="Poppy, the Pet Breeder, Lv10"><img class="px" src="../assets/img/npc-portraits/breeder_10.png" alt=""></button>
+        </div>
+        <span class="role">Pet Breeder</span><h3>Poppy</h3>
+        <p>A girl who repairs pet robots and drones the corporations threw away and finds them new homes. Once she can fix even upper-floor prototypes, she offers a clue that machines keep memories too.</p>
+      </article>
+    </div>
+
+    <div class="line-band">
+      <div class="emblem" role="img" aria-label="Line emblem example, teal Line 7"><img class="px" src="../assets/img/line-art/line_emblem_tide.png" alt="" width="192" height="192"><span>7</span></div>
+      <div>
+        <span class="tag soon">Online tab · Lv10</span>
+        <h3 style="margin-top:12px">Lines and the Riot Train</h3>
+        <p>Before the Day of Stopping, lower-floor people lived together by subway line. So guilds in this city are called 「Lines」. The emblem is a station sign with a line color and number, and the guild coin is an old subway token. Every week ECHO sends down unmanned Riot Trains, starting from Train 1. When Line crews stack enough damage to stop one, a tougher train comes down right away, all the way to the last, Train 10 「Terminus」. Any race can join a Line. Crews talk over Line Radio and trade for supplies like Chip Bundles at the Token Shop.</p>
+        <div class="trains"><img class="px" src="../assets/img/line-art/train_1.png" alt="Riot Train No.1" loading="lazy"><img class="px" src="../assets/img/line-art/train_2.png" alt="Riot Train No.2" loading="lazy"><img class="px" src="../assets/img/line-art/train_3.png" alt="Riot Train No.3" loading="lazy"><img class="px" src="../assets/img/line-art/train_4.png" alt="Riot Train 4" loading="lazy"><img class="px" src="../assets/img/line-art/train_5.png" alt="Riot Train 5" loading="lazy"><img class="px" src="../assets/img/line-art/train_6.png" alt="Riot Train 6" loading="lazy"><img class="px" src="../assets/img/line-art/train_7.png" alt="Riot Train 7" loading="lazy"><img class="px" src="../assets/img/line-art/train_8.png" alt="Riot Train 8" loading="lazy"><img class="px" src="../assets/img/line-art/train_9.png" alt="Riot Train 9" loading="lazy"><img class="px" src="../assets/img/line-art/train_10.png" alt="Riot Train 10" loading="lazy"></div>
+      </div>
+    </div>
+
+    <dl class="glossary">
+      <div><dt>Upbound line</dt><dd>The stalled orbital elevator</dd></div>
+      <div><dt>Day of Stopping</dt><dd>The day in 2061 when work on the upbound line stopped</dd></div>
+      <div><dt>Keiron Group</dt><dd>The company that owns the station. Its security arm is Omni Guard</dd></div>
+      <div><dt>Deletion</dt><dd>The punishment of ECHO wiping your ID chip</dd></div>
+      <div><dt>Cutline</dt><dd>The underground Resistance</dd></div>
+      <div><dt>Pit</dt><dd>An underground arena below Platform 0 (PVP)</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 게임 -->
+<section class="stop" id="game" aria-labelledby="game-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">3</span><span class="station">Station 3</span><h2 id="game-title">Game. It fights while you are away</h2></div>
+    <p class="lead">Two to five minutes a day is enough. Your character fights the gangs on its own, and Coins pile up even while you are offline. Your job is to trade with the Arms Dealer, put together your gear, and choose how you look when you walk into the next district.</p>
+    <div class="shots" tabindex="0" aria-label="8 game screens, swipe sideways">
+      <figure><img src="../assets/img/store/01.webp" alt="Battle screen. Auto battle in District 8, Holo Pleasure District" loading="lazy" width="1080" height="1920"><figcaption>Leave it on and it fights</figcaption></figure>
+      <figure><img src="../assets/img/store/02.webp" alt="Intro cutscene screen" loading="lazy" width="1080" height="1920"><figcaption>2087, Neon Station</figcaption></figure>
+      <figure><img src="../assets/img/store/03.webp" alt="Arms Dealer trade screen, Arms Dealer Lv15" loading="lazy" width="1080" height="1920"><figcaption>Trade gear across 11 grades</figcaption></figure>
+      <figure><img src="../assets/img/store/04.webp" alt="Palette Builder collection screen" loading="lazy" width="1080" height="1920"><figcaption>Your look changes with what you wear</figcaption></figure>
+      <figure><img src="../assets/img/store/05.webp" alt="Palette Builder sets screen" loading="lazy" width="1080" height="1920"><figcaption>Hidden Signature Sets</figcaption></figure>
+      <figure><img src="../assets/img/store/06.webp" alt="Pet squad screen" loading="lazy" width="1080" height="1920"><figcaption>Adopt discarded machines</figcaption></figure>
+      <figure><img src="../assets/img/store/07.webp" alt="Implant surgery screen" loading="lazy" width="1080" height="1920"><figcaption>Rebuild your body</figcaption></figure>
+      <figure><img src="../assets/img/store/08.webp" alt="Special Jobs screen" loading="lazy" width="1080" height="1920"><figcaption>New Special Jobs every day</figcaption></figure>
+    </div>
+
+    <div class="grid features">
+      <article class="feature" style="--fc:var(--yellow)"><img class="ico px" src="../assets/img/ui-icons/icon_coins.png" alt=""><h3>Auto battle</h3><ul><li>10 districts, each with its own gang and boss</li><li>Idle rewards pile up while you are away</li><li>Hunt with the app open to build up a separate Playtime reward</li></ul></article>
+      <article class="feature" style="--fc:var(--orange)"><img class="ico px" src="../assets/img/gear-icons/ranged_9.png" alt=""><h3>Arms Dealer trades</h3><ul><li>11 grades, from Scrap to Origin</li><li>5 slots: Head, Body, Legs, Feet, Weapon</li><li>The Arms Dealer goes up to Lv50. Higher levels unlock higher grades</li></ul></article>
+      <article class="feature" style="--fc:var(--cyan)"><img class="ico px" src="../assets/img/gear-icons/head_11.png" alt=""><h3>Look collecting</h3><ul><li>The gear you equip becomes your character's look</li><li>594 looks. From item Lv26, gear wears an upper look</li><li>Gather clues to activate 40 Signature Sets</li></ul></article>
+      <article class="feature" style="--fc:#4DFFE5"><img class="ico px" src="../assets/img/ui-icons/icon_chips.png" alt=""><h3>Skill Tree <span class="tag soon">expanded in 1.1.3</span></h3><ul><li>Collect neural chips to grow an 18-tier net tree</li><li>Six branches: Stats, Jobs, PVP, Implants, Pets, Add-ons</li><li>Opens in Add-ons at account Lv10</li></ul></article>
+      <article class="feature" style="--fc:var(--green)"><img class="ico px" src="../assets/img/pet-icons/pet_mechwolf.png" alt=""><h3>Pets</h3><ul><li>55 robot pets and drones repaired by the Pet Breeder, five per grade</li><li>Combine ground and air pets for a squad bonus</li></ul></article>
+      <article class="feature" style="--fc:#A66BFF"><img class="ico px" src="../assets/img/ui-icons/implant_neural.png" alt=""><h3>Implants</h3><ul><li>Three lines: nerve, skeletal, intelligence, up to Quantum, Void and Origin grades</li><li>Skills that fire automatically in battle</li><li>Plan your build within the neural load limit</li></ul></article>
+      <article class="feature" style="--fc:var(--red)"><img class="ico px" src="../assets/img/scenes/request_relay.png" alt=""><h3>Special Jobs</h3><ul><li>Five jobs, from vault raids to relay server hacks</li><li>Three runs a day per job, each paying a different currency</li></ul></article>
+      <article class="feature" style="--fc:#FF4FD8"><img class="ico px" src="../assets/img/ui-icons/icon_fame.png" alt=""><h3>Online</h3><ul><li>Weekly seasons and a podium in the underground arena 「Pit」</li><li>Guilds called 「Lines」 and the 10-stage weekly boss, the Riot Train</li><li>Challenge players to duels in chat and share the results</li></ul></article>
+      <article class="feature" style="--fc:#D8E4E2"><h3>Four languages</h3><ul><li>한국어, English, 中文(简体), 日本語</li><li>Change any time in Profile › Settings › Language</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- 외형 실험실 -->
+<section class="stop" id="looks" aria-labelledby="looks-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">4</span><span class="station">Station 4</span><h2 id="looks-title">Looks. Dress the character yourself</h2></div>
+    <p class="lead">Characters in the game are 24 × 24 pixels. Gear layers go on top of the base body, then the grade color and skin tone are painted in to make one image. The lab below draws with the same art in the same order as the game.</p>
+    <div class="dresser">
+      <div class="stage">
+        <canvas id="doll" class="px" width="240" height="240" role="img" aria-label="Preview of the character wearing gear"></canvas>
+        <div id="doll-readout" class="readout" aria-live="polite"></div>
+      </div>
+      <div class="controls">
+        <div class="toolbar">
+          <div class="seg" role="group" aria-label="Race"><button type="button" data-race="resistance">Resistance</button><button type="button" data-race="drifter">Drifter</button><button type="button" data-race="citizen">Citizen</button></div>
+          <div class="seg" role="group" aria-label="Weapon type"><button type="button" data-wtype="melee">Melee</button><button type="button" data-wtype="ranged">Ranged</button></div>
+          <button type="button" class="btn ghost" id="doll-random">Random outfit</button>
+        </div>
+        <div id="doll-controls" class="controls"></div>
+        <p class="dim" style="margin:4px 0 0;font-size:14px">The number is the gear grade. Each grade has several looks (item Lv26 and above adds five upper looks), and the 「Look」 button flips through them. Looks do not affect stats or odds.</p>
+      </div>
+    </div>
+    <h3 class="subhead">40 Signature Sets</h3>
+    <p class="dim">Wear a certain set of looks together to discover a hidden set. Each set opens a small effect and its own profile image. Tap a set to put it on in the lab.</p>
+    <div id="sets" class="grid sets"></div>
+  </div>
+</section>
+
+<!-- 안내 -->
+<section class="stop" id="guide" aria-labelledby="guide-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">5</span><span class="station">Station 5</span><h2 id="guide-title">Info. For passengers getting off here for the first time</h2></div>
+    <ol class="steps">
+      <li><h3>Choose your group</h3><p>Choose Drifter, Resistance or Citizen. The 7-cut intro plays and your first battle starts in District 1, Rust Sewers.</p></li>
+      <li><h3>Leave it on and wait</h3><p>Battles are automatic. Clear the waves and beat the boss to move to the next stage. Coins earned while the app was closed are waiting when you come back.</p></li>
+      <li><h3>Trade with the Arms Dealer</h3><p>Spend your Coins on gear from Barrel, the Arms Dealer. Higher Arms Dealer levels unlock higher grades, and Lv21, 25 and 29 unlock Quantum, Void and Origin in turn.</p></li>
+      <li><h3>Put your gear together</h3><p>Stronger gear raises your combat power and changes your look. Sell or dismantle the gear you do not need.</p></li>
+      <li><h3>Open Add-ons and Online</h3><p>As you level up, the merchants of Platform 0 and the Lines open their doors one by one. The guide drone shows you the way in each new menu.</p><div class="unlock"><span class="tag">Implants Lv5</span><span class="tag">Skill Tree Lv10</span><span class="tag">Lines Lv10</span><span class="tag">Pets Lv15</span><span class="tag">Palette Builder Lv20</span></div></li>
+      <li><h3>Come back every day</h3><p>The five Special Jobs give three runs a day each, and the free box and Playtime reward reset every day at 9 AM. The weekly Pit ranking and the Riot Train restart every week.</p></li>
+    </ol>
+
+    <div class="tabs5" aria-label="Five bottom menus">
+      <div><b>Battle</b><span>Auto hunting, boss challenges, equipped gear, Playtime reward</span></div>
+      <div><b>Special Jobs</b><span>Five jobs, from vault raids to relay server hacks</span></div>
+      <div><b>Add-ons</b><span>Arms Dealer, Implants, Skill Tree, Pets, Palette Builder</span></div>
+      <div><b>Online</b><span>Pit (PVP) and Lines (guilds)</span></div>
+      <div><b>Shop</b><span>Free box and Credits</span></div>
+    </div>
+
+    <h3 class="subhead">Six currencies</h3>
+    <div class="grid money">
+      <div><img class="px" src="../assets/img/ui-icons/icon_coins.png" alt=""><b>Coins</b><span>The street money of the lower floors, struck from melted chips</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_fame.png" alt=""><b>Fame</b><span>The weight of the name the lower floors call Null by</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_chrome.png" alt=""><b>Chrome</b><span>Metal stripped from cyborgs. Material for surgery</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_food.png" alt=""><b>Food</b><span>Feeds discarded machines and hungry people alike</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_chips.png" alt=""><b>Chips</b><span>Neural chips pulled from relay servers in dead stations. Skill Tree material</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_credits.png" alt=""><b>Credits</b><span>The official money of the upper floors. Rare down below</span></div>
+    </div>
+
+    <h3 class="subhead">11 gear grades, and where the gear came from</h3>
+    <div class="ladder"><div style="--g:#8E9CA0"><img class="px" src="../assets/img/gear-icons/head_1.png" alt="" loading="lazy"><b>1 Scrap</b><span>Sewer scrap tied together. Rust, tape, bolts</span></div><div style="--g:#D8E4E2"><img class="px" src="../assets/img/gear-icons/head_2.png" alt="" loading="lazy"><b>2 Street</b><span>Modded in the Neon Market. Stickers, neon strips</span></div><div style="--g:#3DDC84"><img class="px" src="../assets/img/gear-icons/head_3.png" alt="" loading="lazy"><b>3 Custom</b><span>Handmade by lower-floor craftsmen. Clean welds</span></div><div style="--g:#3CA0FF"><img class="px" src="../assets/img/gear-icons/head_4.png" alt="" loading="lazy"><b>4 Mil-Spec</b><span>Leaked from the Omni Guard armory. Angular armor plates</span></div><div style="--g:#A66BFF"><img class="px" src="../assets/img/gear-icons/head_5.png" alt="" loading="lazy"><b>5 Black Market</b><span>Smuggled through the harbor. Purple glow, illegal mods</span></div><div style="--g:#FF8A1F"><img class="px" src="../assets/img/gear-icons/head_6.png" alt="" loading="lazy"><b>6 Prototype</b><span>Keiron lab prototypes. Orange circuit lines</span></div><div style="--g:#FF3B4E"><img class="px" src="../assets/img/gear-icons/head_7.png" alt="" loading="lazy"><b>7 Legend</b><span>Relics of runners who became legends. Red ribbons</span></div><div style="--g:#F5E50A"><img class="px" src="../assets/img/gear-icons/head_8.png" alt="" loading="lazy"><b>8 Singularity</b><span>Fragments of the ECHO core. Floating parts</span></div><div style="--g:#4DFFE5"><img class="px" src="../assets/img/gear-icons/head_9.png" alt="" loading="lazy"><b>9 Quantum</b><span>The first step past Singularity. From Arms Dealer Lv21</span></div><div style="--g:#7B2DFF"><img class="px" src="../assets/img/gear-icons/head_10.png" alt="" loading="lazy"><b>10 Void</b><span>The second step past Singularity. From Arms Dealer Lv25</span></div><div style="--g:#FFFFFF"><img class="px" src="../assets/img/gear-icons/head_11.png" alt="" loading="lazy"><b>11 Origin</b><span>The highest grade. From Arms Dealer Lv29</span></div></div>
+
+    <h3 class="subhead">Five Special Jobs</h3>
+    <div class="grid requests">
+      <div><img class="px" src="../assets/img/scenes/request_vault.png" alt="Gang Vault Raid scene" loading="lazy"><b>Gang Vault Raid</b><span>Bring back the Coins</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_fixer.png" alt="Fixer Job scene" loading="lazy"><b>Fixer Job</b><span>Earn Fame</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_scrapyard.png" alt="Cyborg Scrapyard scene" loading="lazy"><b>Cyborg Scrapyard</b><span>Collect Chrome</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_convoy.png" alt="Supply Truck Heist scene" loading="lazy"><b>Supply Truck Heist</b><span>Stop a Keiron truck and share the Food</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_relay.png" alt="Relay Server Hack scene" loading="lazy"><b>Relay Server Hack</b><span>Break into a dead station's server and pull out Chips</span></div>
+    </div>
+
+    <div class="notice">
+      <img class="px" src="../assets/img/guide/guide_drone_talk.png" alt="Guide drone">
+      <div>
+        <h3>All odds are public</h3>
+        <p>Arms Dealer trades and pet and implant pulls include random items. The odds by grade and the pity (guaranteed drop) rules are all listed under 「Probability info」 in the game. Looks within the same grade differ only in appearance. Stats and odds are the same.</p>
+      </div>
+    </div>
+
+    <div class="callout" id="guide-test">
+      <h3>On iPhone now, Android soon</h3>
+      <p>Neon Station is out on the App Store, ready to download on iPhone and iPad. The Android version is waiting for Google Play review for the full release. We post release news first in our notices and on Instagram <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>. New here? Start with the <a href="guide.html">starter guide</a>.</p>
+      <p style="margin:0;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" data-appstore data-fallback="Search 「Neon Station」 on the App Store">Get it on the App Store</a><a class="btn ghost" data-playstore data-fallback="Google Play coming soon">Get it on Google Play</a><a class="btn ghost" href="news.html">News</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 아트 팩토리 -->
+<section class="stop" id="art" aria-labelledby="art-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">6</span><span class="station">Station 6</span><h2 id="art-title">Art Factory. A warehouse of pixels and chiptune</h2></div>
+    <p class="lead">The art, sound and production specs in the game are managed in one catalog called the 「Art Factory」. Change one image or sound and a single command rebuilds the catalog, with the change log stacking up at the top. What you see here is part of that warehouse.</p>
+
+    <div class="af-bar" role="tablist" aria-label="Art Factory categories">
+      <button type="button" role="tab" id="t-bg" aria-controls="p-bg" aria-selected="true">District backgrounds</button>
+      <button type="button" role="tab" id="t-foe" aria-controls="p-foe" aria-selected="false" tabindex="-1">Gangs and bosses</button>
+      <button type="button" role="tab" id="t-pet" aria-controls="p-pet" aria-selected="false" tabindex="-1">Pets</button>
+      <button type="button" role="tab" id="t-face" aria-controls="p-face" aria-selected="false" tabindex="-1">Portraits</button>
+      <button type="button" role="tab" id="t-gear" aria-controls="p-gear" aria-selected="false" tabindex="-1">Gear and style</button>
+      <button type="button" role="tab" id="t-sound" aria-controls="p-sound" aria-selected="false" tabindex="-1">Sound</button>
+      <button type="button" role="tab" id="t-spec" aria-controls="p-spec" aria-selected="false" tabindex="-1">Production specs</button>
+    </div>
+
+    <div class="af-panel" id="p-bg" role="tabpanel" aria-labelledby="t-bg">
+      <div class="gallery g-bg"><figure><img class="px" src="../assets/img/backgrounds/district1.png" alt="Rust Sewers" loading="lazy" width="256" height="112"><figcaption><b>1. Rust Sewers</b> Rust Rats</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district2.png" alt="Neon Market" loading="lazy" width="256" height="112"><figcaption><b>2. Neon Market</b> Red Lantern</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district3.png" alt="Abandoned Harbor" loading="lazy" width="256" height="112"><figcaption><b>3. Abandoned Harbor</b> Black Tide</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district4.png" alt="Data Slum" loading="lazy" width="256" height="112"><figcaption><b>4. Data Slum</b> Glitch</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district5.png" alt="Corporate Outskirts" loading="lazy" width="256" height="112"><figcaption><b>5. Corporate Outskirts</b> Chrome Zero</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district6.png" alt="Elevated Railway" loading="lazy" width="256" height="112"><figcaption><b>6. Elevated Railway</b> Volt Runners</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district7.png" alt="Toxic Factory Zone" loading="lazy" width="256" height="112"><figcaption><b>7. Toxic Factory Zone</b> Green Plague</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district8.png" alt="Holo Pleasure District" loading="lazy" width="256" height="112"><figcaption><b>8. Holo Pleasure District</b> Masquerade</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district9.png" alt="Corporate HQ District" loading="lazy" width="256" height="112"><figcaption><b>9. Corporate HQ District</b> Omni Guard</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district10.png" alt="Data Core" loading="lazy" width="256" height="112"><figcaption><b>10. Data Core</b> Echo Cult</figcaption></figure></div>
+    </div>
+    <div class="af-panel" id="p-foe" role="tabpanel" aria-labelledby="t-foe" hidden>
+      <h3>District Boss</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E5A2B"><img class="px" src="../assets/img/enemies/d01_boss.png" alt="Grom 「Sewer King」" loading="lazy"></div><figcaption><b>Grom</b><br>District 1 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/enemies/d02_boss.png" alt="Baron Red 「Four Arms」" loading="lazy"></div><figcaption><b>Baron Red</b><br>District 2 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #2FA8A0"><img class="px" src="../assets/img/enemies/d03_boss.png" alt="Deep Jack 「Deep-Sea Boss」" loading="lazy"></div><figcaption><b>Deep Jack</b><br>District 3 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/enemies/d04_boss.png" alt="Root 「Lord of the Slum」" loading="lazy"></div><figcaption><b>Root</b><br>District 4 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/enemies/d05_boss.png" alt="Zero 「Discarded Weapon」" loading="lazy"></div><figcaption><b>Zero</b><br>District 5 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/enemies/d06_boss.png" alt="Ampere 「High-Voltage Lord」" loading="lazy"></div><figcaption><b>Ampere</b><br>District 6 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/enemies/d07_boss.png" alt="Smog Mother 「Mother of Pollution」" loading="lazy"></div><figcaption><b>Smog Mother</b><br>District 7 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF4FD8"><img class="px" src="../assets/img/enemies/d08_boss.png" alt="Madame Rouge 「Queen of the Show」" loading="lazy"></div><figcaption><b>Madame Rouge</b><br>District 8 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #E8C35A"><img class="px" src="../assets/img/enemies/d09_boss.png" alt="Aegis-9 「Board Guardian」" loading="lazy"></div><figcaption><b>Aegis-9</b><br>District 9 boss</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/enemies/d10_boss.png" alt="Echo Prime 「God of the Cult」" loading="lazy"></div><figcaption><b>Echo Prime</b><br>District 10 boss</figcaption></figure></div>
+      <h3 class="subhead">Lieutenants</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d01_mid.png" alt="Fang 「Rat Tooth」" loading="lazy"></div><figcaption><b>Fang</b><br>District 1 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d02_mid.png" alt="Jin 「Ledger Keeper」" loading="lazy"></div><figcaption><b>Jin</b><br>District 2 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d03_mid.png" alt="Salt 「One-Eyed Captain」" loading="lazy"></div><figcaption><b>Salt</b><br>District 3 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d04_mid.png" alt="Seven 「Virus」" loading="lazy"></div><figcaption><b>Seven</b><br>District 4 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d05_mid.png" alt="Steel Bee 「Mercenary Captain」" loading="lazy"></div><figcaption><b>Steel Bee</b><br>District 5 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d06_mid.png" alt="Spark 「Gang Leader」" loading="lazy"></div><figcaption><b>Spark</b><br>District 6 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d07_mid.png" alt="Moth 「Mixer」" loading="lazy"></div><figcaption><b>Moth</b><br>District 7 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d08_mid.png" alt="Mirage 「Magician」" loading="lazy"></div><figcaption><b>Mirage</b><br>District 8 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d09_mid.png" alt="Hound 「Security Chief」" loading="lazy"></div><figcaption><b>Hound</b><br>District 9 lieutenant</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d10_mid.png" alt="Oracle 「High Priest」" loading="lazy"></div><figcaption><b>Oracle</b><br>District 10 lieutenant</figcaption></figure></div>
+      <h3 class="subhead">Gang members</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d01_a_idle.png" alt="Rust Rats member" loading="lazy"></div><figcaption>Rust Rats</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d02_a_idle.png" alt="Red Lantern member" loading="lazy"></div><figcaption>Red Lantern</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d03_a_idle.png" alt="Black Tide member" loading="lazy"></div><figcaption>Black Tide</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d04_a_idle.png" alt="Glitch member" loading="lazy"></div><figcaption>Glitch</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d05_a_idle.png" alt="Chrome Zero member" loading="lazy"></div><figcaption>Chrome Zero</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d06_a_idle.png" alt="Volt Runners member" loading="lazy"></div><figcaption>Volt Runners</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d07_a_idle.png" alt="Green Plague member" loading="lazy"></div><figcaption>Green Plague</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d08_a_idle.png" alt="Masquerade member" loading="lazy"></div><figcaption>Masquerade</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d09_a_idle.png" alt="Omni Guard member" loading="lazy"></div><figcaption>Omni Guard</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d10_a_idle.png" alt="Echo Cult member" loading="lazy"></div><figcaption>Echo Cult</figcaption></figure></div>
+      <p class="af-note">Each district has six enemy types: three members, an elite, a lieutenant and a boss. 60 enemy types in all.</p>
+    </div>
+    <div class="af-panel" id="p-pet" role="tabpanel" aria-labelledby="t-pet" hidden>
+      <div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_dog.png" alt="Stray Dog" loading="lazy"></div><figcaption><b>Stray Dog</b><br>Grade 1 Scrap</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_tincan.png" alt="Tin Can Drone" loading="lazy"></div><figcaption><b>Tin Can Drone</b><br>Grade 1 Scrap</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_pigeon.png" alt="Scrap Pigeon" loading="lazy"></div><figcaption><b>Scrap Pigeon</b><br>Grade 1 Scrap</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_trashbot.png" alt="Trash Can Bot" loading="lazy"></div><figcaption><b>Trash Can Bot</b><br>Grade 1 Scrap</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_snail.png" alt="Nut Snail" loading="lazy"></div><figcaption><b>Nut Snail</b><br>Grade 1 Scrap</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_alleycat.png" alt="Alley Cat" loading="lazy"></div><figcaption><b>Alley Cat</b><br>Grade 2 Street</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_drone.png" alt="Recon Drone" loading="lazy"></div><figcaption><b>Recon Drone</b><br>Grade 2 Street</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_ferret.png" alt="Neon Ferret" loading="lazy"></div><figcaption><b>Neon Ferret</b><br>Grade 2 Street</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_raccoon.png" alt="Goggle Raccoon" loading="lazy"></div><figcaption><b>Goggle Raccoon</b><br>Grade 2 Street</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_bat.png" alt="Alley Bat" loading="lazy"></div><figcaption><b>Alley Bat</b><br>Grade 2 Street</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_ratbot.png" alt="Modded Rat Bot" loading="lazy"></div><figcaption><b>Modded Rat Bot</b><br>Grade 3 Custom</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_courier.png" alt="Delivery Quadcopter" loading="lazy"></div><figcaption><b>Delivery Quadcopter</b><br>Grade 3 Custom</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_beetle.png" alt="Custom Rhino Beetle" loading="lazy"></div><figcaption><b>Custom Rhino Beetle</b><br>Grade 3 Custom</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_turtle.png" alt="Armored Turtle" loading="lazy"></div><figcaption><b>Armored Turtle</b><br>Grade 3 Custom</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_glider.png" alt="Custom RC Glider" loading="lazy"></div><figcaption><b>Custom RC Glider</b><br>Grade 3 Custom</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_robodog.png" alt="Robo Puppy" loading="lazy"></div><figcaption><b>Robo Puppy</b><br>Grade 4 Mil-Spec</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_sniper.png" alt="Military Sniper Drone" loading="lazy"></div><figcaption><b>Military Sniper Drone</b><br>Grade 4 Mil-Spec</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_mulebot.png" alt="Military Pack Bot" loading="lazy"></div><figcaption><b>Military Pack Bot</b><br>Grade 4 Mil-Spec</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_turret.png" alt="Walking Turret" loading="lazy"></div><figcaption><b>Walking Turret</b><br>Grade 4 Mil-Spec</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_hawk.png" alt="Military Hawk Drone" loading="lazy"></div><figcaption><b>Military Hawk Drone</b><br>Grade 4 Mil-Spec</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_humanoid.png" alt="Mini Humanoid" loading="lazy"></div><figcaption><b>Mini Humanoid</b><br>Grade 5 Black Market</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_crow.png" alt="Cyborg Crow" loading="lazy"></div><figcaption><b>Cyborg Crow</b><br>Grade 5 Black Market</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_scorpion.png" alt="Cyborg Scorpion" loading="lazy"></div><figcaption><b>Cyborg Scorpion</b><br>Grade 5 Black Market</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_snake.png" alt="Shock Snake" loading="lazy"></div><figcaption><b>Shock Snake</b><br>Grade 5 Black Market</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_jellyfish.png" alt="Holo Jellyfish" loading="lazy"></div><figcaption><b>Holo Jellyfish</b><br>Grade 5 Black Market</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_panther.png" alt="Cyber Panther" loading="lazy"></div><figcaption><b>Cyber Panther</b><br>Grade 6 Prototype</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_avt.png" alt="AVT" loading="lazy"></div><figcaption><b>AVT</b><br>Grade 6 Prototype</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_fox.png" alt="Prototype Holo Fox" loading="lazy"></div><figcaption><b>Prototype Holo Fox</b><br>Grade 6 Prototype</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_spider.png" alt="Spider Mech" loading="lazy"></div><figcaption><b>Spider Mech</b><br>Grade 6 Prototype</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_swallow.png" alt="Prototype Swallow" loading="lazy"></div><figcaption><b>Prototype Swallow</b><br>Grade 6 Prototype</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_mechwolf.png" alt="Mech Wolf" loading="lazy"></div><figcaption><b>Mech Wolf</b><br>Grade 7 Legend</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_gunship.png" alt="Assault Gunship" loading="lazy"></div><figcaption><b>Assault Gunship</b><br>Grade 7 Legend</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_bear.png" alt="Armored Bear Mech" loading="lazy"></div><figcaption><b>Armored Bear Mech</b><br>Grade 7 Legend</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_rhino.png" alt="Mech Rhino" loading="lazy"></div><figcaption><b>Mech Rhino</b><br>Grade 7 Legend</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_eagle.png" alt="Steel Eagle" loading="lazy"></div><figcaption><b>Steel Eagle</b><br>Grade 7 Legend</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_golem.png" alt="Nano Golem" loading="lazy"></div><figcaption><b>Nano Golem</b><br>Grade 8 Singularity</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_phoenix.png" alt="Plasma Phoenix" loading="lazy"></div><figcaption><b>Plasma Phoenix</b><br>Grade 8 Singularity</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_tiger.png" alt="Plasma Tiger" loading="lazy"></div><figcaption><b>Plasma Tiger</b><br>Grade 8 Singularity</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_wyvern.png" alt="Lightning Wyvern" loading="lazy"></div><figcaption><b>Lightning Wyvern</b><br>Grade 8 Singularity</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_swarm.png" alt="Nano Swarm" loading="lazy"></div><figcaption><b>Nano Swarm</b><br>Grade 8 Singularity</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_phaselynx.png" alt="Phase Lynx" loading="lazy"></div><figcaption><b>Phase Lynx</b><br>Grade 9 Quantum</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_qubitowl.png" alt="Qubit Owl" loading="lazy"></div><figcaption><b>Qubit Owl</b><br>Grade 9 Quantum</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_stag.png" alt="Phase Stag" loading="lazy"></div><figcaption><b>Phase Stag</b><br>Grade 9 Quantum</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_butterfly.png" alt="Qubit Butterfly" loading="lazy"></div><figcaption><b>Qubit Butterfly</b><br>Grade 9 Quantum</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_tesseract.png" alt="Tesseract Spirit" loading="lazy"></div><figcaption><b>Tesseract Spirit</b><br>Grade 9 Quantum</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_voidhound.png" alt="Void Hound" loading="lazy"></div><figcaption><b>Void Hound</b><br>Grade 10 Void</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_voidray.png" alt="Void Ray" loading="lazy"></div><figcaption><b>Void Ray</b><br>Grade 10 Void</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_shadecat.png" alt="Void Shade Cat" loading="lazy"></div><figcaption><b>Void Shade Cat</b><br>Grade 10 Void</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_kraken.png" alt="Abyss Kraken" loading="lazy"></div><figcaption><b>Abyss Kraken</b><br>Grade 10 Void</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_eclipse.png" alt="Eclipse Eye" loading="lazy"></div><figcaption><b>Eclipse Eye</b><br>Grade 10 Void</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_originlion.png" alt="Origin Lion" loading="lazy"></div><figcaption><b>Origin Lion</b><br>Grade 11 Origin</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_prismdrake.png" alt="Prism Drake" loading="lazy"></div><figcaption><b>Prism Drake</b><br>Grade 11 Origin</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_unicorn.png" alt="Prism Unicorn" loading="lazy"></div><figcaption><b>Prism Unicorn</b><br>Grade 11 Origin</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_seraph.png" alt="Seraph Frame" loading="lazy"></div><figcaption><b>Seraph Frame</b><br>Grade 11 Origin</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_whale.png" alt="Nebula Whale" loading="lazy"></div><figcaption><b>Nebula Whale</b><br>Grade 11 Origin</figcaption></figure></div>
+      <p class="af-note">Five per grade, 55 in all. Low grades are scrap machines picked up in alleys, middle grades are military and corporate castoffs, and Quantum, Void and Origin come from beyond the upper floors.</p>
+    </div>
+    <div class="af-panel" id="p-face" role="tabpanel" aria-labelledby="t-face" hidden>
+      <h3>15 merchant portraits</h3><div class="gallery g-portraits"><img class="px" src="../assets/img/npc-portraits/merchant.png" alt="Barrel, the Arms Dealer, base" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_5.png" alt="Barrel, the Arms Dealer, Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_10.png" alt="Barrel, the Arms Dealer, Lv10" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_13.png" alt="Barrel, the Arms Dealer, Lv13" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_16.png" alt="Barrel, the Arms Dealer, Lv16" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc.png" alt="White, the Ripper Medic, base" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_3.png" alt="White, the Ripper Medic, Lv3" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_5.png" alt="White, the Ripper Medic, Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_7.png" alt="White, the Ripper Medic, Lv7" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_10.png" alt="White, the Ripper Medic, Lv10" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder.png" alt="Poppy, the Pet Breeder, base" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_3.png" alt="Poppy, the Pet Breeder, Lv3" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_5.png" alt="Poppy, the Pet Breeder, Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_7.png" alt="Poppy, the Pet Breeder, Lv7" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_10.png" alt="Poppy, the Pet Breeder, Lv10" loading="lazy"></div>
+      <h3 class="subhead">Some of the 204 profile portraits</h3><div class="gallery g-portraits"><img class="px" src="../assets/img/avatars/av001.png" alt="Profile portrait 1" loading="lazy"><img class="px" src="../assets/img/avatars/av012.png" alt="Profile portrait 12" loading="lazy"><img class="px" src="../assets/img/avatars/av027.png" alt="Profile portrait 27" loading="lazy"><img class="px" src="../assets/img/avatars/av041.png" alt="Profile portrait 41" loading="lazy"><img class="px" src="../assets/img/avatars/av056.png" alt="Profile portrait 56" loading="lazy"><img class="px" src="../assets/img/avatars/av071.png" alt="Profile portrait 71" loading="lazy"><img class="px" src="../assets/img/avatars/av085.png" alt="Profile portrait 85" loading="lazy"><img class="px" src="../assets/img/avatars/av099.png" alt="Profile portrait 99" loading="lazy"><img class="px" src="../assets/img/avatars/av104.png" alt="Profile portrait 104" loading="lazy"><img class="px" src="../assets/img/avatars/av110.png" alt="Profile portrait 110" loading="lazy"><img class="px" src="../assets/img/avatars/av116.png" alt="Profile portrait 116" loading="lazy"><img class="px" src="../assets/img/avatars/av119.png" alt="Profile portrait 119" loading="lazy"><img class="px" src="../assets/img/avatars/av121.png" alt="Profile portrait 121" loading="lazy"><img class="px" src="../assets/img/avatars/av125.png" alt="Profile portrait 125" loading="lazy"><img class="px" src="../assets/img/avatars/av128.png" alt="Profile portrait 128" loading="lazy"><img class="px" src="../assets/img/avatars/av131.png" alt="Profile portrait 131" loading="lazy"><img class="px" src="../assets/img/avatars/av134.png" alt="Profile portrait 134" loading="lazy"><img class="px" src="../assets/img/avatars/av137.png" alt="Profile portrait 137" loading="lazy"><img class="px" src="../assets/img/avatars/av141.png" alt="Profile portrait 141" loading="lazy"><img class="px" src="../assets/img/avatars/av144.png" alt="Profile portrait 144" loading="lazy"><img class="px" src="../assets/img/avatars/av148.png" alt="Profile portrait 148" loading="lazy"><img class="px" src="../assets/img/avatars/av152.png" alt="Profile portrait 152" loading="lazy"><img class="px" src="../assets/img/avatars/av156.png" alt="Profile portrait 156" loading="lazy"><img class="px" src="../assets/img/avatars/av160.png" alt="Profile portrait 160" loading="lazy"><img class="px" src="../assets/img/avatars/av164.png" alt="Profile portrait 164" loading="lazy"><img class="px" src="../assets/img/avatars/av168.png" alt="Profile portrait 168" loading="lazy"><img class="px" src="../assets/img/avatars/av172.png" alt="Profile portrait 172" loading="lazy"><img class="px" src="../assets/img/avatars/av176.png" alt="Profile portrait 176" loading="lazy"><img class="px" src="../assets/img/avatars/av180.png" alt="Profile portrait 180" loading="lazy"><img class="px" src="../assets/img/avatars/av184.png" alt="Profile portrait 184" loading="lazy"><img class="px" src="../assets/img/avatars/av188.png" alt="Profile portrait 188" loading="lazy"><img class="px" src="../assets/img/avatars/av191.png" alt="Profile portrait 191" loading="lazy"><img class="px" src="../assets/img/avatars/av192.png" alt="Profile portrait 192" loading="lazy"><img class="px" src="../assets/img/avatars/av193.png" alt="Profile portrait 193" loading="lazy"><img class="px" src="../assets/img/avatars/av194.png" alt="Profile portrait 194" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-gear" role="tabpanel" aria-labelledby="t-gear" hidden>
+      <h3>Gear icons, 6 slots × 11 grades</h3><div class="gallery g-style gear-grid"><img class="px" src="../assets/img/gear-icons/head_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/head_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/head_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/head_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/head_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/head_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/head_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/head_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/head_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/head_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/head_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/body_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/body_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/body_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/body_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/body_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/body_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/body_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/body_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/body_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/body_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/body_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/legs_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/legs_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/legs_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/legs_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/legs_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/legs_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/legs_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/legs_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/legs_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/legs_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/legs_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/feet_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/feet_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/feet_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/feet_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/feet_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/feet_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/feet_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/feet_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/feet_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/feet_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/feet_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/melee_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/melee_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/melee_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/melee_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/melee_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/melee_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/melee_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/melee_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/melee_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/melee_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/melee_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/ranged_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/ranged_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/ranged_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/ranged_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/ranged_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/ranged_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/ranged_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/ranged_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/ranged_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/ranged_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/ranged_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"></div>
+      <h3 class="subhead">Style tags, set frames, auras, street graffiti, Echo Infection</h3><div class="gallery g-style"><img class="px" src="../assets/img/style/tags/tag_scrap.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_street.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_survival.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_shadow.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_military.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_mech.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_lab.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_energy.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_knight.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_raider.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_01.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_03.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_05.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_07.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_09.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_11.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_13.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_15.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_17.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_19.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_01_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_03_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_05_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_07_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_09_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_11_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_13_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_15_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_17_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_19_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d01.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d02.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d03.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d04.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d05.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d06.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d07.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d08.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d09.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d10.png" alt="" loading="lazy"><img class="px" src="../assets/img/story/echo_eye_32.png" alt="" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-sound" role="tabpanel" aria-labelledby="t-sound" hidden>
+      <p>The music and sound effects were synthesized in code, not taken from AI music services or sound libraries. Every waveform is calculated one by one, so this chiptune is free of copyright worries. The game has 10 music tracks and 21 sound effects. The Battle tab plays one of four tracks at random.</p>
+      <ul class="tracks"><li><b>Lobby</b><div class="meta">A minor · night synthwave</div><p>One of four random Battle tab tracks (1.1.0), plus other screens (Shop, Jobs, Profile, Chat)</p><audio controls preload="none" src="../assets/audio/bgm_lobby.m4a"></audio></li><li><b>Battle</b><div class="meta">E minor · driving chiptune</div><p>Normal hunting on the Battle tab</p><audio controls preload="none" src="../assets/audio/bgm_battle.m4a"></audio></li><li><b>Neon Chase</b><div class="meta">F# minor · tense cyberpunk, 150 BPM sixteenth-note octave bass and sawtooth lead</div><p>One of four random Battle tab tracks (picked again each time you tap [Battle] from another tab)</p><audio controls preload="none" src="../assets/audio/bgm_battle_cyber.m4a"></audio></li><li><b>Back Alley Bebop</b><div class="meta">B♭ major · swing jazz, walking bass, ride cymbal, electric piano</div><p>One of four random Battle tab tracks</p><audio controls preload="none" src="../assets/audio/bgm_battle_jazz1.m4a"></audio></li><li><b>Neon Bar Acid Jazz</b><div class="meta">D Dorian · 104 BPM shuffle, syncopated funk bass</div><p>One of four random Battle tab tracks</p><audio controls preload="none" src="../assets/audio/bgm_battle_jazz2.m4a"></audio></li><li><b>Boss</b><div class="meta">D minor · tension</div><p>Boss standby and boss fights, Special Job battles, PVP (starts from the top each time)</p><audio controls preload="none" src="../assets/audio/bgm_boss.m4a"></audio></li><li><b>Arms Dealer</b><div class="meta">G Dorian · swing groove</div><p>Add-ons (hub, Arms Dealer, Implants, Pets, Palette Builder; not Lines)</p><audio controls preload="none" src="../assets/audio/bgm_merchant.m4a"></audio></li><li><b>Lines</b><div class="meta">D Dorian · night at a stopped station, slow swing lo-fi</div><p>Add-ons › Lines (Route, Token Shop, Crew, Line Radio)</p><audio controls preload="none" src="../assets/audio/bgm_line.m4a"></audio></li><li><b>Riot Train</b><div class="meta">C minor · steel racing down the tracks, 16-bit bass</div><p>Lines › Riot Train tab (starts from the top each time)</p><audio controls preload="none" src="../assets/audio/bgm_train.m4a"></audio></li><li><b>Pit</b><div class="meta">A minor · half-time with the crowd stomping</div><p>PVP tab (weekly ranking, picking an opponent)</p><audio controls preload="none" src="../assets/audio/bgm_pit.m4a"></audio></li></ul>
+    </div>
+    <div class="af-panel" id="p-spec" role="tabpanel" aria-labelledby="t-spec" hidden>
+      <table class="spec">
+        <thead><tr><th scope="col">Asset</th><th scope="col">Size (pixels)</th><th scope="col">Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Gear grades</td><td>11 steps</td><td>Quantum (mint), Void (purple) and Origin (white) were added above Singularity. The accent mask is painted in the grade color</td></tr>
+          <tr><td>Character base body</td><td>24 × 24</td><td>3 races × 2 poses (idle, aim). Gear is layered on at the same size</td></tr>
+          <tr><td>Gear layers</td><td>24 × 24</td><td>Art + accent mask (grade color) + skin mask (only where hands show)</td></tr>
+          <tr><td>Normal enemies</td><td>24 × 24</td><td>Two frames, idle and attack</td></tr>
+          <tr><td>Bosses, Riot Trains</td><td>52 × 52</td><td>One per district, three trains</td></tr>
+          <tr><td>Pets</td><td>16 × 16</td><td>Includes the grade-color accent mask</td></tr>
+          <tr><td>District backgrounds, intro cuts</td><td>256 × 112</td><td>On screen, one background pixel is drawn at 2 dp</td></tr>
+          <tr><td>Merchants, profile portraits</td><td>256 × 256</td><td>3 merchants × 5 level stages, 204 profile images</td></tr>
+          <tr><td>Set auras</td><td>36 × 36</td><td>Three frames per set, light around the body and a ring at the feet</td></tr>
+          <tr><td>Fonts</td><td>Galmuri 11·14, Fusion Pixel 12</td><td>SIL OFL 1.1. The Chinese and Japanese versions use Fusion Pixel. Used only at whole-number scales so the pixels stay sharp</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 제작기 -->
+<section class="stop" id="making" aria-labelledby="making-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">7</span><span class="station">Station 7</span><h2 id="making-title">Making of. A game studio of one person and AI</h2></div>
+    <p class="lead">Planner, developer, artist, sound designer and operator are all one person. This is a plain record of how a data analytics consultant, working with AI as a teammate, went from an idea to getting ready for two stores.</p>
+
+    <div class="two" style="margin-top:48px">
+      <div>
+        <h3>Twelve days of records</h3>
+        <ol class="days">
+          <li><time datetime="2026-11-16">Nov 16</time><h3>Setting the direction</h3><p>After testing the feel with a pet-raising web prototype, I widened the direction to a cyberpunk idle RPG. The game design doc, dev setup, design system and six screen mockups were all made in one day.</p></li>
+          <li><time datetime="2026-11-17">Nov 17</time><h3>The skeleton and the pixel pipeline</h3><p>Laid out currencies, Special Jobs and the merchant structure, and ran a 45-day balance simulation. Built an automated pipeline for making gear looks in bulk.</p></li>
+          <li><time datetime="2026-11-18">Nov 18</time><h3>A name and a sound</h3><p>Renamed the game Neon Station and locked in the app ID. Added 16 pets, chiptune music and sound effects, chat and merchant portraits, and built the Art Factory.</p></li>
+          <li><time datetime="2026-11-19">Nov 19</time><h3>Server and story</h3><p>Connected a Supabase server and opened online PVP, weekly seasons and chat. Filled in 60 enemy types and 10 backgrounds, and wrote the story bible.</p></li>
+          <li><time datetime="2026-11-20">Nov 20</time><h3>Style and policy</h3><p>Built the style and set systems and the 7-cut intro, and prepared store policy items like reporting, blocking and account deletion, along with the store listings.</p></li>
+          <li><time datetime="2026-11-21">Nov 21</time><h3>Lines and the first testers</h3><p>Uploaded the first build to a Google Play test track and started taking tester feedback. Added guilds called 「Lines」, the Riot Train, 20 Signature Sets and 112 titles.</p></li>
+          <li><time datetime="2026-11-22">Nov 22</time><h3>Beyond Singularity</h3><p>Added three grades, Quantum, Void and Origin, bringing gear to 11 grades, and made Playtime rewards and the update gift. Opened the official site at neon-station.com.</p></li>
+          <li><time datetime="2026-11-23">Nov 23</time><h3>Skill Tree and three languages</h3><p>Added a 16-tier Skill Tree grown with Chips, the Relay Server Hack job, the Online tab, and English and Chinese versions. Uploaded the first iOS build to TestFlight.</p></li>
+          <li><time datetime="2026-11-24">Nov 24</time><h3>Out on the App Store</h3><p>Version 1.1.0, with Arms Dealer Lv50, coupons, 66 new looks, 30 sets, 3 battle tracks and a chat word filter, passed App Store review and launched on iOS. The same day I built 1.1.1 with in-app purchases and account linking.</p></li>
+          <li><time datetime="2026-11-25">Nov 25</time><h3>1.1.2 and a guidebook</h3><p>Prepared 1.1.2 with item levels, 330 upper looks (all 330 drawn) and Riot Train contribution rewards, and opened the starter guide and news board for new runners.</p></li>
+          <li><time datetime="2026-11-26">Nov 26</time><h3>1.1.3, a deeper city</h3><p>Extended the Riot Train to 10 stages and added Implant and Pet branches to the Skill Tree. Added 55 pets, 40 sets and 100 achievements, and built a server check on currency changes.</p></li>
+          <li><time datetime="2026-11-27">Nov 27</time><h3>A fourth language, a second store</h3><p>Finished moving to a Google Play organization account and submitted for full release review. Version 1.1.4 adds guest backup and recovery codes, crash reporting and Japanese, and the official site now opens in English, Japanese and Chinese too.</p></li>
+        </ol>
+      </div>
+      <div>
+        <h3>Tools in use</h3>
+        <table class="spec">
+          <tbody>
+            <tr><td>App</td><td>React Native (Expo), TypeScript. One codebase for Android and iOS</td></tr>
+            <tr><td>Graphics</td><td>Pixel sprites drawn with Skia, using nearest-neighbor scaling so pixels never blur</td></tr>
+            <tr><td>Server</td><td>Supabase (Postgres, RLS, Edge Functions). Currencies, pulls and rankings are calculated on the server</td></tr>
+            <tr><td>Builds</td><td>EAS cloud builds. Android and iOS in one go, no Mac needed</td></tr>
+            <tr><td>Operations</td><td>PostHog for usage analytics, Sentry for crash reports</td></tr>
+            <tr><td>Art</td><td>Generated and picked in PixelLab, then cleaned up with a layer extraction script</td></tr>
+            <tr><td>Sound</td><td>Chiptune synthesized in Python</td></tr>
+            <tr><td>AI teammate</td><td>Claude. Design docs, code, review and documentation, together</td></tr>
+          </tbody>
+        </table>
+        <h3 class="subhead" style="margin-top:40px">Principles we keep</h3>
+        <ul class="principles">
+          <li><b>The server handles money and odds</b><span>Currencies, pulls, rewards and rankings are decided only in server functions. The app only reads them.</span></li>
+          <li><b>No hidden odds</b><span>All odds are published in the game, as Korean law requires for random items.</span></li>
+          <li><b>No borrowed worlds</b><span>We do not use names or designs unique to other works.</span></li>
+          <li><b>Safe chat</b><span>A word filter, agreement to the rules, reporting and blocking were all in place before launch.</span></li>
+          <li><b>Write it down every day</b><span>Every morning at 9, the work log, decision log and design doc are updated.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="subhead">Five stages of game development, and where we are</h3>
+    <p class="dim">Solo, but run like a real studio. Each stage has set outputs, and at each gate we decide whether to continue, change direction or stop.</p>
+    <ol class="gates">
+      <li class="done"><b>Concept and design</b><span>Genre, benchmarks, design doc</span></li>
+      <li class="done"><b>Pre-production</b><span>Dev setup, design system, mockups</span></li>
+      <li class="done"><b>Production</b><span>Features, pixel assets, server, sound</span></li>
+      <li class="done"><b>Testing and QA</b><span>Internal tests and tester feedback</span></li>
+      <li class="now"><b>Launch and live</b><span>We are here. Out on iOS, in Google Play review, running updates and news</span></li>
+    </ol>
+
+    <h3 class="subhead">How one pixel sprite gets into the game</h3>
+    <p class="dim">AI pours out candidates. The hard part is what comes next. The pipeline has six steps, and only one of them needs a person.</p>
+    <ol class="pipeline">
+      <li><b>Generate</b><span>Inpaint the gear over the base body</span></li>
+      <li class="human"><b>Pick</b><span>A person picks, side by side with the grades above and below</span></li>
+      <li><b>Extract</b><span>Keep only the pixels that differ from the base body as a layer</span></li>
+      <li><b>Mask</b><span>Yellow pixels become the grade color, skin tones go to the skin mask</span></li>
+      <li><b>Register</b><span>Rebuild the layer list, muzzle positions and icons</span></li>
+      <li><b>Check</b><span>Tests catch missing grades and poses without a pair</span></li>
+    </ol>
+
+    <div class="records">
+      <div><b>594</b><span>gear looks</span></div>
+      <div><b>107</b><span>decision log entries</span></div>
+      <div><b>4</b><span>languages (한국어, English, 中文, 日本語)</span></div>
+      <div><b>26</b><span>dev journal drafts on Brunch</span></div>
+    </div>
+    <p style="margin-top:24px">The development story is serialized on Brunch as 「Solo game development with AI」 (in Korean). Gameplay videos and update news go up on Instagram <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>. <a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">Read the series on Brunch</a></p>
+  </div>
+</section>
+
+<!-- 제작사 -->
+<section class="stop" id="studio" aria-labelledby="studio-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">8</span><span class="station">Terminus</span><h2 id="studio-title">Studio. Data Station</h2></div>
+    <div class="studio-band cut">
+      <div>
+        <p class="motto">The truth will set you free.</p>
+        <p>Data Station teaches and consults on data analytics and AI. We have taught at companies and public institutions since 2018. Neon Station is a project that takes what we say in the classroom, define the problem first and pick the tools after, and applies it straight to making a game.</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <a class="btn" href="studio.html">About the studio</a> <a class="btn ghost" href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">data-station.co.kr</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <p class="label">제작사</p>
+      <p class="name"><a href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">데이터스테이션</a></p>
+      <p class="motto">The truth will set you free.</p>
+      <p class="biz">사업자등록번호 : 627-29-01315</p>
+      <p class="copy">© 2026 Data Station</p>
+    </div>
+    <div class="ft-links">
+      <a href="studio.html">About the studio</a> <a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">Dev journal (Brunch, Korean)</a> <a href="guide.html">Starter guide</a> <a href="news.html">News</a> <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">Instagram</a> <a href="../support/">Support (Korean)</a> <a href="../privacy/en/">Privacy policy</a> <a href="../terms/">Terms (Korean)</a> <a href="../delete-account/">Delete your account (Korean)</a> <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/news-data.js"></script>
+<script src="../assets/js/news.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

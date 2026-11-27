@@ -1,63 +1,79 @@
 # Neon Station 소개 사이트
 
-사이버펑크 도트 방치형 RPG **Neon Station**의 소개 홈페이지입니다. 빌드 과정 없는 정적 사이트라 이 폴더를 그대로 GitHub Pages에 올리면 됩니다.
+사이버펑크 도트 방치형 RPG **Neon Station**의 소개 홈페이지입니다. 빌드 과정 없는 정적 사이트라 이 폴더를 그대로 GitHub Pages에 올리면 됩니다. 주소: https://neon-station.com/
+
+## 언어
+
+| 주소 | 언어 |
+| --- | --- |
+| `/` (`index.html` 등) | 한국어 (원문) |
+| `/en/` | English |
+| `/ja/` | 日本語 |
+| `/zh/` | 中文(简体) |
+
+- 페이지마다 오른쪽 위 언어 메뉴로 같은 페이지의 다른 언어로 이동합니다. 검색엔진용 `hreflang` 링크도 들어 있습니다.
+- `/en/` `/ja/` `/zh/`의 HTML은 한국어 원문에서 **자동으로 만든 파일**입니다. 직접 고치지 말고, 한국어 원문과 번역표를 고친 뒤 다시 만듭니다(작업 폴더 `홈페이지/_작업파일/i18n-tools`, 아래 「번역 다시 만들기」).
+- 개인정보처리방침은 한국어(`privacy/`)와 영어(`privacy/en/`)만 있습니다. 일본어 · 중국어 페이지는 영어 방침으로 연결합니다. 이용약관 · 고객 지원 · 계정 삭제 안내는 한국어 페이지로 연결합니다(링크에 「(Korean)」 표시).
+
+## 파일
 
 | 파일 | 내용 |
 | --- | --- |
 | `index.html` | 게임 소개 — 인트로 컷신, 스토리(3막 10장), 세계관, 게임, 외형 실험실, 안내, 아트 팩토리, 제작기 |
 | `studio.html` | 제작사 데이터스테이션 소개 |
-| `guide.html` | 시작 가이드 — 처음 온 유저용 안내서(설치·첫 10분·화면·성장 순서·해금 레벨·하루 할 일·재화·팁·용어) |
-| `news.html` | 공지 — 업데이트·안내·이벤트·점검. 내용은 `assets/js/news-data.js` 하나에서 읽음 |
-| `assets/css/style.css` | 스타일 (색은 게임 `src/constants/theme.ts`·`grades.ts`와 같은 값) |
-| `assets/js/main.js` | 컷신, 노선도 표시, 상인 초상, 아트 팩토리 탭, 외형 실험실 |
-| `assets/js/data.js` | 장비 외형 목록(11등급)·시그니처 세트 (게임 `assets/sprites/gear`, `docs/art-factory.json`에서 추출) |
-| `assets/img/` | 게임 도트 에셋 사본, 스토어 스크린샷(webp), 공유용 이미지 `og-image.png` |
-| `assets/audio/` | 배경음악 10곡 (코드 합성 칩튠) |
-| `assets/fonts/` | 갈무리(Galmuri) 폰트 — 사이트에 쓰인 글자만 남긴 woff2, SIL OFL 1.1 (`OFL.txt`) |
+| `guide.html` | 시작 가이드 — 처음 온 유저용 안내서 |
+| `news.html` | 공지 — 내용은 `assets/js/news-data.js` 하나에서 읽음 |
+| `en/` `ja/` `zh/` | 위 네 페이지의 번역본 (자동 생성) |
+| `assets/js/i18n.js` | 스크립트가 쓰는 화면 문구(등급 이름, 공지 분류 등) 네 언어 |
+| `assets/js/news-data.js` | 공지 데이터 (언어별 제목 · 요약 · 본문) |
+| `assets/js/data.js` | 장비 외형 목록 · 시그니처 세트 (이름 · 효과는 게임 번역 사전과 같은 네 언어) |
+| `assets/js/main.js` · `news.js` | 컷신, 외형 실험실, 공지 목록 |
+| `assets/css/style.css` | 스타일 (일본어 · 중국어 페이지는 맨 아래 글꼴 설정) |
+| `assets/fonts/` | 갈무리(Galmuri), Fusion Pixel 12px 일본어 · 중국어 — 사이트에 쓰인 글자만 남긴 woff2, 모두 SIL OFL 1.1 (`OFL.txt`, `OFL-FusionPixel.txt`) |
 
-## GitHub Pages로 올리기
+## 공지 올리는 법 (네 언어)
 
-1. GitHub에서 새 저장소를 만듭니다 (공개 저장소): https://github.com/new
-   예: `hanarostation/neon-station-web`
-2. 이 폴더에서 아래 명령으로 올립니다.
-   ```bash
-   git init
-   git add .
-   git commit -m "Neon Station 소개 사이트"
-   git branch -M main
-   git remote add origin https://github.com/hanarostation/neon-station-web.git
-   git push -u origin main
-   ```
-3. 저장소 **Settings → Pages**에서 Source를 `Deploy from a branch`, Branch를 `main` / `/ (root)`로 저장합니다.
-   안내: https://docs.github.com/ko/pages/getting-started-with-github-pages/creating-a-github-pages-site
-4. 1~2분 뒤 `https://neon-station.com/` 에서 열립니다.
+1. `assets/js/news-data.js`를 엽니다. 파일 맨 위 주석에 항목 설명이 있습니다.
+2. `NS_NEWS` 맨 위 항목 하나를 복사해 바로 위에 붙이고 `id` · `date` · `type` · `status` · `version`을 바꿉니다.
+3. 글은 언어마다 따로 씁니다: `ko: { title, summary, sections }`(필수), `en`, `ja`, `zh`(같은 모양). 링크 이름도 `label: { ko, en, ja, zh }`.
+4. 번역이 아직 없으면 그 언어를 빼 두면 됩니다. 그 공지는 한국어 페이지에만 보이고, 번역을 넣는 순간 해당 언어 페이지에도 나타납니다.
+5. 심사가 끝나 적용되면 `status`만 `'pending'` → `'live'`로 바꿉니다.
+6. 저장하고 올리면 네 언어의 공지 페이지와 첫 화면 「최신 소식」이 함께 바뀝니다.
+7. 공지 하나를 링크로 보내려면 `https://neon-station.com/news.html#공지id` (영어는 `/en/news.html#공지id`).
 
-## 올린 뒤 손볼 것
+공지에 처음 쓰는 글자(특히 한자 · 가나)가 들어가면 그 글자만 기본 글꼴로 보일 수 있습니다. 폰트 서브셋을 다시 만들면 됩니다(`_작업파일/i18n-tools/fonts.py`).
 
-- **도메인:** `neon-station.com` (GitHub Pages 맞춤 도메인, 저장소 맨 위 `CNAME` 파일). 공유 미리보기(`og:image`)도 이 주소 기준입니다. 도메인을 바꾸면 `index.html`, `studio.html`의 `og:image`·`og:url`도 함께 고치세요.
-- **비공개 테스트 신청 링크:** 인스타그램 @_neon_station DM(`https://ig.me/m/_neon_station`)으로 연결됩니다. 바꾸려면 `index.html`의 `#guide-test` 버튼 주소를 고치세요.
-- **새 에셋 반영:** 게임의 `assets/sprites/`에서 해당 PNG를 `assets/img/` 같은 경로로 복사하면 됩니다. 장비 외형을 추가했다면 `assets/js/data.js`의 `NS_GEAR`에도 추가합니다.
-- **글자 추가:** 폰트는 지금 쓰인 글자만 남겨 둔 파일이라, 새 문장에 처음 쓰는 한글이 들어가면 그 글자만 기본 글꼴로 보입니다. 원본 TTF(게임 `assets/fonts/`)로 다시 서브셋하거나 원본 woff2로 바꾸면 됩니다.
+## 스토어 링크
+
+`assets/js/news-data.js`의 `NS_SITE`에 주소를 넣으면 모든 언어의 다운로드 버튼이 연결됩니다.
+- `appStoreUrl`: App Store 주소. 비워 두면 「App Store에서 「Neon Station」 검색」 안내가 보입니다.
+- `playStoreUrl`: Google Play 정식 출시 후 `https://play.google.com/store/apps/details?id=com.datastation.neonstation`. 비워 두면 「Google Play 출시 준비 중」이 보입니다.
+
+## 번역 다시 만들기
+
+한국어 페이지 문장을 고쳤다면 번역본도 다시 만들어야 합니다. 이 채팅(Claude)에 「사이트 번역 다시 만들어 줘」라고 요청하면 됩니다. 도구는 `홈페이지/_작업파일/i18n-tools`에 있습니다.
+- `src/*.html`: 한국어 원문 (`<!--LANGS-->` · `<!--HREFLANG-->` 자리 표시)
+- `tr/*.txt`: 직접 번역한 문장, 게임 사전(`C:\Dev\src\i18n\*.json`)에 있는 문장은 그대로 씀
+- `i18n_build.py`: 원문 + 번역표 → `/` `/en/` `/ja/` `/zh/` 페이지, 번역이 빠진 문장은 `i18n_missing.json`에 기록
+- `fonts.py`: 폰트 서브셋
+
+## 올리기
+
+```powershell
+cd "C:\Users\rlack\OneDrive\바탕 화면\네온스테이션_게임개발_261116\홈페이지\neon-station-web"
+robocopy ..\neon-station-site . /E
+git add .
+git commit -m "메시지"
+git push
+```
+`/MIR`는 쓰지 않습니다(저장소에만 있는 `CNAME` · `privacy/` · `terms/` · `support/` · `delete-account/` · `app-ads.txt`가 지워짐).
+GitHub Pages 안내: https://docs.github.com/ko/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
 로컬에서 미리 보려면 이 폴더에서 `python -m http.server 8000` 실행 후 http://localhost:8000 을 엽니다.
 
 ## 갱신 기록
 
-- 2026-11-24: 1.1.0 기준으로 갱신 — 장비 11등급(퀀텀·보이드·오리진)·외형 264종, 스킬트리·칩, 특수 의뢰 5종(중계 서버 해킹), 온라인 탭(PVP·라인), 3개 언어, 무기상 Lv50, 배경음악 10곡, 프로필 204장, 스토어 스크린샷 v1.1.0, 새 앱 아이콘(파비콘), 테스트 안내(비공개 테스트 테스터 모집·App Store 출시 준비), 바닥글에 인스타그램·고객 지원 링크, 제작사 페이지에 데이터스테이션 로고.
-
-## 공지 올리는 법
-
-1. `assets/js/news-data.js`를 엽니다.
-2. `NS_NEWS` 맨 위 항목 하나를 복사해 바로 위에 붙이고 `id` · `date` · `type` · `title` · `summary` · `sections`를 바꿉니다. 파일 맨 위 주석에 항목 설명이 있습니다.
-3. 심사가 끝나 적용되면 그 공지의 `status`만 `'pending'` → `'live'`로 바꿉니다.
-4. 저장하고 올리면 공지 페이지와 첫 화면 「최신 소식」(최근 3개)이 함께 바뀝니다.
-5. 공지 하나를 링크로 보내려면 `https://neon-station.com/news.html#공지id` (공지 아래 「이 공지 주소 복사」).
-
-공지에 새 한글 글자를 쓰면 그 글자만 기본 글꼴로 보일 수 있습니다(사이트 폰트는 쓰인 글자만 남긴 파일). 보기 싫으면 폰트 서브셋을 다시 만들어 달라고 요청하세요.
-
-## App Store 링크
-
-`assets/js/news-data.js`의 `NS_SITE.appStoreUrl`에 App Store 주소를 넣으면 첫 화면 · 시작 가이드의 「App Store에서 받기」 버튼이 그 주소로 연결됩니다. 비워 두면 「App Store에서 'Neon Station' 검색」 안내로 보입니다.
-
-- 2026-11-25: 시작 가이드(`guide.html`)·공지(`news.html`) 추가, 상단에 [가이드] [공지] 버튼, 첫 화면 「최신 소식」, iOS 출시 반영, 시그니처 세트 30종, 제작기 11/25까지.
-- 2026-11-26: 1.1.3 반영 — 공지 「1.1.3 업데이트 안내」(심사·배포 중) 추가, 첫 화면·가이드에 진압열차 10단계·스킬트리 여섯 계열 18층·펫 55종·세트 40종·칭호 232종·외형 594종 반영, 외형 실험실에 상위 외형과 세트 31~40, 아트 팩토리 펫 55종 · 진압열차 10대, 제작기 11/26.
+- 2026-11-24: 1.1.0 기준 — 장비 11등급, 스킬트리 · 칩, 특수 의뢰 5종, 온라인 탭, 무기상 Lv50, 배경음악 10곡, 스토어 스크린샷.
+- 2026-11-25: 시작 가이드 · 공지 추가, iOS 출시 반영.
+- 2026-11-26: 1.1.3 반영 — 진압열차 10단계, 스킬트리 여섯 계열, 펫 55종, 세트 40종, 칭호 232종, 외형 594종.
+- 2026-11-27: 영어 · 일본어 · 중국어 사이트(`/en/` `/ja/` `/zh/`)와 언어 메뉴, 네 언어 공지. 1.1.4 반영 — 게스트 백업 · 복구 코드, 방어 계산, 일본어 앱, Google Play 정식 출시 심사(테스터 모집 종료), 개인정보처리방침 변경 공지(12월 4일 시행).

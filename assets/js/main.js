@@ -3,7 +3,7 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── 노선도: 지금 보고 있는 역 표시 ── */
+  /* route map: highlight current stop */
   const links = $$('.route a[href^="#"]');
   const stops = links.map((a) => $(a.getAttribute('href'))).filter(Boolean);
   if ('IntersectionObserver' in window && stops.length) {
@@ -19,7 +19,7 @@
     stops.forEach((s) => io.observe(s));
   }
 
-  /* ── 인트로 컷신 ── */
+  /* intro cutscene */
   const screen = $('.screen');
   if (screen) {
     const frames = $$('.cut-frame', screen);
@@ -33,17 +33,16 @@
       frames.forEach((f, k) => {
         f.classList.toggle('on', k === i);
         f.setAttribute('aria-hidden', k === i ? 'false' : 'true');
-        // 패닝 애니메이션을 처음부터 다시
         const bg = $('img.bg', f);
         if (k === i && bg) { bg.style.animation = 'none'; void bg.offsetWidth; bg.style.animation = ''; }
         const eye = $('.eye', f);
         if (k === i && eye) { eye.style.animation = 'none'; void eye.offsetWidth; eye.style.animation = ''; }
       });
       $$('span', pips).forEach((p, k) => p.classList.toggle('on', k === i));
-      count.textContent = `컷 ${i + 1} / ${frames.length}`;
+      count.textContent = T('cut', { i: i + 1, n: frames.length });
     };
     const tick = () => { clearTimeout(timer); if (playing) timer = setTimeout(() => { show(i + 1); tick(); }, +frames[i].dataset.ms || 5000); };
-    const setPlay = (p) => { playing = p; playBtn.textContent = p ? '❚❚' : '▶'; playBtn.setAttribute('aria-label', p ? '컷신 일시정지' : '컷신 재생'); tick(); };
+    const setPlay = (p) => { playing = p; playBtn.textContent = p ? '❚❚' : '▶'; playBtn.setAttribute('aria-label', p ? T('pause') : T('play')); tick(); };
     $('[data-cut="prev"]').addEventListener('click', () => { show(i - 1); tick(); });
     $('[data-cut="next"]').addEventListener('click', () => { show(i + 1); tick(); });
     playBtn.addEventListener('click', () => setPlay(!playing));
@@ -51,7 +50,7 @@
     show(0); setPlay(playing);
   }
 
-  /* ── 상인 레벨 초상 바꾸기 ── */
+  /* merchant level portraits */
   $$('.merchant').forEach((m) => {
     const big = $('.portrait', m);
     $$('.levels button', m).forEach((b) => b.addEventListener('click', () => {
@@ -60,7 +59,7 @@
     }));
   });
 
-  /* ── 아트 팩토리 탭 ── */
+  /* art factory tabs */
   const tabs = $$('.af-bar [role="tab"]');
   tabs.forEach((t) => t.addEventListener('click', () => {
     tabs.forEach((x) => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; $('#' + x.getAttribute('aria-controls')).hidden = !on; });
@@ -70,19 +69,18 @@
     if (!d) return; const n = tabs[(k + d + tabs.length) % tabs.length]; n.focus(); n.click();
   }));
 
-  /* ── 외형 실험실 (게임과 같은 레이어 규칙) ──
-     기본 몸 → 하의 → 신발 → 몸통 → 머리 → 무기. 강조 마스크는 등급 색, 피부 마스크는 종족 피부색(부랑자만)으로 칠한다. */
+  /* look lab — same layer rules as the game:
+     base body → legs → feet → body → head → weapon. Accent mask = grade colour, skin mask = race skin colour. */
   const GEAR = window.NS_GEAR, SETS = window.NS_SETS || [], LOOKS = window.NS_LOOKS || {};
   if (!GEAR) return;
   const GRADES = [
-    ['스크랩', '#8E9CA0'], ['스트리트', '#D8E4E2'], ['커스텀', '#3DDC84'], ['밀스펙', '#3CA0FF'],
-    ['블랙마켓', '#A66BFF'], ['프로토타입', '#FF8A1F'], ['레전드', '#FF3B4E'], ['싱귤래리티', '#F5E50A'],
-    ['퀀텀', '#4DFFE5'], ['보이드', '#7B2DFF'], ['오리진', '#FFFFFF'],
-  ];
-  const RACES = { resistance: { name: '레지스탕스' }, drifter: { name: '부랑자', skin: '#D1A370' }, citizen: { name: '시민' } };
-  const SLOTS = [['head', '머리'], ['body', '몸통'], ['legs', '하의'], ['feet', '신발'], ['weapon', '무기']];
+    ['#8E9CA0'], ['#D8E4E2'], ['#3DDC84'], ['#3CA0FF'], ['#A66BFF'], ['#FF8A1F'],
+    ['#FF3B4E'], ['#F5E50A'], ['#4DFFE5'], ['#7B2DFF'], ['#FFFFFF'],
+  ].map(([c], i) => [T('grades')[i], c]);
+  const RACES = { resistance: { name: T('race_resistance') }, drifter: { name: T('race_drifter'), skin: '#D1A370' }, citizen: { name: T('race_citizen') } };
+  const SLOTS = ['head', 'body', 'legs', 'feet', 'weapon'].map((k) => [k, T('slot_' + k)]);
   const ORDER = ['legs', 'feet', 'body', 'head', 'weapon'];
-  const ROOT = 'assets/img/';
+  const ROOT = (window.NS_LANG && window.NS_LANG !== 'ko' ? '../' : '') + 'assets/img/';
   const cache = {};
   const load = (src) => cache[src] || (cache[src] = new Promise((res) => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = src; }));
   const tint = (im, color) => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); x.globalCompositeOperation = 'source-in'; x.fillStyle = color; x.fillRect(0, 0, c.width, c.height); return c; };
@@ -111,11 +109,11 @@
   }
 
   const lookName = (id) => {
-    const p = parse(id); if (!p) return '없음';
-    const named = LOOKS[id] && LOOKS[id].name;
+    const p = parse(id); if (!p) return T('none');
+    const named = LOOKS[id] && NS_PICK(LOOKS[id].name);
     const list = GEAR[p.kind][p.grade] || [];
     const idx = list.findIndex(([v]) => v === p.v);
-    return `${GRADES[p.grade - 1][0]}${list.length > 1 ? ` 외형 ${idx + 1}` : ''}${named ? ` · ${named}` : ''}`;
+    return `${GRADES[p.grade - 1][0]}${list.length > 1 ? ` ${T('look')} ${idx + 1}` : ''}${named ? ` · ${named}` : ''}`;
   };
 
   const state = { race: 'resistance', wtype: 'ranged', look: { head: 'head_11', body: 'body_11', legs: 'legs_11', feet: 'feet_11', weapon: 'ranged_11' } };
@@ -131,7 +129,7 @@
       $$('.grades button', row).forEach((b) => b.setAttribute('aria-pressed', String(p ? +b.dataset.g === p.grade : b.dataset.g === '0')));
       const vb = $('.var-btn', row); const list = p ? GEAR[p.kind][p.grade] : [];
       vb.disabled = !p || list.length < 2;
-      vb.textContent = p ? `외형 ${list.findIndex(([v]) => v === p.v) + 1}/${list.length}` : '외형 -';
+      vb.textContent = p ? `${T('look')} ${list.findIndex(([v]) => v === p.v) + 1}/${list.length}` : `${T('look')} -`;
     });
     $$('[data-race]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.race === state.race)));
     $$('[data-wtype]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.wtype === state.wtype)));
@@ -140,13 +138,13 @@
   const ctlWrap = $('#doll-controls');
   SLOTS.forEach(([slot, label]) => {
     const row = document.createElement('div'); row.className = 'ctl-row'; row.dataset.slot = slot;
-    row.innerHTML = `<span>${label}</span><div class="grades" role="group" aria-label="${label} 등급"></div><button type="button" class="var-btn" aria-label="${label} 다른 외형"></button>`;
+    row.innerHTML = `<span>${label}</span><div class="grades" role="group" aria-label="${T('a_grade', { s: label })}"></div><button type="button" class="var-btn" aria-label="${T('a_next_look', { s: label })}"></button>`;
     const g = $('.grades', row);
-    const off = document.createElement('button'); off.type = 'button'; off.className = 'off'; off.dataset.g = '0'; off.textContent = '벗기'; off.setAttribute('aria-label', `${label} 벗기`);
+    const off = document.createElement('button'); off.type = 'button'; off.className = 'off'; off.dataset.g = '0'; off.textContent = T('unequip'); off.setAttribute('aria-label', T('a_unequip', { s: label }));
     off.addEventListener('click', () => { state.look[slot] = null; render(); });
     GRADES.forEach(([name, color], k) => {
       const b = document.createElement('button'); b.type = 'button'; b.dataset.g = k + 1; b.textContent = k + 1; b.style.setProperty('--g', color);
-      b.setAttribute('aria-label', `${label} ${k + 1}등급 ${name}`); b.title = name;
+      b.setAttribute('aria-label', T('a_grade_n', { s: label, n: k + 1, g: name })); b.title = name;
       b.addEventListener('click', () => { state.look[slot] = `${kindOf(slot)}_${k + 1}`; render(); });
       g.appendChild(b);
     });
@@ -180,8 +178,9 @@
   }
   SETS.forEach((set) => {
     const el = document.createElement('button'); el.type = 'button'; el.className = 'set';
-    el.innerHTML = `<canvas width="72" height="72" class="px" aria-hidden="true"></canvas><div><span class="no">세트 ${set.no}</span><b>${set.name}</b><span>${set.effect}</span></div>`;
-    el.setAttribute('aria-label', `세트 ${set.no} ${set.name} 입어 보기. 효과: ${set.effect}`);
+    const sname = NS_PICK(set.name), seff = NS_PICK(set.effect);
+    el.innerHTML = `<canvas width="72" height="72" class="px" aria-hidden="true"></canvas><div><span class="no">${T('set_no', { n: set.no })}</span><b>${sname}</b><span>${seff}</span></div>`;
+    el.setAttribute('aria-label', T('a_set', { n: set.no, name: sname, eff: seff }));
     el.addEventListener('click', () => {
       state.look = lookFromSet(set);
       const w = parse(state.look.weapon); if (w) state.wtype = w.kind;

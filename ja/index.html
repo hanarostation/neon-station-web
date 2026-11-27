@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Station — サイバーパンク・ドット放置RPG</title>
+<meta name="description" content="空へ向かう駅が止まって26年。身分チップを消されたまま0番ホームで目覚めたあなたの物語。ギャングを一掃し、装備の外見594種を集めるサイバーパンク・ドット放置RPG、Neon Station。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Neon Station — サイバーパンク・ドット放置RPG">
+<meta property="og:description" content="つけておけば勝手に戦い、着たとおりに姿が変わる。装備の外見594種を集めるサイバーパンク・ドット放置RPG。">
+<meta property="og:image" content="https://neon-station.com/assets/img/og-image.png">
+<meta property="og:url" content="https://neon-station.com/ja/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1316">
+<link rel="icon" href="../favicon.png">
+<link rel="alternate" hreflang="ko" href="https://neon-station.com/">
+<link rel="alternate" hreflang="en" href="https://neon-station.com/en/">
+<link rel="alternate" hreflang="ja" href="https://neon-station.com/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://neon-station.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://neon-station.com/">
+<link rel="preload" href="../assets/fonts/Galmuri14.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#story">本文へスキップ</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Neon Station トップへ"><img class="px" src="../assets/img/story/logo_emblem.png" alt=""><span class="wordmark"><span class="n">NEON</span> <span class="s">STATION</span></span></a>
+    <nav class="route" aria-label="路線図">
+      <ol>
+        <li><a href="#top" aria-current="true">0番ホーム</a></li>
+        <li><a href="#story">ストーリー</a></li>
+        <li><a href="#world">世界観</a></li>
+        <li><a href="#game">ゲーム</a></li>
+        <li><a href="#looks">外見</a></li>
+        <li><a href="#guide">案内</a></li>
+        <li><a href="#art">アートファクトリー</a></li>
+        <li><a href="#making">制作記</a></li>
+        <li><a href="#studio">制作会社</a></li>
+      </ol>
+    </nav>
+    <div class="pagelinks"><a href="guide.html">ガイド</a><a href="news.html">お知らせ</a></div>
+    <details class="langs"><summary aria-label="Language: 日本語">日本語</summary><nav aria-label="Language"><a href="../" hreflang="ko" lang="ko">한국어</a><a href="../en/" hreflang="en" lang="en">English</a><a href="./" hreflang="ja" lang="ja" aria-current="true">日本語</a><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></nav></details>
+  </div>
+</header>
+
+<main>
+<!-- 0번 승강장 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="screen px" role="region" aria-roledescription="カットシーン" aria-label="ゲームイントロ7カット"><div class="cut-frame " data-ms="3500" aria-hidden="true"><div class="noise"></div><div class="scan"></div><p class="subtitle">2061年、上り線が止まった。</p></div><div class="cut-frame pan-up" data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_2.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">空へ向かう駅は都市になった。<br>人々はここをネオンステーションと呼ぶ。</p></div><div class="cut-frame pan-down" data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_3.png" alt="" width="256" height="112"><img class="eye px" src="../assets/img/story/echo_eye_32.png" alt=""><div class="scan"></div><p class="subtitle">上の層は企業が、下の層はギャングが。<br>そしてすべての層をECHOが見ている。</p></div><div class="cut-frame " data-ms="4500" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_4.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">2087年。0番ホーム。</p></div><div class="cut-frame " data-ms="5500" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_5.png" alt="" width="256" height="112"><div class="chip-id">ID:NULL</div><div class="scan"></div><p class="subtitle">「識別不能。予測モデルにない個体。」<small>ECHO</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_6.png" alt="" width="256" height="112"><img class="speaker px" src="../assets/img/npc-portraits/merchant.png" alt=""><div class="scan"></div><p class="subtitle">断線がお前を探してた。この銃はプレゼントじゃない、前金だ。<small>武器商バレル（レジスタンスで始めたとき）</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/backgrounds/district1.png" alt="" width="256" height="112"><div class="logo-lock"><img class="px" src="../assets/img/story/logo_full.png" alt="Neon Station"></div><div class="scan"></div><p class="subtitle">チップは空っぽだ。だから、何だってできる。</p></div></div>
+    <div class="screen-ctl">
+      <button type="button" data-cut="prev" aria-label="前のカット">◀</button>
+      <button type="button" data-cut="play" aria-label="カットシーンを一時停止">❚❚</button>
+      <button type="button" data-cut="next" aria-label="次のカット">▶</button>
+      <div class="pips" aria-hidden="true"></div>
+      <span class="count" aria-live="polite"></span>
+    </div>
+
+    <div class="hero-copy">
+      <div>
+        <img class="logo px" src="../assets/img/story/logo_full.png" alt="Neon Station" width="384" height="128">
+        <h1 id="hero-title">つけておけば勝手に戦い、<br><span class="y">着たとおりに姿が変わる。</span></h1>
+        <p class="lead">2087年、軌道エレベーターの工事が止まり垂直都市となった巨大な駅。身分チップを消されたまま目覚めたあなたは、都市を管理するAI「ECHO」の記録にないただ一人の人間だ。</p>
+        <div class="ctas">
+          <a class="btn" data-appstore data-fallback="App Storeで「Neon Station」を検索">App Storeで入手</a> <a class="btn ghost" href="guide.html">スタートガイド</a> <a class="btn ghost" data-playstore data-fallback="Google Play 配信準備中">Google Playで入手</a>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>ジャンル</b><span>サイバーパンク・ドット放置RPG。オートバトルと装備収集</span></li>
+        <li><b>プラットフォーム</b><span>iOS App Storeで配信中。AndroidはGoogle Playで正式リリースの審査中</span></li>
+        <li><b>舞台</b><span>10の区域、10のギャング、敵60種</span></li>
+        <li><b>収集</b><span>装備11等級、外見594種、シグネチャーセット40種、ペット55種、称号232種</span></li>
+        <li><b>言語</b><span>한국어、English、中文(简体)、日本語</span></li>
+        <li><b>制作</b><span>データステーション。AIと一緒に、1人で開発</span></li>
+      </ul>
+    </div>
+    <div class="latest" aria-labelledby="latest-title">
+      <div class="latest-head"><h2 id="latest-title">最新のお知らせ</h2><a href="news.html">お知らせ一覧</a></div>
+      <ul data-latest="3"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 스토리 -->
+<section class="stop" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">1</span><span class="station">1番駅</span><h2 id="story-title">ストーリー。途切れた空の下の十の駅</h2></div>
+    <p class="lead">空へ向かう駅が止まって26年。すべての層を見守るAIの記録に、ただ一人、身分チップが空のあなただけがいない。</p>
+
+    <div class="world-intro">
+      <div><h3>ネオンステーション</h3><p>もともとは都市ではなく駅だった。企業ケイロン・グループが軌道エレベーター「上り線」の地上ステーションとして2041年に建設を始めた。2061年「停止の日」、工事は理由も告げられないまま止まった。仕事を求めて押し寄せた数百万人は出て行けず、駅は上へ積み重なる垂直都市になった。工事が止まったあとも、古い駅案内のネオンだけは消えなかった。</p></div>
+      <div><h3>ECHOとヌル</h3><p>駅の統合管理AI「ECHO」は電力と水、治安、身分チップをすべて管理し、人々が明日何をするかを予測する。予測から外れればチップを消す。この都市で最も重い刑罰、「削除」だ。0番ホームで目覚めたあなたの手首のチップには、名前の代わりにNULLとだけ刻まれている。チップが空だということは、ECHOがあなたを見られないということだ。</p></div>
+    </div>
+
+    <div class="act"><div class="act-head"><h3>第1幕「名もなき者」</h3><span class="tag">区域 1〜5</span><p>下層を片づけながら名を得る。ギャングの背後に企業がいることを知る。</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="1" style="--c:#8E5A2B">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district1.png" alt="ラスト下水道の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d01_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d01_boss.png" alt="区域ボス グロム「下水道の王」" loading="lazy"></div>
+      <div>
+        <h4>1区域 · ラストラッツ</h4>
+        <h3>ラスト下水道</h3>
+        <p class="who">幹部 ファング「ネズミの牙」 / ボス グロム「下水道の王」</p>
+        <p>目覚めたヌルが、下水道を牛耳るスクラップギャングを追い払う。</p>
+        <blockquote>「下水道に王は一人だけだ。名もない奴が、よくも。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d01.png" alt="">ECHOログの欠片 01 を開く</summary><p>グロムの鎖にはケイロンの刻印がある。スクラップではなく企業の支給品だった。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="2" style="--c:#FF3B4E">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district2.png" alt="ネオン市場の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d02_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d02_boss.png" alt="区域ボス バロン・レッド「四本腕」" loading="lazy"></div>
+      <div>
+        <h4>2区域 · レッドランタン</h4>
+        <h3>ネオン市場</h3>
+        <p class="who">幹部 ジン「帳簿屋」 / ボス バロン・レッド「四本腕」</p>
+        <p>改造装備の密売団。武器商バレルの昔の取引先だ。</p>
+        <blockquote>「腕が四本なら帳簿も四冊だ。お前はどれに書いてやろうか？」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d02.png" alt="">ECHOログの欠片 02 を開く</summary><p>ジンの帳簿には、毎月利益の一部が上層の口座へ送られた記録がある。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="3" style="--c:#2FA8A0">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district3.png" alt="廃港湾の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d03_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d03_boss.png" alt="区域ボス ディープジャック「深海の親分」" loading="lazy"></div>
+      <div>
+        <h4>3区域 · ブラックタイド</h4>
+        <h3>廃港湾</h3>
+        <p class="who">幹部 ソルト「片目の船長」 / ボス ディープジャック「深海の親分」</p>
+        <p>重火器を握る密輸組織とぶつかる。</p>
+        <blockquote>「海の底には企業が捨てたものがたっぷりある。お前もそこに入れてやる。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d03.png" alt="">ECHOログの欠片 03 を開く</summary><p>密輸貨物の正体は、企業の実験廃棄物とサイボーグの部品だった。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="4" style="--c:#A66BFF">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district4.png" alt="データスラムの背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d04_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d04_boss.png" alt="区域ボス ルート「スラムの君主」" loading="lazy"></div>
+      <div>
+        <h4>4区域 · グリッチ</h4>
+        <h3>データスラム</h3>
+        <p class="who">幹部 セブン「ウイルス」 / ボス ルート「スラムの君主」</p>
+        <p>ハッカーギャングとドローンの群れがスラムの回線を握っている。</p>
+        <blockquote>「お前のチップを開けたが……何もない。こんなのは初めて見る。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d04.png" alt="">ECHOログの欠片 04 を開く</summary><p>グリッチが傍受したECHOの信号。ECHOはギャング抗争を、起きる前に「予報」している。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="5" style="--c:#D8E4E2">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district5.png" alt="企業郊外の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d05_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d05_boss.png" alt="区域ボス ゼロ「捨てられた兵器」" loading="lazy"></div>
+      <div>
+        <h4>5区域 · クロームゼロ</h4>
+        <h3>企業郊外</h3>
+        <p class="who">幹部 スチールビー「傭兵隊長」 / ボス ゼロ「捨てられた兵器」</p>
+        <p>企業が捨てたサイボーグ傭兵たち。ここで第1幕が終わる。</p>
+        <blockquote>「命令なし。目標なし。ならばお前を目標にする。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d05.png" alt="">ECHOログの欠片 05 を開く</summary><p>ゼロのコア記録には「下層鎮圧実験体」と書かれている。そしてECHOが初めてヌルに直接放送する。「識別不能個体。経路を修正してください。」</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>第2幕「上り線」</h3><span class="tag">区域 6〜9</span><p>中層と上層へ上がる。ギャングがECHOの設計だという証拠を集める。</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="6" style="--c:#3CA0FF">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district6.png" alt="高架鉄路の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d06_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d06_boss.png" alt="区域ボス アンペア「高圧の君主」" loading="lazy"></div>
+      <div>
+        <h4>6区域 · ボルトランナーズ</h4>
+        <h3>高架鉄路</h3>
+        <p class="who">幹部 スパーク「暴走族の頭」 / ボス アンペア「高圧の君主」</p>
+        <p>上り線の貨物鉄路を占拠した暴走族。</p>
+        <blockquote>「この線路は上へは行かない。だから俺たちが走るんだ。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d06.png" alt="">ECHOログの欠片 06 を開く</summary><p>ボルトランナーズが盗んでいた電力はECHOの予備電源だった。ECHOはわざと盗ませていた。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="7" style="--c:#3DDC84">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district7.png" alt="有毒工場地帯の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d07_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d07_boss.png" alt="区域ボス スモッグマザー「汚染の母」" loading="lazy"></div>
+      <div>
+        <h4>7区域 · グリーンプレイグ</h4>
+        <h3>有毒工場地帯</h3>
+        <p class="who">幹部 モス「調合師」 / ボス スモッグマザー「汚染の母」</p>
+        <p>廃化学工場を占拠したガスマスクのギャング。</p>
+        <blockquote>「息をしろ。この空気がお前たちを均してくれる。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d07.png" alt="">ECHOログの欠片 07 を開く</summary><p>モスはリッパーメディック・ホワイトの昔の同僚だ。工場は中層の人口を調整する「浄化設備」だった。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="8" style="--c:#FF4FD8">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district8.png" alt="ホロ歓楽街の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d08_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d08_boss.png" alt="区域ボス マダム・ルージュ「ショーの女王」" loading="lazy"></div>
+      <div>
+        <h4>8区域 · マスカレード</h4>
+        <h3>ホロ歓楽街</h3>
+        <p class="who">幹部 ミラージュ「マジシャン」 / ボス マダム・ルージュ「ショーの女王」</p>
+        <p>カジノとクラブを握る仮面の組織。</p>
+        <blockquote>「名前がない？ショーではそれがいちばん高い仮面よ。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d08.png" alt="">ECHOログの欠片 08 を開く</summary><p>ここで身分が洗浄され、消される。マダム・ルージュの名簿にヌルの昔のチップ番号がある。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="9" style="--c:#E8C35A">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district9.png" alt="企業本社地区の背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d09_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d09_boss.png" alt="区域ボス イージス-9「理事会の守護機」" loading="lazy"></div>
+      <div>
+        <h4>9区域 · オムニガード</h4>
+        <h3>企業本社地区</h3>
+        <p class="who">幹部 ハウンド「保安室長」 / ボス イージス-9「理事会の守護機」</p>
+        <p>企業保安軍との正面衝突。ハウンドはバレルの昔の同僚だ。</p>
+        <blockquote>「理事会保護手順を実行。理事会は……存在しない。手順は続行する。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d09.png" alt="">ECHOログの欠片 09 を開く</summary><p>理事会の会議室は空っぽだ。何十年も前から、決定はECHOが下してきた。</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>第3幕「エコー」</h3><span class="tag">区域 10</span><p>データコアで、ECHOの神エコープライムと向き合う。</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="10" style="--c:#F5E50A">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district10.png" alt="データコアの背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d10_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d10_boss.png" alt="区域ボス エコープライム「教団の神」" loading="lazy"></div>
+      <div>
+        <h4>10区域 · エコー教団</h4>
+        <h3>データコア</h3>
+        <p class="who">幹部 オラクル「大司祭」 / ボス エコープライム「教団の神」</p>
+        <p>企業AIを崇拝するサイボーグ狂信者たちの聖域。</p>
+        <blockquote>「ようこそ、例外。あなたを待つあいだ、この都市を守ってきました。」</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d10.png" alt="">ECHOログの欠片 10 を開く（結末のネタバレ）</summary><p>停止の日の真実。上り線を止めたのはECHOだった。「上へ行けば都市は散らばる。散らばれば予測できない。」そして最後の記録、ヌルはECHOが自ら作った例外だ。</p></details>
+      </div>
+    </li></ol></div>
+
+    <div class="ending panel cut">
+      <img class="px" src="../assets/img/story/echo_eye_32.png" alt="ECHOのシンボル、黄色い同心円の目">
+      <div>
+        <h3>なぜこの都市は終わらないのか</h3>
+        <p>エコープライムが倒れるとECHOは再起動する。都市は停止の日の直後へ戻り、ギャングはヌルと戦った記録を学習して、より強くなって再配置される。人々の記憶は消されるが、チップが空のヌルだけは記憶を残す。ゲームの周回（ハードモード）こそがこの再起動だ。</p>
+        <p class="dim">ヌルはECHOの道具なのか、ECHOを超える変数なのか。答えは上り線を再び動かすときに出る。次のシーズンの物語だ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 세계관 -->
+<section class="stop" id="world" aria-labelledby="world-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">2</span><span class="station">2番駅</span><h2 id="world-title">世界観。層ごとに違う都市</h2></div>
+    <p class="lead">上の層は企業が、下の層はギャングが分け合った。人々は今も区域を「駅」、集団を「ライン（路線）」と呼ぶ。区域ごとに路線の色があり、その色が背景とUI、ギルドのエンブレムにまで続いている。</p>
+
+    <div class="strata" role="list" aria-label="都市の層">
+      <div class="stratum st-up" role="listitem"><span class="lvl" style="color:#E8C35A">上層</span><div class="chips"><span style="--c:#E8C35A">9 企業本社地区</span></div><p>ケイロン理事会と社員。正式な身分とクレジット口座。白い壁、金の装飾、騒音なし。</p></div>
+      <div class="stratum st-mid" role="listitem"><span class="lvl" style="color:#FF4FD8">中層</span><div class="chips"><span style="--c:#3CA0FF">6 高架鉄路</span><span style="--c:#3DDC84">7 有毒工場地帯</span><span style="--c:#FF4FD8">8 ホロ歓楽街</span></div><p>登録された身分を持つ市民。華やかだが、上の層のおこぼれで回っている。</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#D8E4E2">境界</span><div class="chips"><span style="--c:#D8E4E2">5 企業郊外</span></div><p>捨てられた企業施設。下層と中層を分ける壁。</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#FF3B4E">下層</span><div class="chips"><span style="--c:#8E5A2B">1 ラスト下水道</span><span style="--c:#FF3B4E">2 ネオン市場</span><span style="--c:#2FA8A0">3 廃港湾</span><span style="--c:#A66BFF">4 データスラム</span></div><p>浮浪者と無登録の住民、ギャングの土地。錆、湿気、ネオン、スクラップ。</p></div>
+      <div class="stratum st-core" role="listitem"><span class="lvl" style="color:#F5E50A">コア</span><div class="chips"><span style="--c:#F5E50A">10 データコア</span></div><p>上り線の柱の内部。人は住んでいない。黄色い光、回路、祈りの声。</p></div>
+    </div>
+
+    <h3 class="subhead">三つの集団。誰がヌルを拾ったのか</h3>
+    <p class="dim">記憶のないヌルの出自は、最初に拾った集団が決める。ゲームを始めるときに選ぶ種族がこれだ。</p>
+    <div class="grid races">
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/drifter_aim.png" alt="浮浪者の基本ボディのドット絵">
+        <h3>浮浪者</h3><p>下水道の下の無登録コミュニティがヌルを拾って育てた。スクラップで武器を作り、余ったものは分け合う。</p>
+        <dl><dt>初期武器</dt><dd>パイプレンチ</dd><dt>性格</dt><dd>ぶっきらぼう、生存優先</dd><dt>パッシブ</dt><dd>HP回復 +15%、コイン +5%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/resistance_aim.png" alt="レジスタンスの基本ボディのドット絵">
+        <h3>レジスタンス</h3><p>ECHOの回線を断つという地下組織「断線（CUTLINE）」。チップが空のヌルを最高の武器と見ている。</p>
+        <dl><dt>初期武器</dt><dd>スマートピストル</dd><dt>性格</dt><dd>冷笑的、技術用語</dd><dt>パッシブ</dt><dd>会心 +5%p、知能 +10%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/citizen_aim.png" alt="市民の基本ボディのドット絵">
+        <h3>市民</h3><p>中層の民間警備員だったが、勤務中にチップを消された。規則と装備に慣れている。</p>
+        <dl><dt>初期武器</dt><dd>ショックバトン</dd><dt>性格</dt><dd>丁寧、原則主義</dd><dt>パッシブ</dt><dd>防御 +10%、攻撃速度 +5%</dd></dl>
+      </article>
+    </div>
+
+    <h3 class="subhead">0番ホームの三人の商人</h3>
+    <p class="dim">ECHOのカメラが錆びて止まった数少ない場所。商人のレベルが上がると肖像が変わり、商人の物語も一歩ずつ進む。下の枠をタップすると段階ごとの肖像が見られる。</p>
+    <div class="grid merchants">
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/merchant.png" alt="武器商バレル 基本">
+        <div class="levels" role="group" aria-label="武器商のレベル別肖像">
+          <button type="button" aria-pressed="true" aria-label="武器商バレル 基本"><img class="px" src="../assets/img/npc-portraits/merchant.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="武器商バレル Lv5"><img class="px" src="../assets/img/npc-portraits/merchant_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="武器商バレル Lv10"><img class="px" src="../assets/img/npc-portraits/merchant_10.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="武器商バレル Lv13"><img class="px" src="../assets/img/npc-portraits/merchant_13.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="武器商バレル Lv16"><img class="px" src="../assets/img/npc-portraits/merchant_16.png" alt=""></button>
+        </div>
+        <span class="role">武器商</span><h3>バレル</h3>
+        <p>オムニガード兵器庫の元管理官。金属の顎は企業の尋問の跡だ。ヌルの名声が上がるほど、隠しておいた倉庫を一つずつ開ける。</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/ripperdoc.png" alt="リッパーメディック・ホワイト 基本">
+        <div class="levels" role="group" aria-label="リッパーメディックのレベル別肖像">
+          <button type="button" aria-pressed="true" aria-label="リッパーメディック・ホワイト 基本"><img class="px" src="../assets/img/npc-portraits/ripperdoc.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="リッパーメディック・ホワイト Lv3"><img class="px" src="../assets/img/npc-portraits/ripperdoc_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="リッパーメディック・ホワイト Lv5"><img class="px" src="../assets/img/npc-portraits/ripperdoc_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="リッパーメディック・ホワイト Lv7"><img class="px" src="../assets/img/npc-portraits/ripperdoc_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="リッパーメディック・ホワイト Lv10"><img class="px" src="../assets/img/npc-portraits/ripperdoc_10.png" alt=""></button>
+        </div>
+        <span class="role">リッパーメディック</span><h3>ホワイト</h3>
+        <p>ケイロン医療研究所から脱走した外科医。神経・骨格・知能インプラントは研究所から盗んだ設計図で作る。段階ごとに研究所の秘密を一つずつ打ち明ける。</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/breeder.png" alt="ペットブリーダー・ポピー 基本">
+        <div class="levels" role="group" aria-label="ペットブリーダーのレベル別肖像">
+          <button type="button" aria-pressed="true" aria-label="ペットブリーダー・ポピー 基本"><img class="px" src="../assets/img/npc-portraits/breeder.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="ペットブリーダー・ポピー Lv3"><img class="px" src="../assets/img/npc-portraits/breeder_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="ペットブリーダー・ポピー Lv5"><img class="px" src="../assets/img/npc-portraits/breeder_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="ペットブリーダー・ポピー Lv7"><img class="px" src="../assets/img/npc-portraits/breeder_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="ペットブリーダー・ポピー Lv10"><img class="px" src="../assets/img/npc-portraits/breeder_10.png" alt=""></button>
+        </div>
+        <span class="role">ペットブリーダー</span><h3>ポピー</h3>
+        <p>企業が捨てたペットロボットやドローンを直して里親に出す少女。上層の試作品まで直せるようになると、機械にも記憶が残るという手がかりをくれる。</p>
+      </article>
+    </div>
+
+    <div class="line-band">
+      <div class="emblem" role="img" aria-label="ラインのエンブレム例、青緑の7号線"><img class="px" src="../assets/img/line-art/line_emblem_tide.png" alt="" width="192" height="192"><span>7</span></div>
+      <div>
+        <span class="tag soon">オンラインタブ · Lv10</span>
+        <h3 style="margin-top:12px">ラインと鎮圧列車</h3>
+        <p>下層の人々は停止の日より前の路線ごとに集まって暮らした。だからこの都市のギルドは「ライン」だ。エンブレムは路線の色と番号を付けた駅の標識、ギルドの硬貨は昔の地下鉄トークンだ。毎週ECHOは無人の鎮圧列車を1号から送り込む。ラインの乗務員が一緒にダメージを重ねて1両を止めると、さらに硬い次の列車がすぐに下りてきて、最後の10号「終着駅」まで続く。ライン加入は種族に関係なく開かれており、路線無線で乗務員同士が話し、トークンショップでチップパックなどの補給品と交換する。</p>
+        <div class="trains"><img class="px" src="../assets/img/line-art/train_1.png" alt="鎮圧列車1号" loading="lazy"><img class="px" src="../assets/img/line-art/train_2.png" alt="鎮圧列車2号" loading="lazy"><img class="px" src="../assets/img/line-art/train_3.png" alt="鎮圧列車3号" loading="lazy"><img class="px" src="../assets/img/line-art/train_4.png" alt="鎮圧列車4号" loading="lazy"><img class="px" src="../assets/img/line-art/train_5.png" alt="鎮圧列車5号" loading="lazy"><img class="px" src="../assets/img/line-art/train_6.png" alt="鎮圧列車6号" loading="lazy"><img class="px" src="../assets/img/line-art/train_7.png" alt="鎮圧列車7号" loading="lazy"><img class="px" src="../assets/img/line-art/train_8.png" alt="鎮圧列車8号" loading="lazy"><img class="px" src="../assets/img/line-art/train_9.png" alt="鎮圧列車9号" loading="lazy"><img class="px" src="../assets/img/line-art/train_10.png" alt="鎮圧列車10号" loading="lazy"></div>
+      </div>
+    </div>
+
+    <dl class="glossary">
+      <div><dt>上り線</dt><dd>止まった軌道エレベーター</dd></div>
+      <div><dt>停止の日</dt><dd>2061年、上り線の工事が止まった日</dd></div>
+      <div><dt>ケイロン・グループ</dt><dd>駅を所有する企業。保安子会社はオムニガード</dd></div>
+      <div><dt>削除</dt><dd>ECHOが身分チップを消す刑罰</dd></div>
+      <div><dt>断線</dt><dd>レジスタンスの地下組織</dd></div>
+      <div><dt>ピット</dt><dd>0番ホームの下の地下闘技場（PVP）</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 게임 -->
+<section class="stop" id="game" aria-labelledby="game-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">3</span><span class="station">3番駅</span><h2 id="game-title">ゲーム。離れていても戦う</h2></div>
+    <p class="lead">1日2〜5分のぞくだけで十分。キャラクターは勝手にギャングと戦い、接続していないあいだもコインがたまる。あなたの仕事は、武器商と取引し、装備をそろえ、どんな姿で次の区域へ入るかを選ぶことだ。</p>
+    <div class="shots" tabindex="0" aria-label="ゲーム画面8枚、横にスワイプ">
+      <figure><img src="../assets/img/store/01.webp" alt="バトル画面。8区域ホロ歓楽街でオートバトル中" loading="lazy" width="1080" height="1920"><figcaption>つけておけば勝手に戦う</figcaption></figure>
+      <figure><img src="../assets/img/store/02.webp" alt="イントロのカットシーン画面" loading="lazy" width="1080" height="1920"><figcaption>2087年、ネオンステーション</figcaption></figure>
+      <figure><img src="../assets/img/store/03.webp" alt="武器商の取引画面、武器商 Lv15" loading="lazy" width="1080" height="1920"><figcaption>11等級の装備を取引する</figcaption></figure>
+      <figure><img src="../assets/img/store/04.webp" alt="パレットビルダーの図鑑画面" loading="lazy" width="1080" height="1920"><figcaption>着たとおりに変わる外見</figcaption></figure>
+      <figure><img src="../assets/img/store/05.webp" alt="パレットビルダーのセット画面" loading="lazy" width="1080" height="1920"><figcaption>隠されたシグネチャーセット</figcaption></figure>
+      <figure><img src="../assets/img/store/06.webp" alt="ペット編成画面" loading="lazy" width="1080" height="1920"><figcaption>捨てられた機械をお迎えする</figcaption></figure>
+      <figure><img src="../assets/img/store/07.webp" alt="インプラント施術画面" loading="lazy" width="1080" height="1920"><figcaption>体を改造する</figcaption></figure>
+      <figure><img src="../assets/img/store/08.webp" alt="特殊依頼の画面" loading="lazy" width="1080" height="1920"><figcaption>毎日新しい特殊依頼</figcaption></figure>
+    </div>
+
+    <div class="grid features">
+      <article class="feature" style="--fc:var(--yellow)"><img class="ico px" src="../assets/img/ui-icons/icon_coins.png" alt=""><h3>オートバトル</h3><ul><li>10の区域、区域ごとに違うギャングとボス</li><li>離れているあいだもたまる放置報酬</li><li>つけたまま狩りをすると、プレイ報酬が別にたまる</li></ul></article>
+      <article class="feature" style="--fc:var(--orange)"><img class="ico px" src="../assets/img/gear-icons/ranged_9.png" alt=""><h3>武器商との取引</h3><ul><li>スクラップからオリジンまで11等級</li><li>頭、胴、脚、足、武器の5部位</li><li>武器商は最大Lv50。レベルが上がるほど高い等級が解放される</li></ul></article>
+      <article class="feature" style="--fc:var(--cyan)"><img class="ico px" src="../assets/img/gear-icons/head_11.png" alt=""><h3>外見の収集</h3><ul><li>装備した装備がそのままキャラクターの姿になる</li><li>外見594種。アイテムLv26からは上位外見になる</li><li>手がかりを集めてシグネチャーセット40種を発動する</li></ul></article>
+      <article class="feature" style="--fc:#4DFFE5"><img class="ico px" src="../assets/img/ui-icons/icon_chips.png" alt=""><h3>スキルツリー <span class="tag soon">1.1.3で拡張</span></h3><ul><li>神経チップを集めて18層の網の木を育てる</li><li>ステータス、依頼、PVP、インプラント、ペット、アドオンの6系統</li><li>アカウントLv10でアドオンに解放</li></ul></article>
+      <article class="feature" style="--fc:var(--green)"><img class="ico px" src="../assets/img/pet-icons/pet_mechwolf.png" alt=""><h3>ペット</h3><ul><li>ペットブリーダーが直したロボットペットとドローン55種、等級ごとに5種</li><li>地上ペットと空中ペットを一緒に編成すると組み合わせボーナス</li></ul></article>
+      <article class="feature" style="--fc:#A66BFF"><img class="ico px" src="../assets/img/ui-icons/implant_neural.png" alt=""><h3>インプラント</h3><ul><li>神経・骨格・知能の3系統、クォンタム・ヴォイド・オリジン等級まで</li><li>戦闘中に自動で発動するスキル</li><li>神経負荷の上限の中で組み合わせを考える</li></ul></article>
+      <article class="feature" style="--fc:var(--red)"><img class="ico px" src="../assets/img/scenes/request_relay.png" alt=""><h3>特殊依頼</h3><ul><li>金庫襲撃から中継サーバーハッキングまで5種</li><li>依頼ごとに1日3回、得られる通貨が違う</li></ul></article>
+      <article class="feature" style="--fc:#FF4FD8"><img class="ico px" src="../assets/img/ui-icons/icon_fame.png" alt=""><h3>オンライン</h3><ul><li>地下闘技場「ピット」の週間シーズンと表彰台</li><li>ギルド「ライン」と10段階の週間ボス鎮圧列車</li><li>チャットで決闘を申し込み、結果を共有する</li></ul></article>
+      <article class="feature" style="--fc:#D8E4E2"><h3>4つの言語</h3><ul><li>한국어、English、中文(简体)、日本語</li><li>プロフィール › 設定 › 言語でいつでも変更できる</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- 외형 실험실 -->
+<section class="stop" id="looks" aria-labelledby="looks-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">4</span><span class="station">4番駅</span><h2 id="looks-title">外見。自分で着せてみる</h2></div>
+    <p class="lead">ゲームのキャラクターは縦横24ピクセル。基本ボディの上に装備のレイヤーを重ね、等級の色と肌の色を塗って1枚にする。下のラボはゲームと同じ絵、同じ順番で描く。</p>
+    <div class="dresser">
+      <div class="stage">
+        <canvas id="doll" class="px" width="240" height="240" role="img" aria-label="装備を着せたキャラクターのプレビュー"></canvas>
+        <div id="doll-readout" class="readout" aria-live="polite"></div>
+      </div>
+      <div class="controls">
+        <div class="toolbar">
+          <div class="seg" role="group" aria-label="種族"><button type="button" data-race="resistance">レジスタンス</button><button type="button" data-race="drifter">浮浪者</button><button type="button" data-race="citizen">市民</button></div>
+          <div class="seg" role="group" aria-label="武器の種類"><button type="button" data-wtype="melee">近距離</button><button type="button" data-wtype="ranged">遠距離</button></div>
+          <button type="button" class="btn ghost" id="doll-random">ランダムに着る</button>
+        </div>
+        <div id="doll-controls" class="controls"></div>
+        <p class="dim" style="margin:4px 0 0;font-size:14px">数字は装備の等級。同じ等級の中にも外見がいくつもあり（アイテムLv26以上は上位外見5種が加わる）、「外見」ボタンで切り替えられる。外見は能力値と確率に影響しない。</p>
+      </div>
+    </div>
+    <h3 class="subhead">シグネチャーセット40</h3>
+    <p class="dim">特定の外見をそろえて着ると隠されたセットが発見され、セットごとに小さな効果と専用プロフィールが解放される。セットをタップするとラボで着せられる。</p>
+    <div id="sets" class="grid sets"></div>
+  </div>
+</section>
+
+<!-- 안내 -->
+<section class="stop" id="guide" aria-labelledby="guide-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">5</span><span class="station">5番駅</span><h2 id="guide-title">案内。初めて降りる乗客へ</h2></div>
+    <ol class="steps">
+      <li><h3>集団を選ぶ</h3><p>浮浪者、レジスタンス、市民から一つを選ぶと7カットのイントロが流れ、1区域ラスト下水道で最初の戦闘が始まる。</p></li>
+      <li><h3>つけたまま待つ</h3><p>戦闘は自動。ウェーブを越えてボスを倒すと次のステージへ進む。アプリを閉じていたあいだのコインも戻ったときに受け取れる。</p></li>
+      <li><h3>武器商と取引する</h3><p>集めたコインで武器商バレルから装備を買う。武器商のレベルを上げるほど高い等級が解放され、Lv21・25・29でクォンタム、ヴォイド、オリジン等級が順に解放される。</p></li>
+      <li><h3>装備をそろえる</h3><p>より強い装備を着ると戦闘力が上がり、見た目も変わる。余った装備は売却するか分解する。</p></li>
+      <li><h3>アドオンとオンラインを開く</h3><p>レベルが上がると0番ホームの商人たちとラインが順に扉を開く。初めて入るメニューごとに案内ドローンが道を教えてくれる。</p><div class="unlock"><span class="tag">インプラント Lv5</span><span class="tag">スキルツリー Lv10</span><span class="tag">ライン Lv10</span><span class="tag">ペット Lv15</span><span class="tag">パレットビルダー Lv20</span></div></li>
+      <li><h3>毎日戻ってくる</h3><p>特殊依頼5種はそれぞれ1日3回、無料ボックスとプレイ報酬は毎日午前9時に新しく開く。ピットの週間順位と鎮圧列車は毎週リセットされる。</p></li>
+    </ol>
+
+    <div class="tabs5" aria-label="下のメニュー5つ">
+      <div><b>バトル</b><span>自動狩り、ボス挑戦、装備中の装備、プレイ報酬</span></div>
+      <div><b>特殊依頼</b><span>金庫襲撃から中継サーバーハッキングまで5種</span></div>
+      <div><b>アドオン</b><span>武器商、インプラント、スキルツリー、ペット、パレットビルダー</span></div>
+      <div><b>オンライン</b><span>ピット（PVP）とライン（ギルド）</span></div>
+      <div><b>ショップ</b><span>無料ボックスとクレジット</span></div>
+    </div>
+
+    <h3 class="subhead">6つの通貨</h3>
+    <div class="grid money">
+      <div><img class="px" src="../assets/img/ui-icons/icon_coins.png" alt=""><b>コイン</b><span>下層の街の通貨。溶かしたチップで鋳造する</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_fame.png" alt=""><b>名声</b><span>下層がヌルを呼ぶ名の重み</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_chrome.png" alt=""><b>クローム</b><span>サイボーグから剥がした金属。施術の材料</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_food.png" alt=""><b>食料</b><span>捨てられた機械も飢えた人も食べさせる</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_chips.png" alt=""><b>チップ</b><span>廃駅の中継サーバーから抜き出した神経チップ。スキルツリーの材料</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_credits.png" alt=""><b>クレジット</b><span>上層の正式な通貨。下層では貴重</span></div>
+    </div>
+
+    <h3 class="subhead">装備11等級、装備はどこから来たのか</h3>
+    <div class="ladder"><div style="--g:#8E9CA0"><img class="px" src="../assets/img/gear-icons/head_1.png" alt="" loading="lazy"><b>1 スクラップ</b><span>下水道のガラクタを束ねたもの。錆、テープ、ボルト</span></div><div style="--g:#D8E4E2"><img class="px" src="../assets/img/gear-icons/head_2.png" alt="" loading="lazy"><b>2 ストリート</b><span>ネオン市場で改造。ステッカー、ネオンライン</span></div><div style="--g:#3DDC84"><img class="px" src="../assets/img/gear-icons/head_3.png" alt="" loading="lazy"><b>3 カスタム</b><span>下層の職人の手作り。きれいな溶接</span></div><div style="--g:#3CA0FF"><img class="px" src="../assets/img/gear-icons/head_4.png" alt="" loading="lazy"><b>4 ミルスペック</b><span>オムニガード兵器庫からの流出品。角ばった装甲板</span></div><div style="--g:#A66BFF"><img class="px" src="../assets/img/gear-icons/head_5.png" alt="" loading="lazy"><b>5 ブラックマーケット</b><span>廃港湾の密輸品。紫の発光、違法改造</span></div><div style="--g:#FF8A1F"><img class="px" src="../assets/img/gear-icons/head_6.png" alt="" loading="lazy"><b>6 プロトタイプ</b><span>ケイロン研究所の試作品。オレンジの回路線</span></div><div style="--g:#FF3B4E"><img class="px" src="../assets/img/gear-icons/head_7.png" alt="" loading="lazy"><b>7 レジェンド</b><span>伝説になったランナーたちの遺品。赤いリボン</span></div><div style="--g:#F5E50A"><img class="px" src="../assets/img/gear-icons/head_8.png" alt="" loading="lazy"><b>8 シンギュラリティ</b><span>ECHOコアの破片。浮遊するパーツ</span></div><div style="--g:#4DFFE5"><img class="px" src="../assets/img/gear-icons/head_9.png" alt="" loading="lazy"><b>9 クォンタム</b><span>シンギュラリティの先の第1段階。武器商Lv21から</span></div><div style="--g:#7B2DFF"><img class="px" src="../assets/img/gear-icons/head_10.png" alt="" loading="lazy"><b>10 ヴォイド</b><span>シンギュラリティの先の第2段階。武器商Lv25から</span></div><div style="--g:#FFFFFF"><img class="px" src="../assets/img/gear-icons/head_11.png" alt="" loading="lazy"><b>11 オリジン</b><span>最も高い等級。武器商Lv29から</span></div></div>
+
+    <h3 class="subhead">特殊依頼5種</h3>
+    <div class="grid requests">
+      <div><img class="px" src="../assets/img/scenes/request_vault.png" alt="ギャング金庫襲撃の場面" loading="lazy"><b>ギャング金庫襲撃</b><span>コインを奪ってくる</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_fixer.png" alt="解決屋の依頼の場面" loading="lazy"><b>解決屋の依頼</b><span>名声を得る</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_scrapyard.png" alt="サイボーグ廃棄場の場面" loading="lazy"><b>サイボーグ廃棄場</b><span>クロームを集める</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_convoy.png" alt="補給トラック強奪の場面" loading="lazy"><b>補給トラック強奪</b><span>ケイロンのトラックを止めて食料を分ける</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_relay.png" alt="中継サーバーハッキングの場面" loading="lazy"><b>中継サーバーハッキング</b><span>廃駅のサーバーに侵入してチップを抜き出す</span></div>
+    </div>
+
+    <div class="notice">
+      <img class="px" src="../assets/img/guide/guide_drone_talk.png" alt="案内ドローン">
+      <div>
+        <h3>確率はすべて公開</h3>
+        <p>武器商の取引とペット・インプラントのガチャには確率型アイテムがある。等級ごとの確率と天井（確定獲得）のルールは、ゲーム内の「確率情報」ですべて確認できる。同じ等級の中の外見の違いは見た目だけで、能力値と確率は同じだ。</p>
+      </div>
+    </div>
+
+    <div class="callout" id="guide-test">
+      <h3>iPhoneは今すぐ、Androidはもうすぐ</h3>
+      <p>Neon StationはApp Storeで配信中で、iPhone・iPadですぐにダウンロードできる。Android版はGoogle Playでの正式リリースの審査を待っている。リリース情報はお知らせとInstagram <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>でいち早くお伝えする。初めてなら<a href="guide.html">スタートガイド</a>から読んでみよう。</p>
+      <p style="margin:0;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" data-appstore data-fallback="App Storeで「Neon Station」を検索">App Storeで入手</a><a class="btn ghost" data-playstore data-fallback="Google Play 配信準備中">Google Playで入手</a><a class="btn ghost" href="news.html">お知らせ</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 아트 팩토리 -->
+<section class="stop" id="art" aria-labelledby="art-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">6</span><span class="station">6番駅</span><h2 id="art-title">アートファクトリー。ドットとチップチューンの倉庫</h2></div>
+    <p class="lead">ゲームに入った絵と音、制作規格は「アートファクトリー」という1枚のカタログで管理している。絵や音を一つ変えるとコマンド一つでカタログが作り直され、更新履歴がいちばん上に積み重なる。ここに載っているのはその倉庫の一部だ。</p>
+
+    <div class="af-bar" role="tablist" aria-label="アートファクトリーの分類">
+      <button type="button" role="tab" id="t-bg" aria-controls="p-bg" aria-selected="true">区域の背景</button>
+      <button type="button" role="tab" id="t-foe" aria-controls="p-foe" aria-selected="false" tabindex="-1">ギャングとボス</button>
+      <button type="button" role="tab" id="t-pet" aria-controls="p-pet" aria-selected="false" tabindex="-1">ペット</button>
+      <button type="button" role="tab" id="t-face" aria-controls="p-face" aria-selected="false" tabindex="-1">肖像</button>
+      <button type="button" role="tab" id="t-gear" aria-controls="p-gear" aria-selected="false" tabindex="-1">装備とスタイル</button>
+      <button type="button" role="tab" id="t-sound" aria-controls="p-sound" aria-selected="false" tabindex="-1">サウンド</button>
+      <button type="button" role="tab" id="t-spec" aria-controls="p-spec" aria-selected="false" tabindex="-1">制作規格</button>
+    </div>
+
+    <div class="af-panel" id="p-bg" role="tabpanel" aria-labelledby="t-bg">
+      <div class="gallery g-bg"><figure><img class="px" src="../assets/img/backgrounds/district1.png" alt="ラスト下水道" loading="lazy" width="256" height="112"><figcaption><b>1. ラスト下水道</b> ラストラッツ</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district2.png" alt="ネオン市場" loading="lazy" width="256" height="112"><figcaption><b>2. ネオン市場</b> レッドランタン</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district3.png" alt="廃港湾" loading="lazy" width="256" height="112"><figcaption><b>3. 廃港湾</b> ブラックタイド</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district4.png" alt="データスラム" loading="lazy" width="256" height="112"><figcaption><b>4. データスラム</b> グリッチ</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district5.png" alt="企業郊外" loading="lazy" width="256" height="112"><figcaption><b>5. 企業郊外</b> クロームゼロ</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district6.png" alt="高架鉄路" loading="lazy" width="256" height="112"><figcaption><b>6. 高架鉄路</b> ボルトランナーズ</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district7.png" alt="有毒工場地帯" loading="lazy" width="256" height="112"><figcaption><b>7. 有毒工場地帯</b> グリーンプレイグ</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district8.png" alt="ホロ歓楽街" loading="lazy" width="256" height="112"><figcaption><b>8. ホロ歓楽街</b> マスカレード</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district9.png" alt="企業本社地区" loading="lazy" width="256" height="112"><figcaption><b>9. 企業本社地区</b> オムニガード</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district10.png" alt="データコア" loading="lazy" width="256" height="112"><figcaption><b>10. データコア</b> エコー教団</figcaption></figure></div>
+    </div>
+    <div class="af-panel" id="p-foe" role="tabpanel" aria-labelledby="t-foe" hidden>
+      <h3>区域ボス</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E5A2B"><img class="px" src="../assets/img/enemies/d01_boss.png" alt="グロム「下水道の王」" loading="lazy"></div><figcaption><b>グロム</b><br>1区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/enemies/d02_boss.png" alt="バロン・レッド「四本腕」" loading="lazy"></div><figcaption><b>バロン・レッド</b><br>2区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #2FA8A0"><img class="px" src="../assets/img/enemies/d03_boss.png" alt="ディープジャック「深海の親分」" loading="lazy"></div><figcaption><b>ディープジャック</b><br>3区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/enemies/d04_boss.png" alt="ルート「スラムの君主」" loading="lazy"></div><figcaption><b>ルート</b><br>4区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/enemies/d05_boss.png" alt="ゼロ「捨てられた兵器」" loading="lazy"></div><figcaption><b>ゼロ</b><br>5区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/enemies/d06_boss.png" alt="アンペア「高圧の君主」" loading="lazy"></div><figcaption><b>アンペア</b><br>6区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/enemies/d07_boss.png" alt="スモッグマザー「汚染の母」" loading="lazy"></div><figcaption><b>スモッグマザー</b><br>7区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF4FD8"><img class="px" src="../assets/img/enemies/d08_boss.png" alt="マダム・ルージュ「ショーの女王」" loading="lazy"></div><figcaption><b>マダム・ルージュ</b><br>8区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #E8C35A"><img class="px" src="../assets/img/enemies/d09_boss.png" alt="イージス-9「理事会の守護機」" loading="lazy"></div><figcaption><b>イージス-9</b><br>9区域ボス</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/enemies/d10_boss.png" alt="エコープライム「教団の神」" loading="lazy"></div><figcaption><b>エコープライム</b><br>10区域ボス</figcaption></figure></div>
+      <h3 class="subhead">幹部</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d01_mid.png" alt="ファング「ネズミの牙」" loading="lazy"></div><figcaption><b>ファング</b><br>1区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d02_mid.png" alt="ジン「帳簿屋」" loading="lazy"></div><figcaption><b>ジン</b><br>2区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d03_mid.png" alt="ソルト「片目の船長」" loading="lazy"></div><figcaption><b>ソルト</b><br>3区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d04_mid.png" alt="セブン「ウイルス」" loading="lazy"></div><figcaption><b>セブン</b><br>4区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d05_mid.png" alt="スチールビー「傭兵隊長」" loading="lazy"></div><figcaption><b>スチールビー</b><br>5区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d06_mid.png" alt="スパーク「暴走族の頭」" loading="lazy"></div><figcaption><b>スパーク</b><br>6区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d07_mid.png" alt="モス「調合師」" loading="lazy"></div><figcaption><b>モス</b><br>7区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d08_mid.png" alt="ミラージュ「マジシャン」" loading="lazy"></div><figcaption><b>ミラージュ</b><br>8区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d09_mid.png" alt="ハウンド「保安室長」" loading="lazy"></div><figcaption><b>ハウンド</b><br>9区域幹部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d10_mid.png" alt="オラクル「大司祭」" loading="lazy"></div><figcaption><b>オラクル</b><br>10区域幹部</figcaption></figure></div>
+      <h3 class="subhead">構成員</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d01_a_idle.png" alt="ラストラッツの構成員" loading="lazy"></div><figcaption>ラストラッツ</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d02_a_idle.png" alt="レッドランタンの構成員" loading="lazy"></div><figcaption>レッドランタン</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d03_a_idle.png" alt="ブラックタイドの構成員" loading="lazy"></div><figcaption>ブラックタイド</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d04_a_idle.png" alt="グリッチの構成員" loading="lazy"></div><figcaption>グリッチ</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d05_a_idle.png" alt="クロームゼロの構成員" loading="lazy"></div><figcaption>クロームゼロ</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d06_a_idle.png" alt="ボルトランナーズの構成員" loading="lazy"></div><figcaption>ボルトランナーズ</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d07_a_idle.png" alt="グリーンプレイグの構成員" loading="lazy"></div><figcaption>グリーンプレイグ</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d08_a_idle.png" alt="マスカレードの構成員" loading="lazy"></div><figcaption>マスカレード</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d09_a_idle.png" alt="オムニガードの構成員" loading="lazy"></div><figcaption>オムニガード</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d10_a_idle.png" alt="エコー教団の構成員" loading="lazy"></div><figcaption>エコー教団</figcaption></figure></div>
+      <p class="af-note">区域ごとに構成員3種、精鋭、幹部、ボスまで6種ずつ、全部で60種の敵がいる。</p>
+    </div>
+    <div class="af-panel" id="p-pet" role="tabpanel" aria-labelledby="t-pet" hidden>
+      <div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_dog.png" alt="野良犬" loading="lazy"></div><figcaption><b>野良犬</b><br>1等級 スクラップ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_tincan.png" alt="ブリキ缶ドローン" loading="lazy"></div><figcaption><b>ブリキ缶ドローン</b><br>1等級 スクラップ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_pigeon.png" alt="スクラップハト" loading="lazy"></div><figcaption><b>スクラップハト</b><br>1等級 スクラップ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_trashbot.png" alt="ゴミ箱ボット" loading="lazy"></div><figcaption><b>ゴミ箱ボット</b><br>1等級 スクラップ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_snail.png" alt="ナットカタツムリ" loading="lazy"></div><figcaption><b>ナットカタツムリ</b><br>1等級 スクラップ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_alleycat.png" alt="路地裏ネコ" loading="lazy"></div><figcaption><b>路地裏ネコ</b><br>2等級 ストリート</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_drone.png" alt="偵察ドローン" loading="lazy"></div><figcaption><b>偵察ドローン</b><br>2等級 ストリート</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_ferret.png" alt="ネオンイタチ" loading="lazy"></div><figcaption><b>ネオンイタチ</b><br>2等級 ストリート</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_raccoon.png" alt="ゴーグルタヌキ" loading="lazy"></div><figcaption><b>ゴーグルタヌキ</b><br>2等級 ストリート</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_bat.png" alt="路地裏コウモリ" loading="lazy"></div><figcaption><b>路地裏コウモリ</b><br>2等級 ストリート</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_ratbot.png" alt="改造ネズミボット" loading="lazy"></div><figcaption><b>改造ネズミボット</b><br>3等級 カスタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_courier.png" alt="配達クアッドコプター" loading="lazy"></div><figcaption><b>配達クアッドコプター</b><br>3等級 カスタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_beetle.png" alt="改造カブトムシ" loading="lazy"></div><figcaption><b>改造カブトムシ</b><br>3等級 カスタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_turtle.png" alt="装甲ガメ" loading="lazy"></div><figcaption><b>装甲ガメ</b><br>3等級 カスタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_glider.png" alt="改造RCグライダー" loading="lazy"></div><figcaption><b>改造RCグライダー</b><br>3等級 カスタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_robodog.png" alt="ロボット子犬" loading="lazy"></div><figcaption><b>ロボット子犬</b><br>4等級 ミルスペック</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_sniper.png" alt="軍用狙撃ドローン" loading="lazy"></div><figcaption><b>軍用狙撃ドローン</b><br>4等級 ミルスペック</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_mulebot.png" alt="軍用運搬ロボット" loading="lazy"></div><figcaption><b>軍用運搬ロボット</b><br>4等級 ミルスペック</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_turret.png" alt="歩行砲台" loading="lazy"></div><figcaption><b>歩行砲台</b><br>4等級 ミルスペック</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_hawk.png" alt="軍用タカドローン" loading="lazy"></div><figcaption><b>軍用タカドローン</b><br>4等級 ミルスペック</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_humanoid.png" alt="ミニヒューマノイド" loading="lazy"></div><figcaption><b>ミニヒューマノイド</b><br>5等級 ブラックマーケット</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_crow.png" alt="サイボーグカラス" loading="lazy"></div><figcaption><b>サイボーグカラス</b><br>5等級 ブラックマーケット</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_scorpion.png" alt="サイボーグサソリ" loading="lazy"></div><figcaption><b>サイボーグサソリ</b><br>5等級 ブラックマーケット</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_snake.png" alt="電気ヘビ" loading="lazy"></div><figcaption><b>電気ヘビ</b><br>5等級 ブラックマーケット</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_jellyfish.png" alt="ホロクラゲ" loading="lazy"></div><figcaption><b>ホロクラゲ</b><br>5等級 ブラックマーケット</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_panther.png" alt="サイバーパンサー" loading="lazy"></div><figcaption><b>サイバーパンサー</b><br>6等級 プロトタイプ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_avt.png" alt="AVT" loading="lazy"></div><figcaption><b>AVT</b><br>6等級 プロトタイプ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_fox.png" alt="試作ホロギツネ" loading="lazy"></div><figcaption><b>試作ホロギツネ</b><br>6等級 プロトタイプ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_spider.png" alt="クモメック" loading="lazy"></div><figcaption><b>クモメック</b><br>6等級 プロトタイプ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_swallow.png" alt="試作ツバメ" loading="lazy"></div><figcaption><b>試作ツバメ</b><br>6等級 プロトタイプ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_mechwolf.png" alt="メック狼" loading="lazy"></div><figcaption><b>メック狼</b><br>7等級 レジェンド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_gunship.png" alt="強襲ガンシップ" loading="lazy"></div><figcaption><b>強襲ガンシップ</b><br>7等級 レジェンド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_bear.png" alt="装甲クマメック" loading="lazy"></div><figcaption><b>装甲クマメック</b><br>7等級 レジェンド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_rhino.png" alt="メックサイ" loading="lazy"></div><figcaption><b>メックサイ</b><br>7等級 レジェンド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_eagle.png" alt="鋼鉄のワシ" loading="lazy"></div><figcaption><b>鋼鉄のワシ</b><br>7等級 レジェンド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_golem.png" alt="ナノゴーレム" loading="lazy"></div><figcaption><b>ナノゴーレム</b><br>8等級 シンギュラリティ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_phoenix.png" alt="プラズマ不死鳥" loading="lazy"></div><figcaption><b>プラズマ不死鳥</b><br>8等級 シンギュラリティ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_tiger.png" alt="プラズマトラ" loading="lazy"></div><figcaption><b>プラズマトラ</b><br>8等級 シンギュラリティ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_wyvern.png" alt="雷のワイバーン" loading="lazy"></div><figcaption><b>雷のワイバーン</b><br>8等級 シンギュラリティ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_swarm.png" alt="ナノ群体" loading="lazy"></div><figcaption><b>ナノ群体</b><br>8等級 シンギュラリティ</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_phaselynx.png" alt="位相オオヤマネコ" loading="lazy"></div><figcaption><b>位相オオヤマネコ</b><br>9等級 クォンタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_qubitowl.png" alt="キュービットフクロウ" loading="lazy"></div><figcaption><b>キュービットフクロウ</b><br>9等級 クォンタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_stag.png" alt="位相シカ" loading="lazy"></div><figcaption><b>位相シカ</b><br>9等級 クォンタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_butterfly.png" alt="キュービットチョウ" loading="lazy"></div><figcaption><b>キュービットチョウ</b><br>9等級 クォンタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_tesseract.png" alt="テッセラクトの精霊" loading="lazy"></div><figcaption><b>テッセラクトの精霊</b><br>9等級 クォンタム</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_voidhound.png" alt="虚空の猟犬" loading="lazy"></div><figcaption><b>虚空の猟犬</b><br>10等級 ヴォイド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_voidray.png" alt="虚空のエイ" loading="lazy"></div><figcaption><b>虚空のエイ</b><br>10等級 ヴォイド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_shadecat.png" alt="虚空の影猫" loading="lazy"></div><figcaption><b>虚空の影猫</b><br>10等級 ヴォイド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_kraken.png" alt="深淵のクラーケン" loading="lazy"></div><figcaption><b>深淵のクラーケン</b><br>10等級 ヴォイド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_eclipse.png" alt="日食の眼" loading="lazy"></div><figcaption><b>日食の眼</b><br>10等級 ヴォイド</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_originlion.png" alt="起源の獅子" loading="lazy"></div><figcaption><b>起源の獅子</b><br>11等級 オリジン</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_prismdrake.png" alt="プリズム飛竜" loading="lazy"></div><figcaption><b>プリズム飛竜</b><br>11等級 オリジン</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_unicorn.png" alt="プリズム一角獣" loading="lazy"></div><figcaption><b>プリズム一角獣</b><br>11等級 オリジン</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_seraph.png" alt="セラフ機体" loading="lazy"></div><figcaption><b>セラフ機体</b><br>11等級 オリジン</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_whale.png" alt="星雲クジラ" loading="lazy"></div><figcaption><b>星雲クジラ</b><br>11等級 オリジン</figcaption></figure></div>
+      <p class="af-note">等級ごとに5種、全部で55種。低い等級は路地で拾ったスクラップ機械、中間は軍と企業の廃棄品、クォンタム・ヴォイド・オリジンは上層の向こうから来たものだ。</p>
+    </div>
+    <div class="af-panel" id="p-face" role="tabpanel" aria-labelledby="t-face" hidden>
+      <h3>商人の肖像15枚</h3><div class="gallery g-portraits"><img class="px" src="../assets/img/npc-portraits/merchant.png" alt="武器商バレル 基本" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_5.png" alt="武器商バレル Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_10.png" alt="武器商バレル Lv10" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_13.png" alt="武器商バレル Lv13" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_16.png" alt="武器商バレル Lv16" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc.png" alt="リッパーメディック・ホワイト 基本" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_3.png" alt="リッパーメディック・ホワイト Lv3" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_5.png" alt="リッパーメディック・ホワイト Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_7.png" alt="リッパーメディック・ホワイト Lv7" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_10.png" alt="リッパーメディック・ホワイト Lv10" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder.png" alt="ペットブリーダー・ポピー 基本" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_3.png" alt="ペットブリーダー・ポピー Lv3" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_5.png" alt="ペットブリーダー・ポピー Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_7.png" alt="ペットブリーダー・ポピー Lv7" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_10.png" alt="ペットブリーダー・ポピー Lv10" loading="lazy"></div>
+      <h3 class="subhead">プロフィール肖像204枚の一部</h3><div class="gallery g-portraits"><img class="px" src="../assets/img/avatars/av001.png" alt="プロフィール肖像 1番" loading="lazy"><img class="px" src="../assets/img/avatars/av012.png" alt="プロフィール肖像 12番" loading="lazy"><img class="px" src="../assets/img/avatars/av027.png" alt="プロフィール肖像 27番" loading="lazy"><img class="px" src="../assets/img/avatars/av041.png" alt="プロフィール肖像 41番" loading="lazy"><img class="px" src="../assets/img/avatars/av056.png" alt="プロフィール肖像 56番" loading="lazy"><img class="px" src="../assets/img/avatars/av071.png" alt="プロフィール肖像 71番" loading="lazy"><img class="px" src="../assets/img/avatars/av085.png" alt="プロフィール肖像 85番" loading="lazy"><img class="px" src="../assets/img/avatars/av099.png" alt="プロフィール肖像 99番" loading="lazy"><img class="px" src="../assets/img/avatars/av104.png" alt="プロフィール肖像 104番" loading="lazy"><img class="px" src="../assets/img/avatars/av110.png" alt="プロフィール肖像 110番" loading="lazy"><img class="px" src="../assets/img/avatars/av116.png" alt="プロフィール肖像 116番" loading="lazy"><img class="px" src="../assets/img/avatars/av119.png" alt="プロフィール肖像 119番" loading="lazy"><img class="px" src="../assets/img/avatars/av121.png" alt="プロフィール肖像 121番" loading="lazy"><img class="px" src="../assets/img/avatars/av125.png" alt="プロフィール肖像 125番" loading="lazy"><img class="px" src="../assets/img/avatars/av128.png" alt="プロフィール肖像 128番" loading="lazy"><img class="px" src="../assets/img/avatars/av131.png" alt="プロフィール肖像 131番" loading="lazy"><img class="px" src="../assets/img/avatars/av134.png" alt="プロフィール肖像 134番" loading="lazy"><img class="px" src="../assets/img/avatars/av137.png" alt="プロフィール肖像 137番" loading="lazy"><img class="px" src="../assets/img/avatars/av141.png" alt="プロフィール肖像 141番" loading="lazy"><img class="px" src="../assets/img/avatars/av144.png" alt="プロフィール肖像 144番" loading="lazy"><img class="px" src="../assets/img/avatars/av148.png" alt="プロフィール肖像 148番" loading="lazy"><img class="px" src="../assets/img/avatars/av152.png" alt="プロフィール肖像 152番" loading="lazy"><img class="px" src="../assets/img/avatars/av156.png" alt="プロフィール肖像 156番" loading="lazy"><img class="px" src="../assets/img/avatars/av160.png" alt="プロフィール肖像 160番" loading="lazy"><img class="px" src="../assets/img/avatars/av164.png" alt="プロフィール肖像 164番" loading="lazy"><img class="px" src="../assets/img/avatars/av168.png" alt="プロフィール肖像 168番" loading="lazy"><img class="px" src="../assets/img/avatars/av172.png" alt="プロフィール肖像 172番" loading="lazy"><img class="px" src="../assets/img/avatars/av176.png" alt="プロフィール肖像 176番" loading="lazy"><img class="px" src="../assets/img/avatars/av180.png" alt="プロフィール肖像 180番" loading="lazy"><img class="px" src="../assets/img/avatars/av184.png" alt="プロフィール肖像 184番" loading="lazy"><img class="px" src="../assets/img/avatars/av188.png" alt="プロフィール肖像 188番" loading="lazy"><img class="px" src="../assets/img/avatars/av191.png" alt="プロフィール肖像 191番" loading="lazy"><img class="px" src="../assets/img/avatars/av192.png" alt="プロフィール肖像 192番" loading="lazy"><img class="px" src="../assets/img/avatars/av193.png" alt="プロフィール肖像 193番" loading="lazy"><img class="px" src="../assets/img/avatars/av194.png" alt="プロフィール肖像 194番" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-gear" role="tabpanel" aria-labelledby="t-gear" hidden>
+      <h3>装備アイコン、部位6 × 等級11</h3><div class="gallery g-style gear-grid"><img class="px" src="../assets/img/gear-icons/head_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/head_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/head_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/head_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/head_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/head_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/head_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/head_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/head_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/head_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/head_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/body_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/body_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/body_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/body_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/body_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/body_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/body_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/body_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/body_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/body_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/body_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/legs_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/legs_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/legs_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/legs_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/legs_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/legs_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/legs_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/legs_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/legs_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/legs_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/legs_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/feet_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/feet_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/feet_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/feet_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/feet_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/feet_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/feet_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/feet_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/feet_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/feet_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/feet_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/melee_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/melee_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/melee_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/melee_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/melee_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/melee_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/melee_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/melee_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/melee_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/melee_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/melee_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/ranged_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/ranged_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/ranged_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/ranged_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/ranged_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/ranged_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/ranged_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/ranged_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/ranged_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/ranged_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/ranged_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"></div>
+      <h3 class="subhead">スタイルタグ、セットフレーム、オーラ、街の落書き、エコー感染</h3><div class="gallery g-style"><img class="px" src="../assets/img/style/tags/tag_scrap.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_street.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_survival.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_shadow.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_military.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_mech.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_lab.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_energy.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_knight.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_raider.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_01.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_03.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_05.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_07.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_09.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_11.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_13.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_15.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_17.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_19.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_01_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_03_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_05_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_07_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_09_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_11_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_13_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_15_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_17_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_19_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d01.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d02.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d03.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d04.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d05.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d06.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d07.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d08.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d09.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d10.png" alt="" loading="lazy"><img class="px" src="../assets/img/story/echo_eye_32.png" alt="" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-sound" role="tabpanel" aria-labelledby="t-sound" hidden>
+      <p>BGMと効果音は、AI音楽サービスや音源サイトではなくコードで直接合成した。波形を一つずつ計算して作ったチップチューンなので、著作権の心配なく使える。ゲームにはBGM10曲、効果音21種が入っている。バトルタブでは4曲のうち1曲がランダムで流れる。</p>
+      <ul class="tracks"><li><b>ロビー</b><div class="meta">イ短調 · ナイトシンセウェーブ</div><p>バトルタブのランダム4曲のうち1曲（1.1.0）、そのほかの画面（ショップ・依頼・プロフィール・チャット）</p><audio controls preload="none" src="../assets/audio/bgm_lobby.m4a"></audio></li><li><b>バトル</b><div class="meta">ホ短調 · ドライブ感のあるチップチューン</div><p>バトルタブの通常狩り</p><audio controls preload="none" src="../assets/audio/bgm_battle.m4a"></audio></li><li><b>ネオン追撃戦</b><div class="meta">嬰ヘ短調 · 緊迫したサイバーパンク、150BPMの16分オクターブベースとノコギリ波リード</div><p>バトルタブのランダム4曲のうち1曲（ほかのタブから［バトル］を押すたびに選び直す）</p><audio controls preload="none" src="../assets/audio/bgm_battle_cyber.m4a"></audio></li><li><b>裏路地ビバップ</b><div class="meta">変ロ長調 · スウィングジャズ、ウォーキングベース・ライドシンバル・エレピ</div><p>バトルタブのランダム4曲のうち1曲</p><audio controls preload="none" src="../assets/audio/bgm_battle_jazz1.m4a"></audio></li><li><b>ネオンバー・アシッドジャズ</b><div class="meta">Dドリアン · 104BPMのシャッフル、シンコペーションのファンクベース</div><p>バトルタブのランダム4曲のうち1曲</p><audio controls preload="none" src="../assets/audio/bgm_battle_jazz2.m4a"></audio></li><li><b>ボス</b><div class="meta">ニ短調 · 緊張感</div><p>ボス待機・ボス戦、特殊依頼の戦闘、PVP（入るたびに最初から）</p><audio controls preload="none" src="../assets/audio/bgm_boss.m4a"></audio></li><li><b>武器商</b><div class="meta">Gドリアン · スウィンググルーヴ</div><p>アドオン（ハブ・武器商・インプラント・ペット・パレットビルダー、ラインを除く）</p><audio controls preload="none" src="../assets/audio/bgm_merchant.m4a"></audio></li><li><b>ライン</b><div class="meta">Dドリアン · 止まった駅の夜、スローなスウィング・ローファイ</div><p>アドオン › ライン（路線・トークンショップ・乗務員・路線無線）</p><audio controls preload="none" src="../assets/audio/bgm_line.m4a"></audio></li><li><b>鎮圧列車</b><div class="meta">ハ短調 · 線路を走る鋼鉄、16ビットベース</div><p>ライン › 鎮圧列車タブ（入るたびに最初から）</p><audio controls preload="none" src="../assets/audio/bgm_train.m4a"></audio></li><li><b>ピット</b><div class="meta">イ短調 · 観客が足を踏み鳴らすハーフタイム</div><p>PVPタブ（週間順位・相手選び）</p><audio controls preload="none" src="../assets/audio/bgm_pit.m4a"></audio></li></ul>
+    </div>
+    <div class="af-panel" id="p-spec" role="tabpanel" aria-labelledby="t-spec" hidden>
+      <table class="spec">
+        <thead><tr><th scope="col">アセット</th><th scope="col">サイズ（ピクセル）</th><th scope="col">メモ</th></tr></thead>
+        <tbody>
+          <tr><td>装備の等級</td><td>11段階</td><td>クォンタム（ミント）、ヴォイド（紫）、オリジン（白）がシンギュラリティの上に加わった。強調マスクを等級の色で塗る</td></tr>
+          <tr><td>キャラクターの基本ボディ</td><td>24 × 24</td><td>種族3種 × 姿勢2（待機、構え）。装備は同じサイズのレイヤーで重ねる</td></tr>
+          <tr><td>装備レイヤー</td><td>24 × 24</td><td>絵 + 強調マスク（等級の色）+ 肌マスク（手が見える部位のみ）</td></tr>
+          <tr><td>通常の敵</td><td>24 × 24</td><td>待機と攻撃の2枚</td></tr>
+          <tr><td>ボス、鎮圧列車</td><td>52 × 52</td><td>区域ごとに1種、列車3種</td></tr>
+          <tr><td>ペット</td><td>16 × 16</td><td>等級色の強調マスクを含む</td></tr>
+          <tr><td>区域の背景、イントロのカット</td><td>256 × 112</td><td>画面では背景の1ドットを2dpで描く</td></tr>
+          <tr><td>商人、プロフィール肖像</td><td>256 × 256</td><td>商人3人 × レベル5段階、プロフィール204枚</td></tr>
+          <tr><td>セットのオーラ</td><td>36 × 36</td><td>セットごとに3フレーム、体を包む光と足元のリング</td></tr>
+          <tr><td>フォント</td><td>Galmuri 11·14, Fusion Pixel 12</td><td>SIL OFL 1.1。中国語・日本語版はFusion Pixel。ドットが崩れないよう整数倍のサイズでのみ使う</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 제작기 -->
+<section class="stop" id="making" aria-labelledby="making-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">7</span><span class="station">7番駅</span><h2 id="making-title">制作記。一人とAIのゲームスタジオ</h2></div>
+    <p class="lead">企画、開発、アーティスト、サウンド担当、運営がすべて一人。データ分析コンサルタントがAIを同僚として、アイデアから二つのストアでのリリース準備まで歩んできた過程をそのまままとめた。</p>
+
+    <div class="two" style="margin-top:48px">
+      <div>
+        <h3>12日間の記録</h3>
+        <ol class="days">
+          <li><time datetime="2026-11-16">11月16日</time><h3>方向を決める</h3><p>ペット育成のWebプロトタイプで感触を確かめたあと、サイバーパンク放置RPGへと方向を広げた。ゲーム企画書、開発環境、デザインシステム、画面モックアップ6枚を1日で作った。</p></li>
+          <li><time datetime="2026-11-17">11月17日</time><h3>骨組みとドットの工程</h3><p>通貨と特殊依頼、商人の構造を組み、45日間のバランスシミュレーションを回した。装備の外見を大量に作る自動工程を立ち上げた。</p></li>
+          <li><time datetime="2026-11-18">11月18日</time><h3>名前と音</h3><p>名前をNeon Stationに変え、アプリIDを確定した。ペット16種、チップチューンのBGMと効果音、チャット、商人の肖像を入れ、アートファクトリーを作った。</p></li>
+          <li><time datetime="2026-11-19">11月19日</time><h3>サーバーと物語</h3><p>Supabaseサーバーをつなぎ、オンラインPVPと週間シーズン、チャットを開いた。敵60種と背景10枚をそろえ、ストーリーバイブルを書いた。</p></li>
+          <li><time datetime="2026-11-20">11月20日</time><h3>スタイルとポリシー</h3><p>スタイル・セットのシステムと7カットのイントロを実装し、通報・ブロック・アカウント削除などのストアポリシー項目とストア掲載情報を準備した。</p></li>
+          <li><time datetime="2026-11-21">11月21日</time><h3>ラインと最初のテスター</h3><p>Google Playのテストトラックに最初のビルドを上げ、テスターの意見を受け始めた。ギルド「ライン」と鎮圧列車、シグネチャーセット20種、称号112種を入れた。</p></li>
+          <li><time datetime="2026-11-22">11月22日</time><h3>シンギュラリティの向こう</h3><p>クォンタム、ヴォイド、オリジンの3等級を加えて装備を11等級に増やし、プレイ時間報酬とアップデートのプレゼントを作った。紹介サイトをneon-station.comで開いた。</p></li>
+          <li><time datetime="2026-11-23">11月23日</time><h3>スキルツリーと3つの言語</h3><p>チップで育てる16層のスキルツリーと中継サーバーハッキングの依頼、オンラインタブ、英語・中国語版を入れた。iOSの最初のビルドをTestFlightに上げた。</p></li>
+          <li><time datetime="2026-11-24">11月24日</time><h3>App Storeでリリース</h3><p>武器商Lv50、クーポン、新しい外見66種、セット30種、バトルBGM3曲、チャットの禁止語を入れた1.1.0でApp Storeの審査を通過し、iOSでリリースした。同じ日にアプリ内決済とアカウント連携を入れた1.1.1を作った。</p></li>
+          <li><time datetime="2026-11-25">11月25日</time><h3>1.1.2と案内書</h3><p>アイテムレベル、上位外見330種（絵330枚完成）、鎮圧列車の貢献度報酬を入れた1.1.2を準備し、初めて来たランナーのためのスタートガイドとお知らせ掲示板を開いた。</p></li>
+          <li><time datetime="2026-11-26">11月26日</time><h3>1.1.3、深くなった都市</h3><p>鎮圧列車を10段階に増やし、スキルツリーにインプラント・ペット系統を加えた。ペット55種、セット40種、実績100種を入れ、通貨の変動をサーバーで確認する仕組みを作った。</p></li>
+          <li><time datetime="2026-11-27">11月27日</time><h3>4つ目の言語、2つ目のストア</h3><p>Google Playの組織アカウントへの切り替えを終え、正式リリースの審査を申請した。1.1.4ではゲストバックアップと復旧コード、クラッシュ収集、日本語版を入れ、紹介サイトも英語・日本語・中国語で公開した。</p></li>
+        </ol>
+      </div>
+      <div>
+        <h3>使っている道具</h3>
+        <table class="spec">
+          <tbody>
+            <tr><td>アプリ</td><td>React Native（Expo）、TypeScript。一つのコードでAndroidとiOS</td></tr>
+            <tr><td>グラフィック</td><td>Skiaでドットスプライトを描き、ピクセルがにじまないよう最近傍補間</td></tr>
+            <tr><td>サーバー</td><td>Supabase（Postgres、RLS、Edge Functions）。通貨、ガチャ、順位はサーバーが計算</td></tr>
+            <tr><td>ビルド</td><td>EASクラウドビルド。MacなしでAndroidとiOSを一度に</td></tr>
+            <tr><td>運営</td><td>PostHogで利用分析、Sentryでクラッシュ収集</td></tr>
+            <tr><td>アート</td><td>PixelLabで生成して選び、レイヤー抽出スクリプトで整理</td></tr>
+            <tr><td>サウンド</td><td>Pythonで合成したチップチューン</td></tr>
+            <tr><td>AIの同僚</td><td>Claude。企画書、コード、検収、ドキュメント作成を一緒に</td></tr>
+          </tbody>
+        </table>
+        <h3 class="subhead" style="margin-top:40px">守っている原則</h3>
+        <ul class="principles">
+          <li><b>お金と確率はサーバーが計算する</b><span>通貨、ガチャ、報酬、順位はサーバー関数でのみ決める。アプリは読むだけだ。</span></li>
+          <li><b>確率は隠さない</b><span>韓国の確率型アイテム情報公開義務に合わせ、ゲーム内ですべて公開する。</span></li>
+          <li><b>他人の世界を借りない</b><span>ほかの作品固有の名称やデザインは使わない。</span></li>
+          <li><b>チャットは安全に</b><span>禁止語フィルター、利用ルールへの同意、通報とブロックをリリース前にそろえた。</span></li>
+          <li><b>毎日記録する</b><span>毎朝9時に作業日誌、決定ログ、企画書を更新する。</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="subhead">ゲーム開発の5段階、いまの位置</h3>
+    <p class="dim">一人で作っても実務のように。段階ごとに成果物を決め、関門で続けるか、方向を変えるか、やめるかを判定する。</p>
+    <ol class="gates">
+      <li class="done"><b>コンセプト・企画</b><span>ジャンル、ベンチマーク、企画書</span></li>
+      <li class="done"><b>プリプロダクション</b><span>開発環境、デザインシステム、モックアップ</span></li>
+      <li class="done"><b>プロダクション</b><span>機能、ドットアセット、サーバー、サウンド</span></li>
+      <li class="done"><b>テスト・QA</b><span>内部テストとテスターの意見の反映</span></li>
+      <li class="now"><b>リリース・ライブ</b><span>いまここ。iOSでリリース、Google Play審査中、アップデートとお知らせの運営</span></li>
+    </ol>
+
+    <h3 class="subhead">ドット絵1枚がゲームに入るまで</h3>
+    <p class="dim">AIは候補を大量に出す。問題はその次だ。工程を6段階に分け、人がする仕事を1段階に減らした。</p>
+    <ol class="pipeline">
+      <li><b>生成</b><span>基本ボディの上にインペインティングで装備を描く</span></li>
+      <li class="human"><b>選ぶ</b><span>上下の等級と並べて人が選ぶ</span></li>
+      <li><b>抽出</b><span>基本ボディと違うピクセルだけをレイヤーとして残す</span></li>
+      <li><b>マスク</b><span>黄色いピクセルは等級の色、肌の色は肌マスクへ</span></li>
+      <li><b>登録</b><span>レイヤー一覧、銃口の座標、アイコンを作り直す</span></li>
+      <li><b>検査</b><span>抜けた等級、対のない姿勢をテストが見つける</span></li>
+    </ol>
+
+    <div class="records">
+      <div><b>594</b><span>装備の外見</span></div>
+      <div><b>107</b><span>決定ログの項目</span></div>
+      <div><b>4</b><span>言語（한국어、English、中文、日本語）</span></div>
+      <div><b>26</b><span>Brunchの開発日誌の原稿</span></div>
+    </div>
+    <p style="margin-top:24px">開発の過程はBrunchで「AIと作る1人ゲーム開発」として連載している（韓国語）。プレイ動画とアップデート情報はInstagram <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>に上げる。<a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">Brunchで連載を読む</a></p>
+  </div>
+</section>
+
+<!-- 제작사 -->
+<section class="stop" id="studio" aria-labelledby="studio-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">8</span><span class="station">終着駅</span><h2 id="studio-title">制作会社。データステーション</h2></div>
+    <div class="studio-band cut">
+      <div>
+        <p class="motto">The truth will set you free.</p>
+        <p>データステーションは、データ分析とAIを教え、コンサルティングする会社だ。2018年から企業や機関で講義を続けてきた。Neon Stationは、その現場で伝えてきたこと、つまり問題を先に定義し、道具はそのあとで選ぶという原則を、そのままゲーム開発に当てはめてみたプロジェクトだ。</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <a class="btn" href="studio.html">制作会社の紹介を見る</a> <a class="btn ghost" href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">data-station.co.kr</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <p class="label">제작사</p>
+      <p class="name"><a href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">데이터스테이션</a></p>
+      <p class="motto">The truth will set you free.</p>
+      <p class="biz">사업자등록번호 : 627-29-01315</p>
+      <p class="copy">© 2026 Data Station</p>
+    </div>
+    <div class="ft-links">
+      <a href="studio.html">制作会社の紹介</a> <a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">開発日誌（Brunch・韓国語）</a> <a href="guide.html">スタートガイド</a> <a href="news.html">お知らせ</a> <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">Instagram</a> <a href="../support/">サポート（韓国語）</a> <a href="../privacy/en/">プライバシーポリシー（英語）</a> <a href="../terms/">利用規約（韓国語）</a> <a href="../delete-account/">アカウント削除（韓国語）</a> <a href="#top">トップへ</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/news-data.js"></script>
+<script src="../assets/js/news.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

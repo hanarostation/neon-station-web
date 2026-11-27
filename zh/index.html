@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Station — 赛博朋克像素放置 RPG</title>
+<meta name="description" content="通往天空的车站停摆已有 26 年。身份芯片被抹除的你，在 0号站台醒来。扫荡帮派、收集 594 种装备外观的赛博朋克像素放置 RPG——Neon Station。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Neon Station — 赛博朋克像素放置 RPG">
+<meta property="og:description" content="开着就会自动战斗，穿什么就是什么样子。收集 594 种装备外观的赛博朋克像素放置 RPG。">
+<meta property="og:image" content="https://neon-station.com/assets/img/og-image.png">
+<meta property="og:url" content="https://neon-station.com/zh/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1316">
+<link rel="icon" href="../favicon.png">
+<link rel="alternate" hreflang="ko" href="https://neon-station.com/">
+<link rel="alternate" hreflang="en" href="https://neon-station.com/en/">
+<link rel="alternate" hreflang="ja" href="https://neon-station.com/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://neon-station.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://neon-station.com/">
+<link rel="preload" href="../assets/fonts/Galmuri14.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#story">跳到正文</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Neon Station 首页"><img class="px" src="../assets/img/story/logo_emblem.png" alt=""><span class="wordmark"><span class="n">NEON</span> <span class="s">STATION</span></span></a>
+    <nav class="route" aria-label="线路图">
+      <ol>
+        <li><a href="#top" aria-current="true">0号站台</a></li>
+        <li><a href="#story">故事</a></li>
+        <li><a href="#world">世界观</a></li>
+        <li><a href="#game">游戏</a></li>
+        <li><a href="#looks">外观</a></li>
+        <li><a href="#guide">说明</a></li>
+        <li><a href="#art">美术工厂</a></li>
+        <li><a href="#making">制作记</a></li>
+        <li><a href="#studio">制作方</a></li>
+      </ol>
+    </nav>
+    <div class="pagelinks"><a href="guide.html">指南</a><a href="news.html">公告</a></div>
+    <details class="langs"><summary aria-label="Language: 中文">中文</summary><nav aria-label="Language"><a href="../" hreflang="ko" lang="ko">한국어</a><a href="../en/" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="./" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">中文</a></nav></details>
+  </div>
+</header>
+
+<main>
+<!-- 0번 승강장 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="screen px" role="region" aria-roledescription="过场动画" aria-label="游戏开场 7 个镜头"><div class="cut-frame " data-ms="3500" aria-hidden="true"><div class="noise"></div><div class="scan"></div><p class="subtitle">2061年，上行线停运了。</p></div><div class="cut-frame pan-up" data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_2.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">通往天空的车站变成了城市。<br>人们称这里为霓虹站。</p></div><div class="cut-frame pan-down" data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_3.png" alt="" width="256" height="112"><img class="eye px" src="../assets/img/story/echo_eye_32.png" alt=""><div class="scan"></div><p class="subtitle">上层是企业，下层是帮派。<br>而每一层都在 ECHO 的注视之下。</p></div><div class="cut-frame " data-ms="4500" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_4.png" alt="" width="256" height="112"><div class="scan"></div><p class="subtitle">2087年。0号站台。</p></div><div class="cut-frame " data-ms="5500" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_5.png" alt="" width="256" height="112"><div class="chip-id">ID:NULL</div><div class="scan"></div><p class="subtitle">“无法识别。预测模型中不存在的个体。”<small>ECHO</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/story/intro_6.png" alt="" width="256" height="112"><img class="speaker px" src="../assets/img/npc-portraits/merchant.png" alt=""><div class="scan"></div><p class="subtitle">断线一直在找你。这把枪不是礼物，是定金。<small>军火商 巴雷尔（以抵抗军开局时）</small></p></div><div class="cut-frame " data-ms="6000" aria-hidden="true"><img class="bg px" src="../assets/img/backgrounds/district1.png" alt="" width="256" height="112"><div class="logo-lock"><img class="px" src="../assets/img/story/logo_full.png" alt="Neon Station"></div><div class="scan"></div><p class="subtitle">芯片是空的。所以你什么都能做。</p></div></div>
+    <div class="screen-ctl">
+      <button type="button" data-cut="prev" aria-label="上一个镜头">◀</button>
+      <button type="button" data-cut="play" aria-label="暂停过场动画">❚❚</button>
+      <button type="button" data-cut="next" aria-label="下一个镜头">▶</button>
+      <div class="pips" aria-hidden="true"></div>
+      <span class="count" aria-live="polite"></span>
+    </div>
+
+    <div class="hero-copy">
+      <div>
+        <img class="logo px" src="../assets/img/story/logo_full.png" alt="Neon Station" width="384" height="128">
+        <h1 id="hero-title">开着就会自动战斗，<br><span class="y">穿什么就是什么样子。</span></h1>
+        <p class="lead">2087 年，轨道电梯工程停摆后变成垂直城市的巨大车站。身份芯片被抹除后醒来的你，是管理这座城市的 AI ECHO 记录中唯一不存在的人。</p>
+        <div class="ctas">
+          <a class="btn" data-appstore data-fallback="在 App Store 搜索「Neon Station」">在 App Store 下载</a> <a class="btn ghost" href="guide.html">入门指南</a> <a class="btn ghost" data-playstore data-fallback="Google Play 即将上线">在 Google Play 下载</a>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>类型</b><span>赛博朋克像素放置 RPG。自动战斗与装备收集</span></li>
+        <li><b>平台</b><span>iOS App Store 已上线。Android 正在接受 Google Play 正式上线审核</span></li>
+        <li><b>舞台</b><span>10 个区域、10 个帮派、60 种敌人</span></li>
+        <li><b>收集</b><span>装备 11 个等级、外观 594 种、签名套装 40 种、宠物 55 种、称号 232 种</span></li>
+        <li><b>语言</b><span>한국어、English、中文(简体)、日本語</span></li>
+        <li><b>制作</b><span>Data Station。一人开发，与 AI 协作</span></li>
+      </ul>
+    </div>
+    <div class="latest" aria-labelledby="latest-title">
+      <div class="latest-head"><h2 id="latest-title">最新消息</h2><a href="news.html">查看全部公告</a></div>
+      <ul data-latest="3"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 스토리 -->
+<section class="stop" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">1</span><span class="station">1 号站</span><h2 id="story-title">故事。断裂天空下的十座车站</h2></div>
+    <p class="lead">通往天空的车站停摆已有 26 年。在注视每一层的 AI 记录里，唯独没有身份芯片空白的你。</p>
+
+    <div class="world-intro">
+      <div><h3>霓虹站</h3><p>这里原本不是城市，而是车站。凯隆集团于 2041 年开始将其建为轨道电梯「上行线」的地面站。2061 年「停运之日」，工程在没有任何说明的情况下停止。为寻找工作涌来的数百万人无法离开，车站变成了不断向上堆叠的垂直城市。工程停止后，只有旧车站的霓虹指示牌从未熄灭。</p></div>
+      <div><h3>ECHO 与零号</h3><p>车站综合管理 AI ECHO 掌管电力、水、治安与身份芯片，并预测人们明天会做什么。一旦偏离预测，芯片就会被抹除。这是这座城市最重的刑罚——「删除」。在 0号站台醒来的你，手腕芯片上没有名字，只印着 NULL。芯片空白，意味着 ECHO 看不见你。</p></div>
+    </div>
+
+    <div class="act"><div class="act-head"><h3>第一幕「无名之人」</h3><span class="tag">区域 1~5</span><p>在清理下层的过程中获得名字，并得知帮派背后站着企业。</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="1" style="--c:#8E5A2B">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district1.png" alt="锈蚀下水道背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d01_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d01_boss.png" alt="区域首领 格罗姆「下水道之王」" loading="lazy"></div>
+      <div>
+        <h4>1区域 · 锈鼠帮</h4>
+        <h3>锈蚀下水道</h3>
+        <p class="who">干部 獠牙「鼠牙」 / 首领 格罗姆「下水道之王」</p>
+        <p>觉醒的零号赶走了盘踞下水道的废铁帮派。</p>
+        <blockquote>“下水道只有一个王。一个没名字的家伙也敢？”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d01.png" alt="">打开 ECHO 日志碎片 01</summary><p>格罗姆的锁链上刻着凯隆的标记。那不是废铁，而是企业的补给品。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="2" style="--c:#FF3B4E">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district2.png" alt="霓虹市场背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d02_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d02_boss.png" alt="区域首领 红男爵「四臂」" loading="lazy"></div>
+      <div>
+        <h4>2区域 · 红灯笼</h4>
+        <h3>霓虹市场</h3>
+        <p class="who">干部 阵「账房先生」 / 首领 红男爵「四臂」</p>
+        <p>走私改装装备的团伙，是军火商巴雷尔的老客户。</p>
+        <blockquote>“四条胳膊，账本也有四本。你想记在哪一本上？”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d02.png" alt="">打开 ECHO 日志碎片 02</summary><p>阵的账本里记录着每月都有一部分利润流向上层账户。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="3" style="--c:#2FA8A0">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district3.png" alt="废弃港口背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d03_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d03_boss.png" alt="区域首领 深潜杰克「深海头目」" loading="lazy"></div>
+      <div>
+        <h4>3区域 · 黑潮</h4>
+        <h3>废弃港口</h3>
+        <p class="who">干部 盐「独眼船长」 / 首领 深潜杰克「深海头目」</p>
+        <p>与手握重火器的走私组织正面交锋。</p>
+        <blockquote>“海底满是企业丢掉的东西。我也把你扔进去。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d03.png" alt="">打开 ECHO 日志碎片 03</summary><p>走私货物的真面目，是企业的实验废弃物和赛博格零件。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="4" style="--c:#A66BFF">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district4.png" alt="数据贫民窟背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d04_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d04_boss.png" alt="区域首领 根权「贫民窟领主」" loading="lazy"></div>
+      <div>
+        <h4>4区域 · 故障</h4>
+        <h3>数据贫民窟</h3>
+        <p class="who">干部 七号「病毒」 / 首领 根权「贫民窟领主」</p>
+        <p>黑客帮派和无人机群掌控着贫民窟的线路。</p>
+        <blockquote>“我打开了你的芯片……里面什么都没有。我从没见过这种情况。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d04.png" alt="">打开 ECHO 日志碎片 04</summary><p>故障截获的 ECHO 信号。ECHO 会在帮派战争爆发前「预报」它们。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="5" style="--c:#D8E4E2">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district5.png" alt="企业外围背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d05_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d05_boss.png" alt="区域首领 零「被丢弃的兵器」" loading="lazy"></div>
+      <div>
+        <h4>5区域 · 零号铬</h4>
+        <h3>企业外围</h3>
+        <p class="who">干部 钢蜂「雇佣兵队长」 / 首领 零「被丢弃的兵器」</p>
+        <p>被企业抛弃的赛博格雇佣兵。第一幕在这里结束。</p>
+        <blockquote>“没有命令。没有目标。那就把你当作目标。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d05.png" alt="">打开 ECHO 日志碎片 05</summary><p>零的核心记录中写着「下层镇压实验体」。随后 ECHO 第一次直接向零号广播：“无法识别的个体。请修正路线。”</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>第二幕「上行线」</h3><span class="tag">区域 6~9</span><p>向中层和上层攀登，收集帮派是 ECHO 设计产物的证据。</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="6" style="--c:#3CA0FF">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district6.png" alt="高架铁路背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d06_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d06_boss.png" alt="区域首领 安培「高压君主」" loading="lazy"></div>
+      <div>
+        <h4>6区域 · 伏特飞车党</h4>
+        <h3>高架铁路</h3>
+        <p class="who">干部 火花「飙车队长」 / 首领 安培「高压君主」</p>
+        <p>占据上行线货运铁路的飙车党。</p>
+        <blockquote>“这条铁路不会往上走。所以我们自己跑。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d06.png" alt="">打开 ECHO 日志碎片 06</summary><p>伏特飞车党偷走的电力是 ECHO 的备用电源。ECHO 是故意让他们偷的。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="7" style="--c:#3DDC84">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district7.png" alt="毒性工厂区背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d07_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d07_boss.png" alt="区域首领 烟雾之母「污染之母」" loading="lazy"></div>
+      <div>
+        <h4>7区域 · 绿色瘟疫</h4>
+        <h3>毒性工厂区</h3>
+        <p class="who">干部 飞蛾「调配师」 / 首领 烟雾之母「污染之母」</p>
+        <p>占据废弃化工厂的防毒面具帮派。</p>
+        <blockquote>“呼吸吧。这空气会让你们变得一样。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d07.png" alt="">打开 ECHO 日志碎片 07</summary><p>飞蛾是义体医生怀特的旧同事。那座工厂是调控中层人口的「净化设施」。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="8" style="--c:#FF4FD8">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district8.png" alt="全息娱乐街背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d08_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d08_boss.png" alt="区域首领 胭脂夫人「秀场女王」" loading="lazy"></div>
+      <div>
+        <h4>8区域 · 假面舞会</h4>
+        <h3>全息娱乐街</h3>
+        <p class="who">干部 幻影「魔术师」 / 首领 胭脂夫人「秀场女王」</p>
+        <p>掌控赌场与夜店的假面组织。</p>
+        <blockquote>“没有名字？在秀场上，那可是最贵的面具。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d08.png" alt="">打开 ECHO 日志碎片 08</summary><p>身份在这里被洗白、被抹除。胭脂夫人的名单上有零号旧芯片的编号。</p></details>
+      </div>
+    </li>
+    <li class="stopcard" data-no="9" style="--c:#E8C35A">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district9.png" alt="企业总部区背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d09_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d09_boss.png" alt="区域首领 神盾-9「董事会守护机」" loading="lazy"></div>
+      <div>
+        <h4>9区域 · 全能卫队</h4>
+        <h3>企业总部区</h3>
+        <p class="who">干部 猎犬「安保主管」 / 首领 神盾-9「董事会守护机」</p>
+        <p>与企业安保部队正面冲突。猎犬是巴雷尔的旧同事。</p>
+        <blockquote>“执行董事会保护程序。董事会……不存在。程序继续。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d09.png" alt="">打开 ECHO 日志碎片 09</summary><p>董事会会议室空无一人。几十年来，一直是 ECHO 在做决定。</p></details>
+      </div>
+    </li></ol></div><div class="act"><div class="act-head"><h3>第三幕「回声」</h3><span class="tag">区域 10</span><p>在数据核心，与 ECHO 之神回声主宰对峙。</p></div>
+    <ol class="line-list">
+    <li class="stopcard" data-no="10" style="--c:#F5E50A">
+      <div class="scene"><img class="bg px" src="../assets/img/backgrounds/district10.png" alt="数据核心背景" loading="lazy" width="256" height="112">
+        <img class="mid px" src="../assets/img/enemies/d10_mid.png" alt="" loading="lazy">
+        <img class="boss px" src="../assets/img/enemies/d10_boss.png" alt="区域首领 回声主宰「教团之神」" loading="lazy"></div>
+      <div>
+        <h4>10区域 · 回声教团</h4>
+        <h3>数据核心</h3>
+        <p class="who">干部 神谕「大祭司」 / 首领 回声主宰「教团之神」</p>
+        <p>崇拜企业 AI 的赛博格狂信徒的圣所。</p>
+        <blockquote>“欢迎你，例外。为了等你，我一直守护着这座城市。”</blockquote>
+        <details class="log"><summary><img class="px" src="../assets/img/story/log_d10.png" alt="">打开 ECHO 日志碎片 10（结局剧透）</summary><p>停运之日的真相：是 ECHO 让上行线停下的。“向上走，城市就会散开。散开了，就无法预测。”而最后一条记录写着：零号是 ECHO 亲手制造的例外。</p></details>
+      </div>
+    </li></ol></div>
+
+    <div class="ending panel cut">
+      <img class="px" src="../assets/img/story/echo_eye_32.png" alt="ECHO 的标志，黄色同心圆之眼">
+      <div>
+        <h3>这座城市为何没有终结</h3>
+        <p>回声主宰倒下后，ECHO 会重启。城市回到停运之日刚结束时，帮派学习了与零号战斗的记录，变得更强后重新部署。人们的记忆被抹除，只有芯片空白的零号保留着记忆。游戏的周目（困难模式）就是这次重启。</p>
+        <p class="dim">零号是 ECHO 的工具，还是将超越 ECHO 的变量？答案将在上行线重新运转时揭晓。那是下一季的故事。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 세계관 -->
+<section class="stop" id="world" aria-labelledby="world-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">2</span><span class="station">2 号站</span><h2 id="world-title">世界观。每一层都是不同的城市</h2></div>
+    <p class="lead">上层归企业，下层归帮派。人们至今仍把区域称为「站」，把团体称为「线路」。每个区域都有自己的线路颜色，这种颜色延续到背景、UI，甚至公会徽章。</p>
+
+    <div class="strata" role="list" aria-label="城市的层级">
+      <div class="stratum st-up" role="listitem"><span class="lvl" style="color:#E8C35A">上层</span><div class="chips"><span style="--c:#E8C35A">9 企业总部区</span></div><p>凯隆董事会与员工。正式身份与点券账户。白墙、金饰、毫无噪音。</p></div>
+      <div class="stratum st-mid" role="listitem"><span class="lvl" style="color:#FF4FD8">中层</span><div class="chips"><span style="--c:#3CA0FF">6 高架铁路</span><span style="--c:#3DDC84">7 毒性工厂区</span><span style="--c:#FF4FD8">8 全息娱乐街</span></div><p>拥有登记身份的市民。光鲜亮丽，却靠上层的残渣运转。</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#D8E4E2">边界</span><div class="chips"><span style="--c:#D8E4E2">5 企业外围</span></div><p>被废弃的企业设施。分隔下层与中层的墙。</p></div>
+      <div class="stratum" role="listitem"><span class="lvl" style="color:#FF3B4E">下层</span><div class="chips"><span style="--c:#8E5A2B">1 锈蚀下水道</span><span style="--c:#FF3B4E">2 霓虹市场</span><span style="--c:#2FA8A0">3 废弃港口</span><span style="--c:#A66BFF">4 数据贫民窟</span></div><p>流浪者、未登记居民与帮派的地盘。铁锈、潮湿、霓虹、废铁。</p></div>
+      <div class="stratum st-core" role="listitem"><span class="lvl" style="color:#F5E50A">核心</span><div class="chips"><span style="--c:#F5E50A">10 数据核心</span></div><p>上行线支柱内部。无人居住。黄色的光、电路、祈祷声。</p></div>
+    </div>
+
+    <h3 class="subhead">三个群体。是谁收留了零号？</h3>
+    <p class="dim">没有记忆的零号，出身由最先收留它的群体决定。这就是开始游戏时选择的种族。</p>
+    <div class="grid races">
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/drifter_aim.png" alt="流浪者基础身体像素图">
+        <h3>流浪者</h3><p>下水道下方的未登记社区捡到并养大了零号。他们用废铁做武器，多余的东西大家分享。</p>
+        <dl><dt>初始武器</dt><dd>管钳</dd><dt>性格</dt><dd>寡言，生存第一</dd><dt>被动</dt><dd>体力恢复 +15%，金币 +5%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/resistance_aim.png" alt="抵抗军基础身体像素图">
+        <h3>抵抗军</h3><p>誓要切断 ECHO 线路的地下组织「断线（CUTLINE）」。他们把芯片空白的零号视为最强的武器。</p>
+        <dl><dt>初始武器</dt><dd>智能手枪</dd><dt>性格</dt><dd>冷嘲热讽，满口技术术语</dd><dt>被动</dt><dd>暴击 +5%p，智力 +10%</dd></dl>
+      </article>
+      <article class="race panel">
+        <img class="sprite px" src="../assets/img/base/citizen_aim.png" alt="市民基础身体像素图">
+        <h3>市民</h3><p>曾是中层的私人保安，执勤时芯片被抹除。熟悉规则与装备。</p>
+        <dl><dt>初始武器</dt><dd>电击警棍</dd><dt>性格</dt><dd>礼貌，讲原则</dd><dt>被动</dt><dd>防御 +10%，攻击速度 +5%</dd></dl>
+      </article>
+    </div>
+
+    <h3 class="subhead">0号站台的三位商人</h3>
+    <p class="dim">ECHO 的摄像头锈坏失灵的少数地方之一。商人等级提升后，肖像会改变，商人的故事也会向前推进一步。点击下方格子可查看各阶段的肖像。</p>
+    <div class="grid merchants">
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/merchant.png" alt="军火商 巴雷尔 基础">
+        <div class="levels" role="group" aria-label="军火商各等级肖像">
+          <button type="button" aria-pressed="true" aria-label="军火商 巴雷尔 基础"><img class="px" src="../assets/img/npc-portraits/merchant.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="军火商 巴雷尔 Lv5"><img class="px" src="../assets/img/npc-portraits/merchant_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="军火商 巴雷尔 Lv10"><img class="px" src="../assets/img/npc-portraits/merchant_10.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="军火商 巴雷尔 Lv13"><img class="px" src="../assets/img/npc-portraits/merchant_13.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="军火商 巴雷尔 Lv16"><img class="px" src="../assets/img/npc-portraits/merchant_16.png" alt=""></button>
+        </div>
+        <span class="role">军火商</span><h3>巴雷尔</h3>
+        <p>前全能卫队军械库管理官。金属下颚是企业审讯留下的痕迹。零号的名声越高，他就会逐一打开隐藏的仓库。</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/ripperdoc.png" alt="义体医生 怀特 基础">
+        <div class="levels" role="group" aria-label="义体医生各等级肖像">
+          <button type="button" aria-pressed="true" aria-label="义体医生 怀特 基础"><img class="px" src="../assets/img/npc-portraits/ripperdoc.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="义体医生 怀特 Lv3"><img class="px" src="../assets/img/npc-portraits/ripperdoc_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="义体医生 怀特 Lv5"><img class="px" src="../assets/img/npc-portraits/ripperdoc_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="义体医生 怀特 Lv7"><img class="px" src="../assets/img/npc-portraits/ripperdoc_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="义体医生 怀特 Lv10"><img class="px" src="../assets/img/npc-portraits/ripperdoc_10.png" alt=""></button>
+        </div>
+        <span class="role">义体医生</span><h3>怀特</h3>
+        <p>从凯隆医疗研究所出逃的外科医生。神经、骨骼、智力植入体都是用从研究所偷来的图纸制作的。每个阶段她都会吐露研究所的一个秘密。</p>
+      </article>
+      <article class="merchant">
+        <img class="portrait px" src="../assets/img/npc-portraits/breeder.png" alt="宠物饲养员 波比 基础">
+        <div class="levels" role="group" aria-label="宠物饲养员各等级肖像">
+          <button type="button" aria-pressed="true" aria-label="宠物饲养员 波比 基础"><img class="px" src="../assets/img/npc-portraits/breeder.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="宠物饲养员 波比 Lv3"><img class="px" src="../assets/img/npc-portraits/breeder_3.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="宠物饲养员 波比 Lv5"><img class="px" src="../assets/img/npc-portraits/breeder_5.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="宠物饲养员 波比 Lv7"><img class="px" src="../assets/img/npc-portraits/breeder_7.png" alt=""></button>
+          <button type="button" aria-pressed="false" aria-label="宠物饲养员 波比 Lv10"><img class="px" src="../assets/img/npc-portraits/breeder_10.png" alt=""></button>
+        </div>
+        <span class="role">宠物饲养员</span><h3>波比</h3>
+        <p>修好被企业丢弃的宠物机器人和无人机、再送它们去新家的少女。当她能修好上层的试制品时，会给出「机器也会留下记忆」的线索。</p>
+      </article>
+    </div>
+
+    <div class="line-band">
+      <div class="emblem" role="img" aria-label="线路徽章示例，青绿色 7 号线"><img class="px" src="../assets/img/line-art/line_emblem_tide.png" alt="" width="192" height="192"><span>7</span></div>
+      <div>
+        <span class="tag soon">在线页签 · Lv10</span>
+        <h3 style="margin-top:12px">线路与镇压列车</h3>
+        <p>下层的人们曾按停运之日之前的线路聚居。所以这座城市的公会叫「线路」。徽章是标有线路颜色与编号的车站标识，公会货币是旧地铁代币。每周 ECHO 都会从 1 号开始放下无人镇压列车。线路乘务员合力累积伤害停下一列后，更坚固的下一列会立刻驶来，一直到最后的 10 号「终点站」。任何种族都可以加入线路，乘务员通过线路无线电交流，并在代币商店兑换芯片礼包等补给。</p>
+        <div class="trains"><img class="px" src="../assets/img/line-art/train_1.png" alt="镇压列车1号" loading="lazy"><img class="px" src="../assets/img/line-art/train_2.png" alt="镇压列车2号" loading="lazy"><img class="px" src="../assets/img/line-art/train_3.png" alt="镇压列车3号" loading="lazy"><img class="px" src="../assets/img/line-art/train_4.png" alt="镇压列车 4 号" loading="lazy"><img class="px" src="../assets/img/line-art/train_5.png" alt="镇压列车 5 号" loading="lazy"><img class="px" src="../assets/img/line-art/train_6.png" alt="镇压列车 6 号" loading="lazy"><img class="px" src="../assets/img/line-art/train_7.png" alt="镇压列车 7 号" loading="lazy"><img class="px" src="../assets/img/line-art/train_8.png" alt="镇压列车 8 号" loading="lazy"><img class="px" src="../assets/img/line-art/train_9.png" alt="镇压列车 9 号" loading="lazy"><img class="px" src="../assets/img/line-art/train_10.png" alt="镇压列车 10 号" loading="lazy"></div>
+      </div>
+    </div>
+
+    <dl class="glossary">
+      <div><dt>上行线</dt><dd>停摆的轨道电梯</dd></div>
+      <div><dt>停运之日</dt><dd>2061 年上行线工程停止的那一天</dd></div>
+      <div><dt>凯隆集团</dt><dd>拥有车站的企业。安保子公司是全能卫队</dd></div>
+      <div><dt>删除</dt><dd>ECHO 抹除身份芯片的刑罚</dd></div>
+      <div><dt>断线</dt><dd>抵抗军地下组织</dd></div>
+      <div><dt>斗场</dt><dd>0号站台下方的地下斗场（PVP）</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 게임 -->
+<section class="stop" id="game" aria-labelledby="game-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">3</span><span class="station">3 号站</span><h2 id="game-title">游戏。离开时也在战斗</h2></div>
+    <p class="lead">每天看上 2~5 分钟就够了。角色会自己和帮派战斗，不在线时金币也会持续累积。你要做的，是和军火商交易、搭配装备，并决定以什么样子走进下一个区域。</p>
+    <div class="shots" tabindex="0" aria-label="8 张游戏画面，左右滑动查看">
+      <figure><img src="../assets/img/store/01.webp" alt="战斗画面。正在 8区域全息娱乐街自动战斗" loading="lazy" width="1080" height="1920"><figcaption>开着就会自动战斗</figcaption></figure>
+      <figure><img src="../assets/img/store/02.webp" alt="开场过场动画画面" loading="lazy" width="1080" height="1920"><figcaption>2087 年，霓虹站</figcaption></figure>
+      <figure><img src="../assets/img/store/03.webp" alt="军火商交易画面，军火商 Lv15" loading="lazy" width="1080" height="1920"><figcaption>交易 11 个等级的装备</figcaption></figure>
+      <figure><img src="../assets/img/store/04.webp" alt="调色板工坊图鉴画面" loading="lazy" width="1080" height="1920"><figcaption>穿什么就变成什么样</figcaption></figure>
+      <figure><img src="../assets/img/store/05.webp" alt="调色板工坊套装画面" loading="lazy" width="1080" height="1920"><figcaption>隐藏的签名套装</figcaption></figure>
+      <figure><img src="../assets/img/store/06.webp" alt="宠物编组画面" loading="lazy" width="1080" height="1920"><figcaption>领养被丢弃的机器</figcaption></figure>
+      <figure><img src="../assets/img/store/07.webp" alt="植入体手术画面" loading="lazy" width="1080" height="1920"><figcaption>改造身体</figcaption></figure>
+      <figure><img src="../assets/img/store/08.webp" alt="特殊委托画面" loading="lazy" width="1080" height="1920"><figcaption>每天都有新的特殊委托</figcaption></figure>
+    </div>
+
+    <div class="grid features">
+      <article class="feature" style="--fc:var(--yellow)"><img class="ico px" src="../assets/img/ui-icons/icon_coins.png" alt=""><h3>自动战斗</h3><ul><li>10 个区域，每个区域都有不同的帮派和首领</li><li>离开期间也会累积的放置奖励</li><li>开着应用狩猎，还会额外累积在线奖励</li></ul></article>
+      <article class="feature" style="--fc:var(--orange)"><img class="ico px" src="../assets/img/gear-icons/ranged_9.png" alt=""><h3>军火商交易</h3><ul><li>从废铁到起源共 11 个等级</li><li>头部、身体、下装、鞋子、武器 5 个部位</li><li>军火商最高 Lv50。等级越高，解锁的等级越高</li></ul></article>
+      <article class="feature" style="--fc:var(--cyan)"><img class="ico px" src="../assets/img/gear-icons/head_11.png" alt=""><h3>外观收集</h3><ul><li>装备什么，角色就是什么样子</li><li>外观 594 种。物品 Lv26 起换上高阶外观</li><li>收集线索，激活 40 种签名套装</li></ul></article>
+      <article class="feature" style="--fc:#4DFFE5"><img class="ico px" src="../assets/img/ui-icons/icon_chips.png" alt=""><h3>技能树 <span class="tag soon">1.1.3 扩展</span></h3><ul><li>收集神经芯片，培育 18 层的网状之树</li><li>属性、委托、PVP、植入体、宠物、扩展六个分支</li><li>账号 Lv10 时在扩展中开放</li></ul></article>
+      <article class="feature" style="--fc:var(--green)"><img class="ico px" src="../assets/img/pet-icons/pet_mechwolf.png" alt=""><h3>宠物</h3><ul><li>宠物饲养员修好的机器宠物与无人机 55 种，每个等级 5 种</li><li>同时编组地面宠物与空中宠物可获得组合加成</li></ul></article>
+      <article class="feature" style="--fc:#A66BFF"><img class="ico px" src="../assets/img/ui-icons/implant_neural.png" alt=""><h3>植入体</h3><ul><li>神经、骨骼、智力三个系统，最高到量子 · 虚空 · 起源等级</li><li>战斗中自动触发的技能</li><li>在神经负荷上限内琢磨搭配</li></ul></article>
+      <article class="feature" style="--fc:var(--red)"><img class="ico px" src="../assets/img/scenes/request_relay.png" alt=""><h3>特殊委托</h3><ul><li>从金库突袭到中继服务器入侵共 5 种</li><li>每种委托每天 3 次，获得的货币各不相同</li></ul></article>
+      <article class="feature" style="--fc:#FF4FD8"><img class="ico px" src="../assets/img/ui-icons/icon_fame.png" alt=""><h3>在线</h3><ul><li>地下斗场「斗场」的每周赛季与领奖台</li><li>公会「线路」与 10 个阶段的每周首领镇压列车</li><li>在聊天中发起决斗并分享结果</li></ul></article>
+      <article class="feature" style="--fc:#D8E4E2"><h3>四种语言</h3><ul><li>한국어、English、中文(简体)、日本語</li><li>随时可在 资料 › 设置 › 语言 中切换</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- 외형 실험실 -->
+<section class="stop" id="looks" aria-labelledby="looks-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">4</span><span class="station">4 号站</span><h2 id="looks-title">外观。亲手试穿</h2></div>
+    <p class="lead">游戏中的角色是 24 × 24 像素。在基础身体上叠加装备图层，再涂上等级颜色和肤色，合成一张图。下方的实验室使用与游戏相同的图、相同的顺序绘制。</p>
+    <div class="dresser">
+      <div class="stage">
+        <canvas id="doll" class="px" width="240" height="240" role="img" aria-label="穿上装备的角色预览"></canvas>
+        <div id="doll-readout" class="readout" aria-live="polite"></div>
+      </div>
+      <div class="controls">
+        <div class="toolbar">
+          <div class="seg" role="group" aria-label="种族"><button type="button" data-race="resistance">抵抗军</button><button type="button" data-race="drifter">流浪者</button><button type="button" data-race="citizen">市民</button></div>
+          <div class="seg" role="group" aria-label="武器类型"><button type="button" data-wtype="melee">近战</button><button type="button" data-wtype="ranged">远程</button></div>
+          <button type="button" class="btn ghost" id="doll-random">随机穿搭</button>
+        </div>
+        <div id="doll-controls" class="controls"></div>
+        <p class="dim" style="margin:4px 0 0;font-size:14px">数字是装备等级。同一等级内也有多种外观（物品 Lv26 以上另有 5 种高阶外观），可用「外观」按钮切换。外观不影响属性与概率。</p>
+      </div>
+    </div>
+    <h3 class="subhead">签名套装 40</h3>
+    <p class="dim">集齐特定外观穿上，就会发现隐藏套装，每个套装都会开启小小的效果与专属头像。点击套装即可在实验室中试穿。</p>
+    <div id="sets" class="grid sets"></div>
+  </div>
+</section>
+
+<!-- 안내 -->
+<section class="stop" id="guide" aria-labelledby="guide-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">5</span><span class="station">5 号站</span><h2 id="guide-title">说明。致第一次下车的乘客</h2></div>
+    <ol class="steps">
+      <li><h3>选择群体</h3><p>在流浪者、抵抗军、市民中选择一个，就会播放 7 个镜头的开场，并在 1区域锈蚀下水道开始第一场战斗。</p></li>
+      <li><h3>开着等待</h3><p>战斗是自动的。打完波次、击败首领就会进入下一关。关闭应用期间的金币，回来时也能领取。</p></li>
+      <li><h3>与军火商交易</h3><p>用攒下的金币向军火商巴雷尔购买装备。军火商等级越高，解锁的等级越高，Lv21 · 25 · 29 依次解锁量子、虚空、起源等级。</p></li>
+      <li><h3>搭配装备</h3><p>穿上更强的装备，战力会提升，外观也会改变。多余的装备可以出售或分解。</p></li>
+      <li><h3>开启扩展与在线</h3><p>等级提升后，0号站台的商人们和线路会依次开放。第一次进入每个菜单时，引导无人机都会为你指路。</p><div class="unlock"><span class="tag">植入体 Lv5</span><span class="tag">技能树 Lv10</span><span class="tag">线路 Lv10</span><span class="tag">宠物 Lv15</span><span class="tag">调色板工坊 Lv20</span></div></li>
+      <li><h3>每天回来看看</h3><p>5 种特殊委托每种每天 3 次，免费箱与在线奖励每天上午 9 点刷新。斗场的每周排名与镇压列车每周重新开始。</p></li>
+    </ol>
+
+    <div class="tabs5" aria-label="底部五个菜单">
+      <div><b>战斗</b><span>自动狩猎、首领挑战、装备、在线奖励</span></div>
+      <div><b>特殊委托</b><span>从金库突袭到中继服务器入侵共 5 种</span></div>
+      <div><b>扩展</b><span>军火商、植入体、技能树、宠物、调色板工坊</span></div>
+      <div><b>在线</b><span>斗场（PVP）与线路（公会）</span></div>
+      <div><b>商店</b><span>免费箱与点券</span></div>
+    </div>
+
+    <h3 class="subhead">六种货币</h3>
+    <div class="grid money">
+      <div><img class="px" src="../assets/img/ui-icons/icon_coins.png" alt=""><b>金币</b><span>下层的街头货币，用熔化的芯片铸造</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_fame.png" alt=""><b>名声</b><span>下层呼唤零号之名的分量</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_chrome.png" alt=""><b>铬</b><span>从赛博格身上拆下的金属，是手术材料</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_food.png" alt=""><b>食粮</b><span>喂养被丢弃的机器，也喂饱挨饿的人</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_chips.png" alt=""><b>芯片</b><span>从废弃车站中继服务器取出的神经芯片，是技能树材料</span></div>
+      <div><img class="px" src="../assets/img/ui-icons/icon_credits.png" alt=""><b>点券</b><span>上层的正式货币，在下层十分珍贵</span></div>
+    </div>
+
+    <h3 class="subhead">装备 11 个等级，装备从何而来</h3>
+    <div class="ladder"><div style="--g:#8E9CA0"><img class="px" src="../assets/img/gear-icons/head_1.png" alt="" loading="lazy"><b>1 废铁</b><span>把下水道的废铁捆在一起。铁锈、胶带、螺栓</span></div><div style="--g:#D8E4E2"><img class="px" src="../assets/img/gear-icons/head_2.png" alt="" loading="lazy"><b>2 街头</b><span>在霓虹市场改装。贴纸、霓虹灯条</span></div><div style="--g:#3DDC84"><img class="px" src="../assets/img/gear-icons/head_3.png" alt="" loading="lazy"><b>3 定制</b><span>下层工匠的手工品。干净的焊缝</span></div><div style="--g:#3CA0FF"><img class="px" src="../assets/img/gear-icons/head_4.png" alt="" loading="lazy"><b>4 军规</b><span>从全能卫队军械库流出。棱角分明的装甲板</span></div><div style="--g:#A66BFF"><img class="px" src="../assets/img/gear-icons/head_5.png" alt="" loading="lazy"><b>5 黑市</b><span>废弃港口的走私品。紫色光芒、非法改装</span></div><div style="--g:#FF8A1F"><img class="px" src="../assets/img/gear-icons/head_6.png" alt="" loading="lazy"><b>6 原型</b><span>凯隆研究所的试制品。橙色电路线</span></div><div style="--g:#FF3B4E"><img class="px" src="../assets/img/gear-icons/head_7.png" alt="" loading="lazy"><b>7 传奇</b><span>成为传说的跑者们的遗物。红色缎带</span></div><div style="--g:#F5E50A"><img class="px" src="../assets/img/gear-icons/head_8.png" alt="" loading="lazy"><b>8 奇点</b><span>ECHO 核心的碎片。漂浮的零件</span></div><div style="--g:#4DFFE5"><img class="px" src="../assets/img/gear-icons/head_9.png" alt="" loading="lazy"><b>9 量子</b><span>奇点之后的第一阶段。军火商 Lv21 起</span></div><div style="--g:#7B2DFF"><img class="px" src="../assets/img/gear-icons/head_10.png" alt="" loading="lazy"><b>10 虚空</b><span>奇点之后的第二阶段。军火商 Lv25 起</span></div><div style="--g:#FFFFFF"><img class="px" src="../assets/img/gear-icons/head_11.png" alt="" loading="lazy"><b>11 起源</b><span>最高等级。军火商 Lv29 起</span></div></div>
+
+    <h3 class="subhead">5 种特殊委托</h3>
+    <div class="grid requests">
+      <div><img class="px" src="../assets/img/scenes/request_vault.png" alt="帮派金库突袭场景" loading="lazy"><b>帮派金库突袭</b><span>抢回金币</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_fixer.png" alt="解决者委托场景" loading="lazy"><b>解决者委托</b><span>获得名声</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_scrapyard.png" alt="赛博格废料场场景" loading="lazy"><b>赛博格废料场</b><span>收集铬</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_convoy.png" alt="补给卡车劫掠场景" loading="lazy"><b>补给卡车劫掠</b><span>拦下凯隆的卡车，分发食粮</span></div>
+      <div><img class="px" src="../assets/img/scenes/request_relay.png" alt="中继服务器入侵场景" loading="lazy"><b>中继服务器入侵</b><span>攻破废弃车站的服务器，取出芯片</span></div>
+    </div>
+
+    <div class="notice">
+      <img class="px" src="../assets/img/guide/guide_drone_talk.png" alt="引导无人机">
+      <div>
+        <h3>所有概率全部公开</h3>
+        <p>军火商交易与宠物 · 植入体抽取中包含概率型道具。各等级概率与保底（必定获得）规则都可以在游戏内「概率信息」中查看。同一等级内的外观差异仅在外表，属性与概率相同。</p>
+      </div>
+    </div>
+
+    <div class="callout" id="guide-test">
+      <h3>iPhone 现已上线，Android 即将推出</h3>
+      <p>Neon Station 已在 App Store 上线，iPhone · iPad 可直接下载。Android 版正在等待 Google Play 正式上线审核。上线消息会第一时间发布在公告和 Instagram <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>。第一次来的话，先读读<a href="guide.html">入门指南</a>吧。</p>
+      <p style="margin:0;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" data-appstore data-fallback="在 App Store 搜索「Neon Station」">在 App Store 下载</a><a class="btn ghost" data-playstore data-fallback="Google Play 即将上线">在 Google Play 下载</a><a class="btn ghost" href="news.html">公告</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 아트 팩토리 -->
+<section class="stop" id="art" aria-labelledby="art-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">6</span><span class="station">6 号站</span><h2 id="art-title">美术工厂。像素与芯片音乐的仓库</h2></div>
+    <p class="lead">游戏中的图像、声音与制作规格，都用一份名为「美术工厂」的目录管理。改动一张图或一段声音，只需一条命令就能重新生成目录，更新记录会堆叠在最上方。这里展示的是那个仓库的一部分。</p>
+
+    <div class="af-bar" role="tablist" aria-label="美术工厂分类">
+      <button type="button" role="tab" id="t-bg" aria-controls="p-bg" aria-selected="true">区域背景</button>
+      <button type="button" role="tab" id="t-foe" aria-controls="p-foe" aria-selected="false" tabindex="-1">帮派与首领</button>
+      <button type="button" role="tab" id="t-pet" aria-controls="p-pet" aria-selected="false" tabindex="-1">宠物</button>
+      <button type="button" role="tab" id="t-face" aria-controls="p-face" aria-selected="false" tabindex="-1">肖像</button>
+      <button type="button" role="tab" id="t-gear" aria-controls="p-gear" aria-selected="false" tabindex="-1">装备与风格</button>
+      <button type="button" role="tab" id="t-sound" aria-controls="p-sound" aria-selected="false" tabindex="-1">声音</button>
+      <button type="button" role="tab" id="t-spec" aria-controls="p-spec" aria-selected="false" tabindex="-1">制作规格</button>
+    </div>
+
+    <div class="af-panel" id="p-bg" role="tabpanel" aria-labelledby="t-bg">
+      <div class="gallery g-bg"><figure><img class="px" src="../assets/img/backgrounds/district1.png" alt="锈蚀下水道" loading="lazy" width="256" height="112"><figcaption><b>1. 锈蚀下水道</b> 锈鼠帮</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district2.png" alt="霓虹市场" loading="lazy" width="256" height="112"><figcaption><b>2. 霓虹市场</b> 红灯笼</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district3.png" alt="废弃港口" loading="lazy" width="256" height="112"><figcaption><b>3. 废弃港口</b> 黑潮</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district4.png" alt="数据贫民窟" loading="lazy" width="256" height="112"><figcaption><b>4. 数据贫民窟</b> 故障</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district5.png" alt="企业外围" loading="lazy" width="256" height="112"><figcaption><b>5. 企业外围</b> 零号铬</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district6.png" alt="高架铁路" loading="lazy" width="256" height="112"><figcaption><b>6. 高架铁路</b> 伏特飞车党</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district7.png" alt="毒性工厂区" loading="lazy" width="256" height="112"><figcaption><b>7. 毒性工厂区</b> 绿色瘟疫</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district8.png" alt="全息娱乐街" loading="lazy" width="256" height="112"><figcaption><b>8. 全息娱乐街</b> 假面舞会</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district9.png" alt="企业总部区" loading="lazy" width="256" height="112"><figcaption><b>9. 企业总部区</b> 全能卫队</figcaption></figure><figure><img class="px" src="../assets/img/backgrounds/district10.png" alt="数据核心" loading="lazy" width="256" height="112"><figcaption><b>10. 数据核心</b> 回声教团</figcaption></figure></div>
+    </div>
+    <div class="af-panel" id="p-foe" role="tabpanel" aria-labelledby="t-foe" hidden>
+      <h3>区域首领</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E5A2B"><img class="px" src="../assets/img/enemies/d01_boss.png" alt="格罗姆「下水道之王」" loading="lazy"></div><figcaption><b>格罗姆</b><br>1区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/enemies/d02_boss.png" alt="红男爵「四臂」" loading="lazy"></div><figcaption><b>红男爵</b><br>2区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #2FA8A0"><img class="px" src="../assets/img/enemies/d03_boss.png" alt="深潜杰克「深海头目」" loading="lazy"></div><figcaption><b>深潜杰克</b><br>3区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/enemies/d04_boss.png" alt="根权「贫民窟领主」" loading="lazy"></div><figcaption><b>根权</b><br>4区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/enemies/d05_boss.png" alt="零「被丢弃的兵器」" loading="lazy"></div><figcaption><b>零</b><br>5区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/enemies/d06_boss.png" alt="安培「高压君主」" loading="lazy"></div><figcaption><b>安培</b><br>6区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/enemies/d07_boss.png" alt="烟雾之母「污染之母」" loading="lazy"></div><figcaption><b>烟雾之母</b><br>7区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF4FD8"><img class="px" src="../assets/img/enemies/d08_boss.png" alt="胭脂夫人「秀场女王」" loading="lazy"></div><figcaption><b>胭脂夫人</b><br>8区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #E8C35A"><img class="px" src="../assets/img/enemies/d09_boss.png" alt="神盾-9「董事会守护机」" loading="lazy"></div><figcaption><b>神盾-9</b><br>9区域首领</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/enemies/d10_boss.png" alt="回声主宰「教团之神」" loading="lazy"></div><figcaption><b>回声主宰</b><br>10区域首领</figcaption></figure></div>
+      <h3 class="subhead">干部</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d01_mid.png" alt="獠牙「鼠牙」" loading="lazy"></div><figcaption><b>獠牙</b><br>1区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d02_mid.png" alt="阵「账房先生」" loading="lazy"></div><figcaption><b>阵</b><br>2区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d03_mid.png" alt="盐「独眼船长」" loading="lazy"></div><figcaption><b>盐</b><br>3区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d04_mid.png" alt="七号「病毒」" loading="lazy"></div><figcaption><b>七号</b><br>4区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d05_mid.png" alt="钢蜂「雇佣兵队长」" loading="lazy"></div><figcaption><b>钢蜂</b><br>5区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d06_mid.png" alt="火花「飙车队长」" loading="lazy"></div><figcaption><b>火花</b><br>6区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d07_mid.png" alt="飞蛾「调配师」" loading="lazy"></div><figcaption><b>飞蛾</b><br>7区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d08_mid.png" alt="幻影「魔术师」" loading="lazy"></div><figcaption><b>幻影</b><br>8区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d09_mid.png" alt="猎犬「安保主管」" loading="lazy"></div><figcaption><b>猎犬</b><br>9区域干部</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d10_mid.png" alt="神谕「大祭司」" loading="lazy"></div><figcaption><b>神谕</b><br>10区域干部</figcaption></figure></div>
+      <h3 class="subhead">帮派成员</h3><div class="gallery g-sprites"><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d01_a_idle.png" alt="锈鼠帮成员" loading="lazy"></div><figcaption>锈鼠帮</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d02_a_idle.png" alt="红灯笼成员" loading="lazy"></div><figcaption>红灯笼</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d03_a_idle.png" alt="黑潮成员" loading="lazy"></div><figcaption>黑潮</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d04_a_idle.png" alt="故障成员" loading="lazy"></div><figcaption>故障</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d05_a_idle.png" alt="零号铬成员" loading="lazy"></div><figcaption>零号铬</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d06_a_idle.png" alt="伏特飞车党成员" loading="lazy"></div><figcaption>伏特飞车党</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d07_a_idle.png" alt="绿色瘟疫成员" loading="lazy"></div><figcaption>绿色瘟疫</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d08_a_idle.png" alt="假面舞会成员" loading="lazy"></div><figcaption>假面舞会</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d09_a_idle.png" alt="全能卫队成员" loading="lazy"></div><figcaption>全能卫队</figcaption></figure><figure class="g-cell"><div class="box"><img class="px" src="../assets/img/enemies/d10_a_idle.png" alt="回声教团成员" loading="lazy"></div><figcaption>回声教团</figcaption></figure></div>
+      <p class="af-note">每个区域有 3 种帮派成员、精英、干部与首领共 6 种敌人，总计 60 种。</p>
+    </div>
+    <div class="af-panel" id="p-pet" role="tabpanel" aria-labelledby="t-pet" hidden>
+      <div class="gallery g-sprites"><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_dog.png" alt="流浪狗" loading="lazy"></div><figcaption><b>流浪狗</b><br>1级 废铁</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_tincan.png" alt="铁罐无人机" loading="lazy"></div><figcaption><b>铁罐无人机</b><br>1级 废铁</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_pigeon.png" alt="废铁鸽" loading="lazy"></div><figcaption><b>废铁鸽</b><br>1级 废铁</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_trashbot.png" alt="垃圾桶机器人" loading="lazy"></div><figcaption><b>垃圾桶机器人</b><br>1级 废铁</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #8E9CA0"><img class="px" src="../assets/img/pets/pet_snail.png" alt="螺母蜗牛" loading="lazy"></div><figcaption><b>螺母蜗牛</b><br>1级 废铁</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_alleycat.png" alt="小巷猫" loading="lazy"></div><figcaption><b>小巷猫</b><br>2级 街头</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_drone.png" alt="侦察无人机" loading="lazy"></div><figcaption><b>侦察无人机</b><br>2级 街头</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_ferret.png" alt="霓虹雪貂" loading="lazy"></div><figcaption><b>霓虹雪貂</b><br>2级 街头</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_raccoon.png" alt="护目镜浣熊" loading="lazy"></div><figcaption><b>护目镜浣熊</b><br>2级 街头</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #D8E4E2"><img class="px" src="../assets/img/pets/pet_bat.png" alt="巷子蝙蝠" loading="lazy"></div><figcaption><b>巷子蝙蝠</b><br>2级 街头</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_ratbot.png" alt="改装老鼠机器人" loading="lazy"></div><figcaption><b>改装老鼠机器人</b><br>3级 定制</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_courier.png" alt="配送四旋翼" loading="lazy"></div><figcaption><b>配送四旋翼</b><br>3级 定制</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_beetle.png" alt="改装独角仙" loading="lazy"></div><figcaption><b>改装独角仙</b><br>3级 定制</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_turtle.png" alt="装甲龟" loading="lazy"></div><figcaption><b>装甲龟</b><br>3级 定制</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3DDC84"><img class="px" src="../assets/img/pets/pet_glider.png" alt="改装遥控滑翔机" loading="lazy"></div><figcaption><b>改装遥控滑翔机</b><br>3级 定制</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_robodog.png" alt="机器小狗" loading="lazy"></div><figcaption><b>机器小狗</b><br>4级 军规</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_sniper.png" alt="军用狙击无人机" loading="lazy"></div><figcaption><b>军用狙击无人机</b><br>4级 军规</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_mulebot.png" alt="军用驮运机器人" loading="lazy"></div><figcaption><b>军用驮运机器人</b><br>4级 军规</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_turret.png" alt="步行炮塔" loading="lazy"></div><figcaption><b>步行炮塔</b><br>4级 军规</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #3CA0FF"><img class="px" src="../assets/img/pets/pet_hawk.png" alt="军用鹰无人机" loading="lazy"></div><figcaption><b>军用鹰无人机</b><br>4级 军规</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_humanoid.png" alt="迷你人形机" loading="lazy"></div><figcaption><b>迷你人形机</b><br>5级 黑市</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_crow.png" alt="赛博乌鸦" loading="lazy"></div><figcaption><b>赛博乌鸦</b><br>5级 黑市</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_scorpion.png" alt="赛博蝎" loading="lazy"></div><figcaption><b>赛博蝎</b><br>5级 黑市</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_snake.png" alt="电蛇" loading="lazy"></div><figcaption><b>电蛇</b><br>5级 黑市</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #A66BFF"><img class="px" src="../assets/img/pets/pet_jellyfish.png" alt="全息水母" loading="lazy"></div><figcaption><b>全息水母</b><br>5级 黑市</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_panther.png" alt="赛博猎豹" loading="lazy"></div><figcaption><b>赛博猎豹</b><br>6级 原型</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_avt.png" alt="AVT" loading="lazy"></div><figcaption><b>AVT</b><br>6级 原型</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_fox.png" alt="试制全息狐" loading="lazy"></div><figcaption><b>试制全息狐</b><br>6级 原型</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_spider.png" alt="蜘蛛机甲" loading="lazy"></div><figcaption><b>蜘蛛机甲</b><br>6级 原型</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF8A1F"><img class="px" src="../assets/img/pets/pet_swallow.png" alt="试制燕子" loading="lazy"></div><figcaption><b>试制燕子</b><br>6级 原型</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_mechwolf.png" alt="机甲狼" loading="lazy"></div><figcaption><b>机甲狼</b><br>7级 传奇</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_gunship.png" alt="突击武装直升机" loading="lazy"></div><figcaption><b>突击武装直升机</b><br>7级 传奇</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_bear.png" alt="装甲熊机甲" loading="lazy"></div><figcaption><b>装甲熊机甲</b><br>7级 传奇</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_rhino.png" alt="机甲犀牛" loading="lazy"></div><figcaption><b>机甲犀牛</b><br>7级 传奇</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FF3B4E"><img class="px" src="../assets/img/pets/pet_eagle.png" alt="钢铁鹰" loading="lazy"></div><figcaption><b>钢铁鹰</b><br>7级 传奇</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_golem.png" alt="纳米魔像" loading="lazy"></div><figcaption><b>纳米魔像</b><br>8级 奇点</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_phoenix.png" alt="等离子凤凰" loading="lazy"></div><figcaption><b>等离子凤凰</b><br>8级 奇点</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_tiger.png" alt="等离子虎" loading="lazy"></div><figcaption><b>等离子虎</b><br>8级 奇点</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_wyvern.png" alt="雷电双足飞龙" loading="lazy"></div><figcaption><b>雷电双足飞龙</b><br>8级 奇点</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #F5E50A"><img class="px" src="../assets/img/pets/pet_swarm.png" alt="纳米群体" loading="lazy"></div><figcaption><b>纳米群体</b><br>8级 奇点</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_phaselynx.png" alt="相位猞猁" loading="lazy"></div><figcaption><b>相位猞猁</b><br>9级 量子</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_qubitowl.png" alt="量子比特猫头鹰" loading="lazy"></div><figcaption><b>量子比特猫头鹰</b><br>9级 量子</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_stag.png" alt="相位鹿" loading="lazy"></div><figcaption><b>相位鹿</b><br>9级 量子</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_butterfly.png" alt="量子比特蝴蝶" loading="lazy"></div><figcaption><b>量子比特蝴蝶</b><br>9级 量子</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #4DFFE5"><img class="px" src="../assets/img/pets/pet_tesseract.png" alt="超立方精灵" loading="lazy"></div><figcaption><b>超立方精灵</b><br>9级 量子</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_voidhound.png" alt="虚空猎犬" loading="lazy"></div><figcaption><b>虚空猎犬</b><br>10级 虚空</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_voidray.png" alt="虚空鳐" loading="lazy"></div><figcaption><b>虚空鳐</b><br>10级 虚空</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_shadecat.png" alt="虚空暗影猫" loading="lazy"></div><figcaption><b>虚空暗影猫</b><br>10级 虚空</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_kraken.png" alt="深渊海妖" loading="lazy"></div><figcaption><b>深渊海妖</b><br>10级 虚空</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #7B2DFF"><img class="px" src="../assets/img/pets/pet_eclipse.png" alt="日食之眼" loading="lazy"></div><figcaption><b>日食之眼</b><br>10级 虚空</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_originlion.png" alt="起源狮" loading="lazy"></div><figcaption><b>起源狮</b><br>11级 起源</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_prismdrake.png" alt="棱镜飞龙" loading="lazy"></div><figcaption><b>棱镜飞龙</b><br>11级 起源</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_unicorn.png" alt="棱镜独角兽" loading="lazy"></div><figcaption><b>棱镜独角兽</b><br>11级 起源</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_seraph.png" alt="炽天使机体" loading="lazy"></div><figcaption><b>炽天使机体</b><br>11级 起源</figcaption></figure><figure class="g-cell"><div class="box" style="border-top:4px solid #FFFFFF"><img class="px" src="../assets/img/pets/pet_whale.png" alt="星云鲸" loading="lazy"></div><figcaption><b>星云鲸</b><br>11级 起源</figcaption></figure></div>
+      <p class="af-note">每个等级 5 种，共 55 种。低等级是从巷子里捡来的废铁机器，中等级是军方与企业的废弃品，量子 · 虚空 · 起源则来自上层之外。</p>
+    </div>
+    <div class="af-panel" id="p-face" role="tabpanel" aria-labelledby="t-face" hidden>
+      <h3>15 张商人肖像</h3><div class="gallery g-portraits"><img class="px" src="../assets/img/npc-portraits/merchant.png" alt="军火商 巴雷尔 基础" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_5.png" alt="军火商 巴雷尔 Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_10.png" alt="军火商 巴雷尔 Lv10" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_13.png" alt="军火商 巴雷尔 Lv13" loading="lazy"><img class="px" src="../assets/img/npc-portraits/merchant_16.png" alt="军火商 巴雷尔 Lv16" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc.png" alt="义体医生 怀特 基础" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_3.png" alt="义体医生 怀特 Lv3" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_5.png" alt="义体医生 怀特 Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_7.png" alt="义体医生 怀特 Lv7" loading="lazy"><img class="px" src="../assets/img/npc-portraits/ripperdoc_10.png" alt="义体医生 怀特 Lv10" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder.png" alt="宠物饲养员 波比 基础" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_3.png" alt="宠物饲养员 波比 Lv3" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_5.png" alt="宠物饲养员 波比 Lv5" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_7.png" alt="宠物饲养员 波比 Lv7" loading="lazy"><img class="px" src="../assets/img/npc-portraits/breeder_10.png" alt="宠物饲养员 波比 Lv10" loading="lazy"></div>
+      <h3 class="subhead">204 张头像中的一部分</h3><div class="gallery g-portraits"><img class="px" src="../assets/img/avatars/av001.png" alt="头像 1 号" loading="lazy"><img class="px" src="../assets/img/avatars/av012.png" alt="头像 12 号" loading="lazy"><img class="px" src="../assets/img/avatars/av027.png" alt="头像 27 号" loading="lazy"><img class="px" src="../assets/img/avatars/av041.png" alt="头像 41 号" loading="lazy"><img class="px" src="../assets/img/avatars/av056.png" alt="头像 56 号" loading="lazy"><img class="px" src="../assets/img/avatars/av071.png" alt="头像 71 号" loading="lazy"><img class="px" src="../assets/img/avatars/av085.png" alt="头像 85 号" loading="lazy"><img class="px" src="../assets/img/avatars/av099.png" alt="头像 99 号" loading="lazy"><img class="px" src="../assets/img/avatars/av104.png" alt="头像 104 号" loading="lazy"><img class="px" src="../assets/img/avatars/av110.png" alt="头像 110 号" loading="lazy"><img class="px" src="../assets/img/avatars/av116.png" alt="头像 116 号" loading="lazy"><img class="px" src="../assets/img/avatars/av119.png" alt="头像 119 号" loading="lazy"><img class="px" src="../assets/img/avatars/av121.png" alt="头像 121 号" loading="lazy"><img class="px" src="../assets/img/avatars/av125.png" alt="头像 125 号" loading="lazy"><img class="px" src="../assets/img/avatars/av128.png" alt="头像 128 号" loading="lazy"><img class="px" src="../assets/img/avatars/av131.png" alt="头像 131 号" loading="lazy"><img class="px" src="../assets/img/avatars/av134.png" alt="头像 134 号" loading="lazy"><img class="px" src="../assets/img/avatars/av137.png" alt="头像 137 号" loading="lazy"><img class="px" src="../assets/img/avatars/av141.png" alt="头像 141 号" loading="lazy"><img class="px" src="../assets/img/avatars/av144.png" alt="头像 144 号" loading="lazy"><img class="px" src="../assets/img/avatars/av148.png" alt="头像 148 号" loading="lazy"><img class="px" src="../assets/img/avatars/av152.png" alt="头像 152 号" loading="lazy"><img class="px" src="../assets/img/avatars/av156.png" alt="头像 156 号" loading="lazy"><img class="px" src="../assets/img/avatars/av160.png" alt="头像 160 号" loading="lazy"><img class="px" src="../assets/img/avatars/av164.png" alt="头像 164 号" loading="lazy"><img class="px" src="../assets/img/avatars/av168.png" alt="头像 168 号" loading="lazy"><img class="px" src="../assets/img/avatars/av172.png" alt="头像 172 号" loading="lazy"><img class="px" src="../assets/img/avatars/av176.png" alt="头像 176 号" loading="lazy"><img class="px" src="../assets/img/avatars/av180.png" alt="头像 180 号" loading="lazy"><img class="px" src="../assets/img/avatars/av184.png" alt="头像 184 号" loading="lazy"><img class="px" src="../assets/img/avatars/av188.png" alt="头像 188 号" loading="lazy"><img class="px" src="../assets/img/avatars/av191.png" alt="头像 191 号" loading="lazy"><img class="px" src="../assets/img/avatars/av192.png" alt="头像 192 号" loading="lazy"><img class="px" src="../assets/img/avatars/av193.png" alt="头像 193 号" loading="lazy"><img class="px" src="../assets/img/avatars/av194.png" alt="头像 194 号" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-gear" role="tabpanel" aria-labelledby="t-gear" hidden>
+      <h3>装备图标，6 个部位 × 11 个等级</h3><div class="gallery g-style gear-grid"><img class="px" src="../assets/img/gear-icons/head_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/head_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/head_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/head_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/head_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/head_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/head_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/head_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/head_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/head_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/head_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/body_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/body_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/body_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/body_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/body_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/body_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/body_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/body_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/body_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/body_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/body_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/legs_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/legs_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/legs_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/legs_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/legs_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/legs_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/legs_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/legs_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/legs_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/legs_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/legs_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/feet_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/feet_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/feet_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/feet_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/feet_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/feet_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/feet_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/feet_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/feet_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/feet_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/feet_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/melee_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/melee_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/melee_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/melee_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/melee_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/melee_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/melee_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/melee_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/melee_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/melee_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/melee_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"><img class="px" src="../assets/img/gear-icons/ranged_1.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #8E9CA0"><img class="px" src="../assets/img/gear-icons/ranged_2.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #D8E4E2"><img class="px" src="../assets/img/gear-icons/ranged_3.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3DDC84"><img class="px" src="../assets/img/gear-icons/ranged_4.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #3CA0FF"><img class="px" src="../assets/img/gear-icons/ranged_5.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #A66BFF"><img class="px" src="../assets/img/gear-icons/ranged_6.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF8A1F"><img class="px" src="../assets/img/gear-icons/ranged_7.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FF3B4E"><img class="px" src="../assets/img/gear-icons/ranged_8.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #F5E50A"><img class="px" src="../assets/img/gear-icons/ranged_9.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #4DFFE5"><img class="px" src="../assets/img/gear-icons/ranged_10.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #7B2DFF"><img class="px" src="../assets/img/gear-icons/ranged_11.png" alt="" loading="lazy" style="background:var(--surface);border-bottom:3px solid #FFFFFF"></div>
+      <h3 class="subhead">风格标签、套装边框、光环、街头涂鸦、回声感染</h3><div class="gallery g-style"><img class="px" src="../assets/img/style/tags/tag_scrap.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_street.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_survival.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_shadow.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_military.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_mech.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_lab.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_energy.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_knight.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/tags/tag_raider.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_01.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_03.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_05.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_07.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_09.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_11.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_13.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_15.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_17.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/frames/frame_19.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_01_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_03_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_05_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_07_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_09_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_11_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_13_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_15_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_17_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/auras/aura_19_f0.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d01.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d02.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d03.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d04.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d05.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d06.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d07.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d08.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d09.png" alt="" loading="lazy"><img class="px" src="../assets/img/style/graffiti/graffiti_d10.png" alt="" loading="lazy"><img class="px" src="../assets/img/story/echo_eye_32.png" alt="" loading="lazy"></div>
+    </div>
+    <div class="af-panel" id="p-sound" role="tabpanel" aria-labelledby="t-sound" hidden>
+      <p>背景音乐与音效没有使用 AI 音乐服务或音源网站，而是直接用代码合成。逐个计算波形做出的芯片音乐，没有版权顾虑。游戏中有 10 首背景音乐、21 种音效。战斗页签会从 4 首中随机播放 1 首。</p>
+      <ul class="tracks"><li><b>大厅</b><div class="meta">a 小调 · 夜色合成波</div><p>战斗页签随机 4 首之一（1.1.0），以及其他画面（商店 · 委托 · 资料 · 聊天）</p><audio controls preload="none" src="../assets/audio/bgm_lobby.m4a"></audio></li><li><b>战斗</b><div class="meta">e 小调 · 疾驰芯片音乐</div><p>战斗页签普通狩猎</p><audio controls preload="none" src="../assets/audio/bgm_battle.m4a"></audio></li><li><b>霓虹追击战</b><div class="meta">升 f 小调 · 紧张的赛博朋克，150BPM 十六分音符八度贝斯与锯齿波主音</div><p>战斗页签随机 4 首之一（每次从其他页签点击［战斗］时重新挑选）</p><audio controls preload="none" src="../assets/audio/bgm_battle_cyber.m4a"></audio></li><li><b>后巷比波普</b><div class="meta">降 B 大调 · 摇摆爵士，行走贝斯 · 叮叮镲 · 电钢琴</div><p>战斗页签随机 4 首之一</p><audio controls preload="none" src="../assets/audio/bgm_battle_jazz1.m4a"></audio></li><li><b>霓虹酒吧酸爵士</b><div class="meta">D 多利亚 · 104BPM 拖曳节奏，切分放克贝斯</div><p>战斗页签随机 4 首之一</p><audio controls preload="none" src="../assets/audio/bgm_battle_jazz2.m4a"></audio></li><li><b>首领</b><div class="meta">d 小调 · 紧张感</div><p>首领待机 · 首领战、特殊委托战斗、PVP（每次进入从头播放）</p><audio controls preload="none" src="../assets/audio/bgm_boss.m4a"></audio></li><li><b>军火商</b><div class="meta">G 多利亚 · 摇摆律动</div><p>扩展（主页 · 军火商 · 植入体 · 宠物 · 调色板工坊，线路除外）</p><audio controls preload="none" src="../assets/audio/bgm_merchant.m4a"></audio></li><li><b>线路</b><div class="meta">D 多利亚 · 停摆车站的夜，慢速摇摆低保真</div><p>扩展 › 线路（线路 · 代币商店 · 乘务员 · 线路无线电）</p><audio controls preload="none" src="../assets/audio/bgm_line.m4a"></audio></li><li><b>镇压列车</b><div class="meta">c 小调 · 在铁轨上飞驰的钢铁，16 位贝斯</div><p>线路 › 镇压列车页签（每次进入从头播放）</p><audio controls preload="none" src="../assets/audio/bgm_train.m4a"></audio></li><li><b>斗场</b><div class="meta">a 小调 · 观众跺脚的半速节奏</div><p>PVP 页签（每周排名 · 选择对手）</p><audio controls preload="none" src="../assets/audio/bgm_pit.m4a"></audio></li></ul>
+    </div>
+    <div class="af-panel" id="p-spec" role="tabpanel" aria-labelledby="t-spec" hidden>
+      <table class="spec">
+        <thead><tr><th scope="col">资源</th><th scope="col">尺寸（像素）</th><th scope="col">备注</th></tr></thead>
+        <tbody>
+          <tr><td>装备等级</td><td>11 个阶段</td><td>在奇点之上新增量子（薄荷色）、虚空（紫色）、起源（白色）。强调遮罩用等级颜色涂色</td></tr>
+          <tr><td>角色基础身体</td><td>24 × 24</td><td>3 个种族 × 2 种姿势（待机、瞄准）。装备以相同尺寸的图层叠加</td></tr>
+          <tr><td>装备图层</td><td>24 × 24</td><td>图像 + 强调遮罩（等级颜色）+ 皮肤遮罩（仅限露出手的部位）</td></tr>
+          <tr><td>普通敌人</td><td>24 × 24</td><td>待机与攻击 2 张</td></tr>
+          <tr><td>首领、镇压列车</td><td>52 × 52</td><td>每个区域 1 种，列车 3 种</td></tr>
+          <tr><td>宠物</td><td>16 × 16</td><td>包含等级颜色强调遮罩</td></tr>
+          <tr><td>区域背景、开场镜头</td><td>256 × 112</td><td>画面上背景的 1 个像素以 2dp 绘制</td></tr>
+          <tr><td>商人、头像</td><td>256 × 256</td><td>3 位商人 × 5 个等级阶段，204 张头像</td></tr>
+          <tr><td>套装光环</td><td>36 × 36</td><td>每个套装 3 帧，环绕身体的光与脚下的光环</td></tr>
+          <tr><td>字体</td><td>Galmuri 11·14, Fusion Pixel 12</td><td>SIL OFL 1.1。中文 · 日文版使用 Fusion Pixel。只按整数倍尺寸使用，避免像素变形</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 제작기 -->
+<section class="stop" id="making" aria-labelledby="making-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">7</span><span class="station">7 号站</span><h2 id="making-title">制作记。一个人与 AI 的游戏工作室</h2></div>
+    <p class="lead">策划、开发、美术、音效、运营全是同一个人。这里如实记录了一位数据分析顾问以 AI 为同事，从一个想法走到两大商店上线准备的过程。</p>
+
+    <div class="two" style="margin-top:48px">
+      <div>
+        <h3>十二天的记录</h3>
+        <ol class="days">
+          <li><time datetime="2026-11-16">11月16日</time><h3>确定方向</h3><p>先用宠物养成网页原型试了手感，再把方向扩展为赛博朋克放置 RPG。游戏策划书、开发环境、设计系统和 6 张界面草图在一天内完成。</p></li>
+          <li><time datetime="2026-11-17">11月17日</time><h3>骨架与像素流程</h3><p>设计了货币、特殊委托与商人结构，跑了 45 天的平衡模拟，并建立了批量制作装备外观的自动流程。</p></li>
+          <li><time datetime="2026-11-18">11月18日</time><h3>名字与声音</h3><p>将名字改为 Neon Station 并确定了应用 ID。加入 16 种宠物、芯片音乐背景音乐与音效、聊天、商人肖像，并建立了美术工厂。</p></li>
+          <li><time datetime="2026-11-19">11月19日</time><h3>服务器与故事</h3><p>接入 Supabase 服务器，开放在线 PVP、每周赛季与聊天。补齐 60 种敌人和 10 张背景，写下故事圣经。</p></li>
+          <li><time datetime="2026-11-20">11月20日</time><h3>风格与政策</h3><p>实现了风格 · 套装系统与 7 个镜头的开场，并准备了举报、屏蔽、删除账号等商店政策项目和商店页面信息。</p></li>
+          <li><time datetime="2026-11-21">11月21日</time><h3>线路与第一批测试员</h3><p>把第一个版本上传到 Google Play 测试轨道，开始收集测试员意见。加入公会「线路」、镇压列车、20 种签名套装与 112 种称号。</p></li>
+          <li><time datetime="2026-11-22">11月22日</time><h3>奇点之外</h3><p>新增量子、虚空、起源三个等级，装备扩展到 11 个等级，并制作了在线时长奖励与更新礼物。介绍网站在 neon-station.com 开通。</p></li>
+          <li><time datetime="2026-11-23">11月23日</time><h3>技能树与三种语言</h3><p>加入用芯片培养的 16 层技能树、中继服务器入侵委托、在线页签以及英文 · 中文版。把第一个 iOS 版本上传到 TestFlight。</p></li>
+          <li><time datetime="2026-11-24">11月24日</time><h3>App Store 上线</h3><p>加入军火商 Lv50、兑换码、66 种新外观、30 种套装、3 首战斗背景音乐与聊天屏蔽词的 1.1.0 通过 App Store 审核，在 iOS 上线。同一天还做好了包含应用内付款与账号绑定的 1.1.1。</p></li>
+          <li><time datetime="2026-11-25">11月25日</time><h3>1.1.2 与指南</h3><p>准备了包含物品等级、330 种高阶外观（330 张图全部完成）与镇压列车贡献度奖励的 1.1.2，并为新跑者开设了入门指南与公告板。</p></li>
+          <li><time datetime="2026-11-26">11月26日</time><h3>1.1.3，更深的城市</h3><p>把镇压列车扩展到 10 个阶段，并在技能树中加入植入体 · 宠物分支。加入 55 种宠物、40 种套装、100 项成就，并建立了在服务器核对货币变动的机制。</p></li>
+          <li><time datetime="2026-11-27">11月27日</time><h3>第四种语言，第二家商店</h3><p>完成 Google Play 组织账号的切换并提交了正式上线审核。1.1.4 加入游客备份与恢复码、崩溃收集和日文版，介绍网站也推出了英文 · 日文 · 中文版。</p></li>
+        </ol>
+      </div>
+      <div>
+        <h3>在用的工具</h3>
+        <table class="spec">
+          <tbody>
+            <tr><td>应用</td><td>React Native（Expo）、TypeScript。一套代码同时支持 Android 与 iOS</td></tr>
+            <tr><td>图形</td><td>用 Skia 绘制像素精灵，采用最近邻插值，像素不会模糊</td></tr>
+            <tr><td>服务器</td><td>Supabase（Postgres、RLS、Edge Functions）。货币、抽取与排名都由服务器计算</td></tr>
+            <tr><td>构建</td><td>EAS 云构建。无需 Mac，一次构建 Android 与 iOS</td></tr>
+            <tr><td>运营</td><td>用 PostHog 做使用分析，用 Sentry 收集崩溃</td></tr>
+            <tr><td>美术</td><td>在 PixelLab 生成并挑选，再用图层提取脚本整理</td></tr>
+            <tr><td>声音</td><td>用 Python 合成的芯片音乐</td></tr>
+            <tr><td>AI 同事</td><td>Claude。一起完成策划文档、代码、审查与文档整理</td></tr>
+          </tbody>
+        </table>
+        <h3 class="subhead" style="margin-top:40px">坚持的原则</h3>
+        <ul class="principles">
+          <li><b>钱与概率由服务器计算</b><span>货币、抽取、奖励与排名只在服务器函数中决定。应用只负责读取。</span></li>
+          <li><b>不隐藏概率</b><span>依照韩国概率型道具信息公开义务，在游戏内全部公开。</span></li>
+          <li><b>不借用别人的世界</b><span>不使用其他作品特有的名称或设计。</span></li>
+          <li><b>聊天要安全</b><span>屏蔽词过滤、使用规则同意、举报与屏蔽在上线前就已到位。</span></li>
+          <li><b>每天记录</b><span>每天早上 9 点更新工作日志、决策日志与策划书。</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="subhead">游戏开发五个阶段，现在的位置</h3>
+    <p class="dim">即使一个人做，也按正式流程来。每个阶段都确定产出物，并在关口判断是继续、转向还是放弃。</p>
+    <ol class="gates">
+      <li class="done"><b>概念 · 策划</b><span>类型、对标、策划书</span></li>
+      <li class="done"><b>前期制作</b><span>开发环境、设计系统、界面草图</span></li>
+      <li class="done"><b>制作</b><span>功能、像素资源、服务器、声音</span></li>
+      <li class="done"><b>测试 · QA</b><span>内部测试与测试员意见反馈</span></li>
+      <li class="now"><b>上线 · 运营</b><span>就在这里。iOS 已上线、Google Play 审核中、更新与公告运营</span></li>
+    </ol>
+
+    <h3 class="subhead">一张像素图进入游戏的过程</h3>
+    <p class="dim">AI 会大量产出候选图，难的是之后的事。我把流程分成六步，需要人做的只剩一步。</p>
+    <ol class="pipeline">
+      <li><b>生成</b><span>在基础身体上用局部重绘画出装备</span></li>
+      <li class="human"><b>挑选</b><span>与上下等级并排比较，由人挑选</span></li>
+      <li><b>提取</b><span>只把与基础身体不同的像素保留为图层</span></li>
+      <li><b>遮罩</b><span>黄色像素变为等级颜色，肤色放入皮肤遮罩</span></li>
+      <li><b>登记</b><span>重新生成图层列表、枪口坐标与图标</span></li>
+      <li><b>检查</b><span>由测试找出缺失的等级和不成对的姿势</span></li>
+    </ol>
+
+    <div class="records">
+      <div><b>594</b><span>装备外观</span></div>
+      <div><b>107</b><span>决策日志条目</span></div>
+      <div><b>4</b><span>种语言（한국어、English、中文、日本語）</span></div>
+      <div><b>26</b><span>篇 Brunch 开发日志稿</span></div>
+    </div>
+    <p style="margin-top:24px">开发过程以「与 AI 一起的单人游戏开发」为题连载于 Brunch（韩文）。游玩视频与更新消息发布在 Instagram <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">@_neon_station</a>。<a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">在 Brunch 阅读连载</a></p>
+  </div>
+</section>
+
+<!-- 제작사 -->
+<section class="stop" id="studio" aria-labelledby="studio-title">
+  <div class="wrap">
+    <div class="stop-head"><span class="roundel" aria-hidden="true">8</span><span class="station">终点站</span><h2 id="studio-title">制作方。Data Station</h2></div>
+    <div class="studio-band cut">
+      <div>
+        <p class="motto">The truth will set you free.</p>
+        <p>Data Station 是一家讲授数据分析与 AI 并提供咨询的公司。自 2018 年起持续为企业和机构授课。Neon Station 把我们在课堂上一直强调的原则——先定义问题，再选择工具——原样应用到了游戏开发中。</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <a class="btn" href="studio.html">查看制作方介绍</a> <a class="btn ghost" href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">data-station.co.kr</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <p class="label">제작사</p>
+      <p class="name"><a href="https://www.data-station.co.kr/index" target="_blank" rel="noopener">데이터스테이션</a></p>
+      <p class="motto">The truth will set you free.</p>
+      <p class="biz">사업자등록번호 : 627-29-01315</p>
+      <p class="copy">© 2026 Data Station</p>
+    </div>
+    <div class="ft-links">
+      <a href="studio.html">制作方介绍</a> <a href="https://brunch.co.kr/@data-station" target="_blank" rel="noopener">开发日志（Brunch，韩文）</a> <a href="guide.html">入门指南</a> <a href="news.html">公告</a> <a href="https://www.instagram.com/_neon_station/" target="_blank" rel="noopener">Instagram</a> <a href="../support/">客服（韩文）</a> <a href="../privacy/en/">隐私政策（英文）</a> <a href="../terms/">用户协议（韩文）</a> <a href="../delete-account/">删除账号（韩文）</a> <a href="#top">回到顶部</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/news-data.js"></script>
+<script src="../assets/js/news.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

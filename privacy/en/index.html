@@ -13,7 +13,7 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 </head>
 <body>
 <h1>Neon Station Privacy Policy</h1>
-<p class="muted">Effective date: December 1, 2026 (announced November 24, 2026) · Operator: Datastation (the “Operator”) · <a href="../">한국어</a></p>
+<p class="muted">Effective date: December 4, 2026 (announced November 27, 2026) · Operator: Datastation (the “Operator”) · <a href="../">한국어</a></p>
 
 <p>The Operator provides the mobile game “Neon Station” (the “Game”) in compliance with the Personal Information Protection Act of the Republic of Korea and other applicable laws, and processes users’ personal information as described below. The Game starts with an anonymous account without sign-up, and you may choose to link a Google or Apple account. If you do not link an account, we do not collect contact information such as your name, phone number or email address.</p>
 
@@ -28,12 +28,15 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 <tr><td>Access logs (server logs including IP address)</td><td>Service security and incident response</td><td>Generated automatically when using the server</td></tr>
 <tr><td>App usage events (app open and close, intro completed, level, faction, menu unlocks, set discoveries), a random per-install ID, device information (device model, OS and app version, language), and country and city estimated from the IP address</td><td>Usage statistics, improving game balance and features</td><td>Collected automatically by the analytics tool while using the app</td></tr>
 <tr><td>Error and crash reports and app logs</td><td>Finding and fixing errors</td><td>Collected automatically by the analytics tool when an error occurs</td></tr>
+<tr><td>Native crash reports — device model, OS version, app version, error details (where and what kind of error), whether the app froze, and session information used to calculate the crash-free session rate</td><td>Finding the cause of crashes and freezes, improving app stability</td><td>Collected automatically by the crash reporting tool (Sentry) when the app crashes or freezes. No user identifier, IP address or screenshot is sent</td></tr>
 <tr><td>(Optional) User identifier and email address of the linked Google or Apple account (if you choose “Hide My Email” on Apple, the relay address created by Apple)</td><td>Account linking, restoring progress on another device, identity verification</td><td>When you sign in under Profile › Account link</td></tr>
-<tr><td>(Optional) Game progress backup — the full progress data stored on your device (level, currencies, gear and inventory, settings, etc.)</td><td>Restoring progress when a linked user changes devices or reinstalls, handling support requests</td><td>Only for linked accounts; sent automatically every 10 minutes and when the app goes to the background</td></tr>
+<tr><td>Game progress backup — the full progress data stored on your device (level, currencies, gear and inventory, settings, etc.)</td><td>Restoring progress when you change devices or reinstall, handling support requests</td><td>All users, including guests without a linked account; sent automatically every 10 minutes and when the app goes to the background</td></tr>
+<tr><td>(Optional) Recovery code — a hash of the code for checking (the code itself is not stored), an internal sign-in identifier for recovery (an address that is not a real mailbox), and code entry records (account, time, IP address, success or failure)</td><td>Loading progress on another device with a recovery code, preventing brute-force guessing</td><td>When you make or enter a recovery code under Profile › Account link</td></tr>
+<tr><td>Currency records — the currency balance confirmed by the server, each change by currency and its source (purchase, coupon, game reward, etc.), time, app version, and records flagged by checks</td><td>Preventing currency fraud, handling purchase and reward inquiries, analyzing the game economy</td><td>Sent automatically when the app syncs currencies with the server during play</td></tr>
 <tr><td>Purchase records — product purchased, store transaction ID and order number, purchase time, environment (real or test), refund status</td><td>Verifying purchases and delivering items, handling refunds and recovering delivered items, preventing fraudulent purchases, keeping legally required records</td><td>Our server checks directly with Google Play and App Store servers when you buy</td></tr>
 <tr><td>Advertising information — advertising identifier (Android advertising ID), device and app information, approximate location estimated from the IP address, ad impression, click and view records</td><td>Serving and measuring rewarded ads, preventing ad fraud</td><td>Collected automatically by the ad SDK (Google AdMob) after the app starts</td></tr>
 </table>
-<p class="muted">If you do not link an account, most game progress (currencies, inventory, etc.) is stored only on your device and is not sent to the Operator. We use the analytics tool PostHog for usage statistics and error analysis, and these records are linked to the account identifier above. Payment method information such as card numbers is handled by Google and Apple and is never received by the Operator. The Game does not use location permission (GPS), contacts, photos or the microphone.</p>
+<p class="muted">Game progress is stored on your device, and the same data is also kept on the server as the “Game progress backup” above (guests included, from version 1.1.4). We use the analytics tool PostHog for usage statistics and error analysis, and these records are linked to the account identifier above. Payment method information such as card numbers is handled by Google and Apple and is never received by the Operator. The Game does not use location permission (GPS), contacts, photos or the microphone.</p>
 
 <h2>1-1. Ads and personalized ads</h2>
 <ul>
@@ -46,7 +49,10 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 
 <h2>2. Retention and deletion</h2>
 <ul>
-<li>Account and server records (including linked Google/Apple account information and progress backups): kept until you delete your account, and deleted without delay when you request deletion.</li>
+<li>Account and server records (including linked Google/Apple account information, progress backups, recovery code hashes and currency balances): kept until you delete your account, and deleted without delay when you request deletion. When you make a new recovery code, the hash of the previous code is deleted at once.</li>
+<li>Recovery code entry records: deleted automatically 1 day after entry.</li>
+<li>Currency change records (changes and sources): deleted automatically 90 days after they are recorded.</li>
+<li>Native crash reports (Sentry): kept for up to 90 days from collection, then deleted.</li>
 <li>Purchase records: kept for <b>5 years</b> as required by the Korean Act on the Consumer Protection in Electronic Commerce (records of payment and supply of goods). When you delete your account, we unlink the purchase records from it and keep only those records until the period ends.</li>
 <li>Chat messages: only the latest 500 messages are kept; older messages are deleted automatically.</li>
 <li>Reports: deleted within 6 months after the report is handled (also deleted when the account is deleted).</li>
@@ -59,6 +65,7 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 <tr><th>Processor</th><th>Task</th><th>Storage location</th></tr>
 <tr><td>Supabase, Inc.</td><td>Database, anonymous authentication and server functions</td><td>Republic of Korea (Seoul region)</td></tr>
 <tr><td>PostHog, Inc.</td><td>Usage statistics and error analysis</td><td>United States</td></tr>
+<tr><td>Functional Software, Inc. (Sentry)</td><td>Collecting and analyzing native crash reports</td><td>United States</td></tr>
 <tr><td>Google LLC</td><td>App distribution (Google Play), in-app payment processing (Google Play Billing), Google sign-in, ads (AdMob)</td><td>United States and others, per Google’s policies</td></tr>
 <tr><td>Apple Inc.</td><td>App distribution (App Store), in-app purchase processing, Sign in with Apple</td><td>United States and others, per Apple’s policies</td></tr>
 </table>
@@ -76,6 +83,16 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 </table>
 <p></p>
 <table>
+<tr><th>Recipient</th><td>Functional Software, Inc. (Sentry · privacy contact: privacy@sentry.io)</td></tr>
+<tr><th>Country</th><td>United States</td></tr>
+<tr><th>Information transferred</th><td>Native crash reports (device model, OS version, app version, error details, whether the app froze, session information). No user identifier, IP address or screenshot is sent.</td></tr>
+<tr><th>When and how</th><td>On the next launch after the app crashes or freezes, over an encrypted connection (HTTPS)</td></tr>
+<tr><th>Purpose</th><td>Finding the cause of crashes and freezes, improving app stability</td></tr>
+<tr><th>Retention</th><td>Up to 90 days from collection</td></tr>
+<tr><th>How to refuse, and its effect</th><td>Contact us at the address below and we will delete the crash reports for your device. Crash reports are not used for game features, so refusing does not limit your use of the Game.</td></tr>
+</table>
+<p></p>
+<table>
 <tr><th>Recipient</th><td>Google LLC (AdMob · privacy contact: <a href="https://support.google.com/policies/contact/general_privacy_form">Google privacy form</a>)</td></tr>
 <tr><th>Country</th><td>United States and other countries where Google operates servers</td></tr>
 <tr><th>Information transferred</th><td>Advertising identifier (Android advertising ID), device and app information, approximate location estimated from the IP address, ad impression, click and view records</td></tr>
@@ -88,7 +105,7 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 
 <h2>5. Your rights and how to exercise them</h2>
 <ul>
-<li>In the Game, go to <b>Profile › Info › Delete account &amp; data</b> to immediately delete your server account and records (including linked account information and progress backups) and the progress on your device. Purchase records are kept separately from the account for the legal period described in section 2.</li>
+<li>In the Game, go to <b>Profile › Info › Delete account &amp; data</b> to immediately delete your server account and records (including linked account information, progress backups, recovery codes and currency records) and the progress on your device. Purchase records are kept separately from the account for the legal period described in section 2.</li>
 <li>If you have already removed the app, email <a href="mailto:0001jmp@gmail.com">0001jmp@gmail.com</a> with the subject “Neon Station account deletion request” and the <b>nickname</b> you used in the Game. We will delete your data within 10 days and let you know.</li>
 <li>Send requests to access, correct or suspend processing of your information to the contact below. We will reply within 10 days.</li>
 </ul>
@@ -106,6 +123,6 @@ a{color:#3CC8F0}.muted{color:#7FA0A6;font-size:14px}
 <h2>9. Changes</h2>
 <p>If this policy changes, we will announce it on this page and in the Game 7 days before the change takes effect, and 30 days before for changes that are unfavorable or important to users.</p>
 <p class="muted">This English version is a translation. If it differs from the <a href="../">Korean version</a>, the Korean version prevails.<br>
-History: Nov 21, 2026 first published · Nov 23, 2026 added the analytics tool (PostHog) to the information processed, processors and international transfer, and added the App Store as a distributor · Nov 24, 2026 announced (effective Dec 1, 2026): rewarded ads (Google AdMob), in-app purchases and purchase record retention, Google/Apple account linking and progress backup.</p>
+History: Nov 21, 2026 first published · Nov 23, 2026 added the analytics tool (PostHog) to the information processed, processors and international transfer, and added the App Store as a distributor · Nov 24, 2026 announced (effective Dec 1, 2026): rewarded ads (Google AdMob), in-app purchases and purchase record retention, Google/Apple account linking and progress backup · Nov 27, 2026 announced (effective Dec 4, 2026): progress backup for all users, recovery codes, currency change records, and native crash reporting (Sentry) added to the information processed, processors and international transfer.</p>
 </body>
 </html>
